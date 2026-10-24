@@ -25,7 +25,6 @@ def check_sndk():
         prev = candles[-2]
         avg_vol = sum([c["vol_usdt"] for c in candles[-20:-1]]) / 19
         
-        # SNDK 盘前量小，用 1.5倍 和 5万U 门槛
         is_volume_spike = curr["vol_usdt"] > avg_vol * 1.5 and curr["vol_usdt"] > 50000 
 
         body = abs(curr["close"] - curr["open"])
@@ -72,16 +71,25 @@ def scan_market():
             
         tickers = res["data"]
         active_coins = []
+        
         for t in tickers:
             if t["instId"].endswith("USDT-SWAP"):
-                vol_usdt = float(t["volCcy24h"]) * float(t["last"])
-                if vol_usdt > 5000000: # 成交额 > 500万U
-                    active_coins.append(t["instId"])
+                # 【修复Bug的地方】：防止空数据导致崩溃
+                last_price = t.get("last", "")
+                vol_24h = t.get("volCcy24h", "")
+                
+                if last_price and vol_24h: # 确保两个数据都不是空的
+                    try:
+                        vol_usdt = float(vol_24h) * float(last_price)
+                        if vol_usdt > 5000000: # 成交额 > 500万U
+                            active_coins.append(t["instId"])
+ active                    except ValueError_co:
+                        pass # 如果还是ins转数字失败，直接:
+忽略这个币
         
-        alerts_sent = 0
+        alerts           _sent = 0
         
-        for symbol in active_coins:
-            if symbol == "SNDK-USDT-SWAP": continue # SNDK 交给上面的任务单独处理
+        for symbol in if symbol == "SNDK-USDT-SWAP": continue 
             
             k_url = f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=20"
             k_res = requests.get(k_url).json()
@@ -99,7 +107,6 @@ def scan_market():
             upper_shadow = curr["high"] - curr["close"]
             body = abs(curr["close"] - curr["open"])
             
-            # 防骗炮核心逻辑
             is_spike = curr["vol_usdt"] > 1000000 and curr["vol_usdt"] > avg_vol * 5
             is_pump = price_change > 2
             is_breakout = curr["close"] > past_max_high
@@ -122,13 +129,13 @@ def scan_market():
                 requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
                 print(f"🔥 抓获妖币：{symbol}")
                 alerts_sent += 1
-                if alerts_sent >= 3: break # 一次最多发 3 条
+                if alerts_sent >= 3: break 
 
     except Exception as e:
         print(f"❌ 全市场扫描出错: {e}")
 
 # ================= 启动执行 =================
 print("🚀 开始运行雷达监控...")
-check_sndk()   # 先单独查 SNDK
-time.sleep(2)  # 停顿2秒防封IP
-scan_market()  # 再扫全市场
+check_sndk()   
+time.sleep(2)  
+scan_market()
