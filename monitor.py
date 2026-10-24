@@ -4,7 +4,6 @@ import time
 TOKEN = "8611401535:AAFQiAe7UiOYNwQeiEuCnM-iDQo925Aa0Kk"  # ⚠️ 换成你的真 Token
 CHAT_ID = "6293141270"
 
-# ================= 任务1：监控特定的美股代币 =================
 def check_sndk():
     symbol = "SNDK-USDT-SWAP"
     try:
@@ -61,8 +60,6 @@ def check_sndk():
     except Exception as e:
         print(f"❌ SNDK 监控出错: {e}")
 
-
-# ================= 任务2：全市场扫描爆量山寨币 =================
 def scan_market():
     try:
         tickers_url = "https://www.okx.com/api/v5/market/tickers?instType=SWAP"
@@ -74,22 +71,21 @@ def scan_market():
         
         for t in tickers:
             if t["instId"].endswith("USDT-SWAP"):
-                # 【修复Bug的地方】：防止空数据导致崩溃
                 last_price = t.get("last", "")
                 vol_24h = t.get("volCcy24h", "")
                 
-                if last_price and vol_24h: # 确保两个数据都不是空的
+                if last_price and vol_24h:
                     try:
                         vol_usdt = float(vol_24h) * float(last_price)
-                        if vol_usdt > 5000000: # 成交额 > 500万U
+                        if vol_usdt > 5000000:
                             active_coins.append(t["instId"])
- active                    except ValueError_co:
-                        pass # 如果还是ins转数字失败，直接:
-忽略这个币
+                    except ValueError:
+                        pass
         
-        alerts           _sent = 0
+        alerts_sent = 0
         
-        for symbol in if symbol == "SNDK-USDT-SWAP": continue 
+        for symbol in active_coins:
+            if symbol == "SNDK-USDT-SWAP": continue 
             
             k_url = f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=20"
             k_res = requests.get(k_url).json()
@@ -134,7 +130,6 @@ def scan_market():
     except Exception as e:
         print(f"❌ 全市场扫描出错: {e}")
 
-# ================= 启动执行 =================
 print("🚀 开始运行雷达监控...")
 check_sndk()   
 time.sleep(2)  
