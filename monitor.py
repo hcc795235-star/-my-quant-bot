@@ -20,26 +20,59 @@ def check_orderbook(symbol):
 # 辅助函数2：获取多空持仓人数比 (Long/Short Ratio)
 def check_long_short_ratio(symbol):
     try:
-        # OKX 接口需要提取基础币种，比如 BTC-USDT-SWAP -> BTC
         ccy = symbol.split("-")[0]
         url = f"https://www.okx.com/api/v5/rubik/stat/contracts/long-short-account-ratio?ccy={ccy}&period=5m"
         res = requests.get(url).json()
-        
-        # 某些刚上线的小币没有这个数据，直接返回 1.0（中性）
         if res.get("code") != "0" or not res.get("data"): return 1.0
-        
-        # 取最新的一条数据
-        latest_data = res["data"][0]
-        # ratio = 多单人数 / 空单人数
-        ratio = float(latest_data[1])
-        return ratio
+        return float(res["data"][0][1])
     except:
         return 1.0
 
+# ================= 任务1：监控美股代币 SNDK =================
 def check_sndk():
-    # ... (SNDK代码同上，略)
-    pass
+    symbol = "SNDK-USDT-SWAP"
+    try:
+        url = f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=30"
+        response = requests.get(url).json()
+        if response.get("code") != "0": return
 
+        raw_candles = response["data"]
+        candles = []
+        for c in reversed(raw_candles):
+            candles.append({
+                "open": float(c[1]), "high": float(c[2]), 
+                "low": float(c[3]), "close": float(c[4]), 
+                "vol_usdt": float(c[6])
+            })
+
+        curr = candles[-1]
+        avg_vol = sum([c["vol_usdt"] for c in candles[-20:-1]]) / 19
+        is_volume_spike = curr["vol_usdt"] > avg_vol * 1.5 and curr["vol_usdt"] > 50000 
+
+        body = abs(curr["close"] - curr["open"])
+        total_length = curr["high"] - curr["low"]
+        upper_shadow = curr["high"] - max(curr["close"], curr["open"])
+        lower_shadow = min(curr["close"], curr["open"]) - curr["low"]
+        price_change = (curr["close"] - curr["open"]) / curr["open"] * 100
+
+        if curr["close"] > curr["open"] and body > total_length * 0.7 and is_volume_spike and 0.5 < price_change < 3.5 and upper_shadow < body * 0.4:
+            entry = curr["close"]
+            sl = curr["low"] * 0.999
+            risk = entry - sl
+            fmt = lambda x: f"{x:.3f}"
+            message = (
+                f"🚨 {symbol} 形态信号！\n"
+                f"🧭 方向: 【做多 🟢 LONG】\n"
+                f"🎯 建议入场: {fmt(entry)}\n"
+                f"🛑 严格止损: {fmt(sl)}\n"
+                f"🥇 止盈1: {fmt(entry + risk*1.5)} | 🥈 止盈2: {fmt(entry + risk*2.5)}"
+            )
+            requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
+    except Exception as e:
+        pass
+
+
+# ================= 任务2：全市场扫描 =================
 def scan_market():
     try:
         tickers_url = "https://www.okx.com/api/v5/market/tickers?instType=SWAP"
@@ -56,7 +89,7 @@ def scan_market():
                 if last_price and vol_24h:
                     try:
                         vol_usdt = float(vol_24h) * float(last_price)
-                        if vol_usdt > 5000000: # 500万U门槛
+                        if vol_usdt > 5000000: 
                             active_coins.append(t["instId"])
                     except ValueError:
                         pass
@@ -98,8 +131,8 @@ def scan_market():
                 
             is_mild_volume = curr["vol_usdt"] > avg_vol * 1.5 and curr["vol_usdt"] > 150000
 
-            signal_long = None
-            signal_short = None
+            signal_long = False
+            signal_short = False
             shape_name = ""
 
             # --- 做多形态 ---
@@ -108,18 +141,15 @@ def scan_market():
             elif prev["close"] < prev["open"] and curr["close"] > curr["open"] and curr["close"] > prev["open"] and curr["open"] < prev["close"] and is_mild_volume:
                 signal_long, shape_name = True, "看涨吞没"
             # --- 做空形态 ---
-            elif curr["close"] < past_20_low and -3.5 < price_change < -0.5 and lower_shadow < body * 0.4 and is_mild_']volume:
-                signal/_short, shape_name = True, "阴avg线跌破前低"
+            elif curr["close"] < past_20_low and -3.5 < price_change < -0.5 and lower_shadow < body * 0.4 and is_mild_volume:
+                signal_short, shape_name = True, "阴线跌破前低"
             elif prev["close"] > prev["open"] and curr["close"] < curr["open"] and curr["close"] < prev["open"] and curr["open"] > prev["close"] and is_mild_volume:
                 signal_short, shape_name = True, "看跌吞没"
 
-            # 如果触发了信号，去查盘口和多空比
             if signal_long or signal_short:
                 bid_ratio = check_orderbook(symbol)
-                ls_ratio = check_long_short_ratio(symbol) # 多空人数比
+                ls_ratio = check_long_short_ratio(symbol)
                 
-                # ================= 核心过滤：防拥挤踩踏 =================
-                # 如果做多，但盘口买盘 < 40%（卖墙大），或者多空比 > 1.5（做多的人太多，容易被主力爆多军）
                 if signal_long and bid_ratio > 40.0 and ls_ratio < 1.5:
                     entry = curr["close"]
                     sl = curr["low"] * 0.999
@@ -129,17 +159,15 @@ def scan_market():
                         f"🐣 做多信号！ {symbol}\n"
                         f"📊 形态: {shape_name} (温和放量 {curr['vol_usdt']/avg_vol:.1f}倍)\n"
                         f"🛡️ 盘口买盘: {bid_ratio:.1f}% (健康)\n"
-                        f"⚖️ 多空比: {ls_ratio:.2f} (多头未拥挤，盈亏比高)\n"
+                        f"⚖️ 多空比: {ls_ratio:.2f} (多头未拥挤)\n"
                         f"🧭 方向: 【做多 🟢 LONG】\n"
                         f"🎯 建议入场: {fmt(entry)}\n"
                         f"🛑 严格止损: {fmt(sl)}\n"
                         f"🥇 止盈1: {fmt(entry + risk*1.5)} | 🥈 止盈2: {fmt(entry + risk*2.5)} | 🥉 止盈3: {fmt(entry + risk*4.0)}"
                     )
                     requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
-                    print(f"🔥 抓获做多：{symbol}")
                     alerts_sent += 1
                     
-                # 如果做空，但盘口买盘 > 60%（买墙托底），或者多空比 < 0.6（做空的人太多，容易被轧空）
                 elif signal_short and bid_ratio < 60.0 and ls_ratio > 0.6:
                     entry = curr["close"]
                     sl = curr["high"] * 1.001
@@ -147,16 +175,15 @@ def scan_market():
                     fmt = lambda x: f"{x:.4f}"
                     message = (
                         f"🩸 做空信号！ {symbol}\n"
-                        f"📊 形态: {shape_name} (温和放量 {curr['_vol:.1f}倍)\n"
+                        f"📊 形态: {shape_name} (温和放量 {curr['vol_usdt']/avg_vol:.1f}倍)\n"
                         f"🛡️ 盘口卖盘: {100-bid_ratio:.1f}% (健康)\n"
-                        f"⚖️ 多空比: {ls_ratio:.2f} (空头未拥挤，防轧空)\n"
+                        f"⚖️ 多空比: {ls_ratio:.2f} (空头未拥挤)\n"
                         f"🧭 方向: 【做空 🔴 SHORT】\n"
                         f"🎯 建议入场: {fmt(entry)}\n"
                         f"🛑 严格止损: {fmt(sl)}\n"
                         f"🥇 止盈1: {fmt(entry - risk*1.5)} | 🥈 止盈2: {fmt(entry - risk*2.5)} | 🥉 止盈3: {fmt(entry - risk*4.0)}"
                     )
                     requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
-                    print(f"🔥 抓获做空：{symbol}")
                     alerts_sent += 1
 
                 if alerts_sent >= 3: break 
@@ -164,7 +191,7 @@ def scan_market():
     except Exception as e:
         print(f"❌ 全市场扫描出错: {e}")
 
-print("🚀 开始运行【多空双修+盈亏比强化】雷达...")
+print("🚀 开始运行【多空双修+深度过滤】雷达...")
 check_sndk()   
 time.sleep(2)  
 scan_market()
