@@ -60,6 +60,7 @@ def check_sndk():
     except Exception as e:
         print(f"❌ SNDK 监控出错: {e}")
 
+
 def scan_market():
     try:
         tickers_url = "https://www.okx.com/api/v5/market/tickers?instType=SWAP"
@@ -77,7 +78,8 @@ def scan_market():
                 if last_price and vol_24h:
                     try:
                         vol_usdt = float(vol_24h) * float(last_price)
-                        if vol_usdt > 5000000:
+                        # 【门槛降低1】：24小时成交额从 500万 降到 200万，覆盖更多小盘子
+                        if vol_usdt > 2000000: 
                             active_coins.append(t["instId"])
                     except ValueError:
                         pass
@@ -99,14 +101,18 @@ def scan_market():
             prev_candles = candles[:-1]
             avg_vol = sum([c["vol_usdt"] for c in prev_candles]) / len(prev_candles)
             price_change = (curr["close"] - curr["open"]) / curr["open"] * 100
-            past_max_high = max([c["high"] for c in prev_candles])
+            # 取最近 15 根 K 线的最高点（相比之前 19根，更容易突破）
+            past_max_high = max([c["high"] for c in prev_candles[-15:]])
             upper_shadow = curr["high"] - curr["close"]
             body = abs(curr["close"] - curr["open"])
             
-            is_spike = curr["vol_usdt"] > 1000000 and curr["vol_usdt"] > avg_vol * 5
-            is_pump = price_change > 2
+            # 【门槛降低2】：成交额从 100万 降到 30万U，爆量倍数从 5倍 降到 3倍
+            is_spike = curr["vol_usdt"] > 300000 and curr["vol_usdt"] > avg_vol * 3
+            # 【门槛降低3】：涨幅从 2% 降到 1%
+            is_pump = price_change > 1
             is_breakout = curr["close"] > past_max_high
-            is_strong_close = upper_shadow < body * 0.3 
+            # 上影线依然不能太长（防骗炮），但不能超过实体的 40%
+            is_strong_close = upper_shadow < body * 0.4 
             
             if is_spike and is_pump and is_breakout and is_strong_close:
                 entry = curr["close"]
@@ -114,10 +120,10 @@ def scan_market():
                 risk = entry - sl
                 fmt = lambda x: f"{x:.4f}"
                 message = (
-                    f"🚨 全市场爆量妖币！ {symbol}\n"
+                    f"🚨 全市场异动妖币！ {symbol}\n"
                     f"🚀 5m涨幅: +{price_change:.2f}%\n"
                     f"💵 5m成交额: {curr['vol_usdt']:,.0f} U (爆量 {curr['vol_usdt']/avg_vol:.1f}倍)\n"
-                    f"✅ 已突破前高，实体强势收线\n"
+                    f"✅ 已突破近15分钟前高，多头异动\n"
                     f"🎯 建议入场: {fmt(entry)}\n"
                     f"🛑 严格止损: {fmt(sl)}\n"
                     f"🥇 止盈1: {fmt(entry + risk*1.5)} | 🥈 止盈2: {fmt(entry + risk*2.5)}"
@@ -130,7 +136,7 @@ def scan_market():
     except Exception as e:
         print(f"❌ 全市场扫描出错: {e}")
 
-print("🚀 开始运行雷达监控...")
+print("🚀 开始运行灵敏版雷达监控...")
 check_sndk()   
 time.sleep(2)  
 scan_market()
