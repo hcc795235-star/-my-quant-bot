@@ -1,10 +1,27 @@
 import requests
 import time
+import json
+import os
+from datetime import datetime, timezone, timedelta
 
 TOKEN = "8611401535:AAFQiAe7UiOYNwQeiEuCnM-iDQo925Aa0Kk"  # ⚠️ 换成你的真 Token
 CHAT_ID = "6293141270"
+DB_FILE = "trades.json"
 
-# 辅助函数1：获取盘口买卖单比例
+def load_trades():
+    if os.path.exists(DB_FILE):
+        with open(DB_FILE, "r") as f:
+            return json.load(f)
+    return []
+
+def save_trades(trades):
+    with open(DB_FILE, "w") as f:
+        json.dump(trades, f, indent=4)
+
+def send_tg(message):
+    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
+
+# 辅助：获取盘口
 def check_orderbook(symbol):
     try:
         url = f"https://www.okx.com/api/v5/market/books?instId={symbol}&sz=20"
@@ -14,184 +31,167 @@ def check_orderbook(symbol):
         asks_vol = sum([float(a[1]) for a in res["data"][1]])
         total = bids_vol + asks_vol
         return (bids_vol / total) * 100 if total > 0 else 50.0
-    except:
-        return 50.0
+    except: return 50.0
 
-# 辅助函数2：获取多空持仓人数比 (Long/Short Ratio)
-def check_long_short_ratio(symbol):
+# 辅助：获取多空比
+def check_ls_ratio(symbol):
     try:
         ccy = symbol.split("-")[0]
-        url = f"https://www.okx.com/api/v5/rubik/stat/contracts/long-short-account-ratio?ccy={ccy}&period=5m"
+        url = f"https://www.okx.com/api/v5/statistics/contracts/long-short-account-ratio?ccy={ccy}&period=5m"
         res = requests.get(url).json()
         if res.get("code") != "0" or not res.get("data"): return 1.0
         return float(res["data"][0][1])
-    except:
-        return 1.0
+    except: return 1.0
 
-# ================= 任务1：监控美股代币 SNDK =================
-def check_sndk():
-    symbol = "SNDK-USDT-SWAP"
+# 辅助：获取最新价格
+def get_current_price(symbol):
     try:
-        url = f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=30"
-        response = requests.get(url).json()
-        if response.get("code") != "0": return
+        url = f"https://www.okx.com/api/v5/market/ticker?instId={symbol}"
+        res = requests.get(url).json()
+        if res.get("code") == "0":
+            return float(res["data"][0]["last"])
+    except: pass
+    return None
 
-        raw_candles = response["data"]
-        candles = []
-        for c in reversed(raw_candles):
-            candles.append({
-                "open": float(c[1]), "high": float(c[2]), 
-                "low": float(c[3]), "close": float(c[4]), 
-                "vol_usdt": float(c[6])
-            })
-
-        curr = candles[-1]
-        avg_vol = sum([c["vol_usdt"] for c in candles[-20:-1]]) / 19
-        is_volume_spike = curr["vol_usdt"] > avg_vol * 1.5 and curr["vol_usdt"] > 50000 
-
-        body = abs(curr["close"] - curr["open"])
-        total_length = curr["high"] - curr["low"]
-        upper_shadow = curr["high"] - max(curr["close"], curr["open"])
-        lower_shadow = min(curr["close"], curr["open"]) - curr["low"]
-        price_change = (curr["close"] - curr["open"]) / curr["open"] * 100
-
-        if curr["close"] > curr["open"] and body > total_length * 0.7 and is_volume_spike and 0.5 < price_change < 3.5 and upper_shadow < body * 0.4:
-            entry = curr["close"]
-            sl = curr["low"] * 0.999
-            risk = entry - sl
-            fmt = lambda x: f"{x:.3f}"
-            message = (
-                f"🚨 {symbol} 形态信号！\n"
-                f"🧭 方向: 【做多 🟢 LONG】\n"
-                f"🎯 建议入场: {fmt(entry)}\n"
-                f"🛑 严格止损: {fmt(sl)}\n"
-                f"🥇 止盈1: {fmt(entry + risk*1.5)} | 🥈 止盈2: {fmt(entry + risk*2.5)}"
-            )
-            requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
-    except Exception as e:
-        pass
-
-
-# ================= 任务2：全市场扫描 =================
-def scan_market():
-    try:
-        tickers_url = "https://www.okx.com/api/v5/market/tickers?instType=SWAP"
-        res = requests.get(tickers_url).json()
-        if res.get("code") != "0": return
+def review_trades(trades):
+    """复盘检查"""
+    now = datetime.now(timezone.utc)
+    active_trades = []
+    
+    for t in trades:
+        if t["status"] != "OPEN":
+            continue
             
-        tickers = res["data"]
-        active_coins = []
-        
-        for t in tickers:
-            if t["instId"].endswith("USDT-SWAP"):
-                last_price = t.get("last", "")
-                vol_24h = t.get("volCcy24h", "")
-                if last_price and vol_24h:
-                    try:
-                        vol_usdt = float(vol_24h) * float(last_price)
-                        if vol_usdt > 5000000: 
-                            active_coins.append(t["instId"])
-                    except ValueError:
-                        pass
+        # 超过 2 小时强制平仓记录（模拟）
+        entry_time = datetime.fromisoformat(t["time"])
+        if (now - entry_time).total_seconds() > 7200:
+            t["status"] = "TIMEOUT"
+            send_tg(f"⏳ {t['symbol']} 持仓超2小时，自动按现价平仓记录。")
+            continue
+
+        curr_price = get_current_price(t["symbol"])
+        if not curr_price:
+            active_trades.append(t)
+            continue
+
+        # 检查是否触发止盈止损
+        if t["direction"] == "LONG":
+            if curr_price <= t["sl"]:
+                t["status"] = "LOSS"
+                send_tg(f"🛑 {t['symbol']} 多单触及止损: {t['sl']}")
+            elif curr_price >= t["tp2"]:
+                t["status"] = "WIN_TP2"
+                send_tg(f"🏆 {t['symbol']} 多单止盈2达成: {t['tp2']}")
+            elif curr_price >= t["tp1"]:
+                t["status"] = "WIN_TP1"
+                send_tg(f"✅ {t['symbol']} 多单止盈1达成: {t['tp1']}")
+            else:
+                active_trades.append(t)
+                
+        elif t["direction"] == "SHORT":
+            if curr_price >= t["sl"]:
+                t["status"] = "LOSS"
+                send_tg(f"🛑 {t['symbol']} 空单触及止损: {t['sl']}")
+            elif curr_price <= t["tp2"]:
+                t["status"] = "WIN_TP2"
+                send_tg(f"🏆 {t['symbol']} 空单止盈2达成: {t['tp2']}")
+            elif curr_price <= t["tp1"]:
+                t["status"] = "WIN_TP1"
+                send_tg(f"✅ {t['symbol']} 空单止盈1达成: {t['tp1']}")
+            else:
+                active_trades.append(t)
+                
+    return active_trades
+
+def calculate_stats(trades):
+    """计算胜率"""
+    closed = [t for t in trades if t["status"] != "OPEN"]
+    if not closed: return "暂无已完结交易记录"
+    wins = len([t for t in closed if "WIN" in t["status"]])
+    losses = len([t for t in closed if t["status"] == "LOSS"])
+    total = len(closed)
+    win_rate = (wins / total) * 100 if total > 0 else 0
+    return f"📊 总开单: {total} | 胜: {wins} | 负: {losses} | 胜率: {win_rate:.1f}%"
+
+def scan_market(trades):
+    """扫描新信号（简化了之前的形态判断，重点演示流程）"""
+    try:
+        res = requests.get("https://www.okx.com/api/v5/market/tickers?instType=SWAP").json()
+        active_coins = [t["instId"] for t in res["data"] if t["instId"].endswith("USDT-SWAP") and float(t.get("volCcy24h", 0)) * float(t.get("last", 0)) > 5000000]
         
         alerts_sent = 0
-        
         for symbol in active_coins:
             if symbol == "SNDK-USDT-SWAP": continue 
             
-            k_url = f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=30"
-            k_res = requests.get(k_url).json()
+            # 避免重复开单：如果账本里有这个币的 OPEN 状态，跳过
+            if any(t["symbol"] == symbol and t["status"] == "OPEN" for t in trades):
+                continue
+
+            k_res = requests.get(f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=30").json()
             if k_res.get("code") != "0" or not k_res.get("data"): continue
                 
-            candles = []
-            for c in reversed(k_res["data"]):
-                candles.append({"high": float(c[2]), "low": float(c[3]), "close": float(c[4]), "open": float(c[1]), "vol_usdt": float(c[6])})
+            candles = [{"high": float(c[2]), "low": float(c[3]), "close": float(c[4]), "open": float(c[1]), "vol": float(c[6])} for c in reversed(k_res["data"])]
             
-            curr = candles[-1]
-            prev = candles[-2]
-            prev2 = candles[-3]
-            prev_candles = candles[:-1]
-            
-            avg_vol = sum([c["vol_usdt"] for c in prev_candles[-20:]]) / 20
+            curr, prev_candles = candles[-1], candles[:-1]
+            avg_vol = sum([c["vol"] for c in prev_candles[-20:]]) / 20
             past_20_high = max([c["high"] for c in prev_candles[-20:]])
             past_20_low = min([c["low"] for c in prev_candles[-20:]])
-            past_amplitude = (past_20_high - past_20_low) / past_20_low * 100
             
             price_change = (curr["close"] - curr["open"]) / curr["open"] * 100
-            upper_shadow = curr["high"] - max(curr["close"], curr["open"])
-            lower_shadow = min(curr["close"], curr["open"]) - curr["low"]
             body = abs(curr["close"] - curr["open"])
-            total_length = curr["high"] - curr["low"]
             
-            bad_candles_count = sum(1 for c in prev_candles[-20:] if (c["high"] - max(c["close"], c["open"])) > abs(c["close"] - c["open"]) * 2 or (min(c["close"], c["open"]) - c["low"]) > abs(c["close"] - c["open"]) * 2)
-            current_amplitude = (curr["high"] - curr["low"]) / curr["low"] * 100
-            
-            if bad_candles_count > 4 or current_amplitude > 6.0 or past_amplitude > 5.0:
-                continue
-                
-            is_mild_volume = curr["vol_usdt"] > avg_vol * 1.5 and curr["vol_usdt"] > 150000
-
-            signal_long = False
-            signal_short = False
-            shape_name = ""
-
-            # --- 做多形态 ---
-            if curr["close"] > past_20_high and 0.5 < price_change < 3.5 and upper_shadow < body * 0.4 and is_mild_volume:
-                signal_long, shape_name = True, "阳线突破前高"
-            elif prev["close"] < prev["open"] and curr["close"] > curr["open"] and curr["close"] > prev["open"] and curr["open"] < prev["close"] and is_mild_volume:
-                signal_long, shape_name = True, "看涨吞没"
-            # --- 做空形态 ---
-            elif curr["close"] < past_20_low and -3.5 < price_change < -0.5 and lower_shadow < body * 0.4 and is_mild_volume:
-                signal_short, shape_name = True, "阴线跌破前低"
-            elif prev["close"] > prev["open"] and curr["close"] < curr["open"] and curr["close"] < prev["open"] and curr["open"] > prev["close"] and is_mild_volume:
-                signal_short, shape_name = True, "看跌吞没"
-
-            if signal_long or signal_short:
-                bid_ratio = check_orderbook(symbol)
-                ls_ratio = check_long_short_ratio(symbol)
-                
-                if signal_long and bid_ratio > 40.0 and ls_ratio < 1.5:
+            # 简化的做多逻辑：放量突破前高，涨幅 0.5% ~ 3%
+            if curr["close"] > past_20_high and 0.5 < price_change < 3.0 and curr["vol"] > avg_vol * 1.5 and curr["vol"] > 150000:
+                if check_orderbook(symbol) > 40 and check_ls_ratio(symbol) < 1.5:
                     entry = curr["close"]
                     sl = curr["low"] * 0.999
                     risk = entry - sl
-                    fmt = lambda x: f"{x:.4f}"
-                    message = (
-                        f"🐣 做多信号！ {symbol}\n"
-                        f"📊 形态: {shape_name} (温和放量 {curr['vol_usdt']/avg_vol:.1f}倍)\n"
-                        f"🛡️ 盘口买盘: {bid_ratio:.1f}% (健康)\n"
-                        f"⚖️ 多空比: {ls_ratio:.2f} (多头未拥挤)\n"
-                        f"🧭 方向: 【做多 🟢 LONG】\n"
-                        f"🎯 建议入场: {fmt(entry)}\n"
-                        f"🛑 严格止损: {fmt(sl)}\n"
-                        f"🥇 止盈1: {fmt(entry + risk*1.5)} | 🥈 止盈2: {fmt(entry + risk*2.5)} | 🥉 止盈3: {fmt(entry + risk*4.0)}"
-                    )
-                    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
+                    
+                    trade = {
+                        "symbol": symbol, "direction": "LONG", 
+                        "entry": entry, "sl": sl, 
+                        "tp1": entry + risk*1.5, "tp2": entry + risk*2.5, 
+                        "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"
+                    }
+                    trades.append(trade)
+                    send_tg(f"🐣 开多信号! {symbol}\n入场: {entry:.4f} | 止损: {sl:.4f}\n止盈1: {trade['tp1']:.4f} | 止盈2: {trade['tp2']:.4f}")
                     alerts_sent += 1
                     
-                elif signal_short and bid_ratio < 60.0 and ls_ratio > 0.6:
+            # 简化的做空逻辑
+            elif curr["close"] < past_20_low and -3.0 < price_change < -0.5 and curr["vol"] > avg_vol * 1.5 and curr["vol"] > 150000:
+                if check_orderbook(symbol) < 60 and check_ls_ratio(symbol) > 0.6:
                     entry = curr["close"]
                     sl = curr["high"] * 1.001
                     risk = sl - entry
-                    fmt = lambda x: f"{x:.4f}"
-                    message = (
-                        f"🩸 做空信号！ {symbol}\n"
-                        f"📊 形态: {shape_name} (温和放量 {curr['vol_usdt']/avg_vol:.1f}倍)\n"
-                        f"🛡️ 盘口卖盘: {100-bid_ratio:.1f}% (健康)\n"
-                        f"⚖️ 多空比: {ls_ratio:.2f} (空头未拥挤)\n"
-                        f"🧭 方向: 【做空 🔴 SHORT】\n"
-                        f"🎯 建议入场: {fmt(entry)}\n"
-                        f"🛑 严格止损: {fmt(sl)}\n"
-                        f"🥇 止盈1: {fmt(entry - risk*1.5)} | 🥈 止盈2: {fmt(entry - risk*2.5)} | 🥉 止盈3: {fmt(entry - risk*4.0)}"
-                    )
-                    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
+                    
+                    trade = {
+                        "symbol": symbol, "direction": "SHORT", 
+                        "entry": entry, "sl": sl, 
+                        "tp1": entry - risk*1.5, "tp2": entry - risk*2.5, 
+                        "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"
+                    }
+                    trades.append(trade)
+                    send_tg(f"🩸 开空信号! {symbol}\n入场: {entry:.4f} | 止损: {sl:.4f}\n止盈1: {trade['tp1']:.4f} | 止盈2: {trade['tp2']:.4f}")
                     alerts_sent += 1
 
-                if alerts_sent >= 3: break 
-
+            if alerts_sent >= 2: break
     except Exception as e:
-        print(f"❌ 全市场扫描出错: {e}")
+        print(f"❌ 扫描出错: {e}")
 
-print("🚀 开始运行【多空双修+深度过滤】雷达...")
-check_sndk()   
-time.sleep(2)  
-scan_market()
+if __name__ == "__main__":
+    print(f"🚀 启动量化系统...")
+    all_trades = load_trades()
+    
+    # 1. 先复盘旧单子
+    active_trades = review_trades(all_trades)
+    
+    # 2. 扫描新单子
+    scan_market(active_trades)
+    
+    # 3. 保存账本
+    save_trades(active_trades)
+    
+    # 4. 每天早上8点推送一次胜率报告（这里用简单的时间判断代替）
+    if datetime.now(timezone.utc).hour == 0: # 0点是 UTC 时间，相当于北京早上8点
+        stats = calculate_stats(active_trades)
+        send_tg(f"🌅 每日复盘报告\n{stats}")
