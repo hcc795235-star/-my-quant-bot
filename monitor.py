@@ -8,8 +8,8 @@ TOKEN = "8611401535:AAFQiAe7UiOYNwQeiEuCnM-iDQo925Aa0Kk"  # ⚠️ 记得换成�
 CHAT_ID = "6293141270"
 DB_FILE = "trades.json"
 CYCLE_FILE = "cycle_time.json"
-MAX_OPEN_TRADES = 15  # 最多开 15 单
-CYCLE_HOURS = 3       # 3 小时强制轮转
+MAX_OPEN_TRADES = 15  
+CYCLE_HOURS = 3       
 
 def fmt_price(price):
     if price >= 1: return f"{price:.4f}"
@@ -102,8 +102,19 @@ def scan_market(trades):
         
     try:
         res = requests.get("https://www.okx.com/api/v5/market/tickers?instType=SWAP").json()
-        active_coins = [t["instId"] for t in res["data"] if t["instId"].endswith("USDT-SWAP") and float(t.get("volCcy24h", 0)) * float(t.get("last", 0)) > 5000000]
         
+        # 🚨 【核心修复】：用 try...except 过滤空数据，彻底告别报错
+        active_coins = []
+        for t in res.get("data", []):
+            if t.get("instId", "").endswith("USDT-SWAP"):
+                try:
+                    last_price = float(t.get("last", 0))
+                    vol_24h = float(t.get("volCcy24h", 0))
+                    if last_price * vol_24h > 5000000:
+                        active_coins.append(t["instId"])
+                except (ValueError, TypeError):
+                    pass # 数据为空或不是数字，直接跳过
+                    
         alerts_sent = 0 
         for symbol in active_coins:
             if len(trades) + alerts_sent >= MAX_OPEN_TRADES: break
