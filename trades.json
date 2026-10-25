@@ -1186,6 +1186,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SNXX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 8.199,
+        "sl": 8.321985,
+        "tp1": 7.95303,
+        "tp2": 7.830045,
+        "time": "2026-10-25T14:25:28.157961+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.6553,
+        "sl": 1.6553,
+        "tp1": 1.591164,
+        "tp2": 1.559096,
+        "time": "2026-10-25T15:50:28.913828+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "ADA-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.2032,
@@ -1223,16 +1243,6 @@
         "tp1": 0.16313460000000002,
         "tp2": 0.16061190000000003,
         "time": "2026-10-25T14:22:17.657854+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "SNXX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 8.199,
-        "sl": 8.321985,
-        "tp1": 7.95303,
-        "tp2": 7.830045,
-        "time": "2026-10-25T14:25:28.157961+00:00",
         "status": "OPEN"
     },
     {
@@ -1316,16 +1326,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "BTW-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1.6553,
-        "sl": 1.687368,
-        "tp1": 1.591164,
-        "tp2": 1.559096,
-        "time": "2026-10-25T15:50:28.913828+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SOL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 101.43,
@@ -1333,6 +1333,16 @@
         "tp1": 98.3871,
         "tp2": 96.86565,
         "time": "2026-10-25T16:05:26.189070+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "IOST-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.0007697,
+        "sl": 0.0007812455,
+        "tp1": 0.000746609,
+        "tp2": 0.0007350635,
+        "time": "2026-10-25T16:10:37.123993+00:00",
         "status": "OPEN"
     }
 ]
