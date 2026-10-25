@@ -8,8 +8,8 @@ TOKEN = "8611401535:AAFQiAe7UiOYNwQeiEuCnM-iDQo925Aa0Kk"  # ⚠️ 记得换成�
 CHAT_ID = "6293141270"
 DB_FILE = "trades.json"
 CYCLE_FILE = "cycle_time.json"
-MAX_OPEN_TRADES = 15  # 每个周期最多开 15 单
-CYCLE_HOURS = 3       # 每 3 小时强制结算一次
+MAX_OPEN_TRADES = 15  # 最多开 15 单
+CYCLE_HOURS = 3       # 3 小时强制轮转
 
 def fmt_price(price):
     if price >= 1: return f"{price:.4f}"
@@ -28,7 +28,10 @@ def load_json(file, default):
 def save_json(file, data):
     with open(file, "w") as f: json.dump(data, f, indent=4)
 
-def send_tg(message"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
+def send_tg(message):
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    payload = {"chat_id": CHAT_ID, "text": message}
+    requests.post(url, json=payload)
 
 def calculate_rsi(candles, period=14):
     if len(candles) < period + 1: return 50.0
@@ -90,7 +93,7 @@ def review_trades(trades):
 
 def force_cycle_settlement(active_trades):
     if not active_trades: return []
-    msg = f"⏰ 【3小时周期结算强制平仓】\n因到达重新扫描时间，清理当前持仓 {len(active_trades)} 单。\n释放资金额度，开始新一轮扫描！\n-------------------\n"
+    msg = f"⏰ 【3小时周期结算强制平仓】\n清理当前持仓 {len(active_trades)} 单。\n释放资金额度，开始新一轮扫描！"
     send_tg(msg)
     return [] 
 
@@ -146,13 +149,7 @@ def scan_market(trades):
                 
                 trades.append({"symbol": symbol, "direction": "LONG", "entry": entry, "sl": sl, "tp1": tp1, "tp2": tp2, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"})
                 
-                # 优化消息格式，防止报错
-                msg = f"🐂 底部反转做多! {symbol}\n"
-                msg += f"入场: {fmt_price(entry)}\n"
-                msg += f"止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n"
-                msg += f"🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n"
-                msg += f"🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n"
-                msg += f"(RSI: {rsi:.1f})\n⏰ {get_bj_time()}"
+                msg = f"🐂 底部反转做多! {symbol}\n入场: {fmt_price(entry)}\n止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n(RSI: {rsi:.1f})\n⏰ {get_bj_time()}"
                 send_tg(msg)
                 alerts_sent += 1
                 continue
@@ -179,13 +176,7 @@ def scan_market(trades):
                     
                     trades.append({"symbol": symbol, "direction": "SHORT", "entry": entry, "sl": sl, "tp1": tp1, "tp2": tp2, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"})
                     
-                    # 优化消息格式
-                    msg = f"🔪 {shape}做空! {symbol}\n"
-                    msg += f"入场: {fmt_price(entry)}\n"
-                    msg += f"止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n"
-                    msg += f"🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n"
-                    msg += f"🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n"
-                    msg += f"(RSI: {rsi:.1f})\n⏰ {get_bj_time()}"
+                    msg = f"🔪 {shape}做空! {symbol}\n入场: {fmt_price(entry)}\n止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n(RSI: {rsi:.1f})\n⏰ {get_bj_time()}"
                     send_tg(msg)
                     alerts_sent += 1
 
