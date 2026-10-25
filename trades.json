@@ -1204,5 +1204,35 @@
         "tp2": 236.7445,
         "time": "2026-10-25T14:22:29.252850+00:00",
         "status": "OPEN"
+    },
+    {
+        "symbol": "SNXX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 8.199,
+        "sl": 8.321985,
+        "tp1": 7.95303,
+        "tp2": 7.830045,
+        "time": "2026-10-25T14:25:28.157961+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SKHY-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 139.01,
+        "sl": 141.09515,
+        "tp1": 134.8397,
+        "tp2": 132.75455,
+        "time": "2026-10-25T14:25:30.559253+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SAND-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.04773,
+        "sl": 0.04844595,
+        "tp1": 0.0462981,
+        "tp2": 0.04558215,
+        "time": "2026-10-25T14:25:32.161322+00:00",
+        "status": "OPEN"
     }
 ]
