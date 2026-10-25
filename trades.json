@@ -1576,6 +1576,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "SNDK-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1264.1,
+        "sl": 1264.1,
+        "tp1": 1252.7231000000002,
+        "tp2": 1248.9308,
+        "time": "2026-10-25T20:25:35.867180+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "USELESS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.16952,
@@ -1656,16 +1666,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SNDK-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1264.1,
-        "sl": 1264.1,
-        "tp1": 1252.7231000000002,
-        "tp2": 1248.9308,
-        "time": "2026-10-25T20:25:35.867180+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SOXL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 86.25,
@@ -1723,6 +1723,16 @@
         "tp1": 0.19959690000000002,
         "tp2": 0.19651035000000003,
         "time": "2026-10-25T21:15:37.997813+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "XAG-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 54.24,
+        "sl": 55.0536,
+        "tp1": 52.6128,
+        "tp2": 51.7992,
+        "time": "2026-10-25T21:55:35.440358+00:00",
         "status": "OPEN"
     }
 ]
