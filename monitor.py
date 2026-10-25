@@ -4,11 +4,11 @@ import json
 import os
 from datetime import datetime, timezone, timedelta
 
-TOKEN = "8611401535:AAFQiAe7UiOYNwQeiEuCnM-iDQo925Aa0Kk"  # ⚠️ 换成你的真 Token
+TOKEN = "8611401535:AAFQiAe7UiOYNwQeiEuCnM-iDQo925Aa0Kk"  # ⚠️ 记得换成你的真 Token
 CHAT_ID = "6293141270"
 DB_FILE = "trades.json"
 REPORT_FILE = "last_report.json"
-MAX_OPEN_TRADES = 30 # 👈 这里已经改成 30 单了
+MAX_OPEN_TRADES = 30 # 最大同时持仓数量 30 单
 
 def fmt_price(price):
     if price >= 1: return f"{price:.4f}"
@@ -28,13 +28,13 @@ def save_json(file, data):
     with open(file, "w") as f: json.dump(data, f, indent=4)
 
 def send_tg(message):
-    requests.post(f"https://][api.telegram.org/bot{0]])
-TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "       text": message})
+    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
 
 def check_orderbook(symbol):
     try:
-        res = requests.get(f" askshttps://www.okx.com/api/v5/m =arket/books?instId={symbol}& sumsz=20").json()
-        bids = sum([float(b[1]) for b in res["data"([float(a[1]) for a in res["data"][1]])
+        res = requests.get(f"https://www.okx.com/api/v5/market/books?instId={symbol}&sz=20").json()
+        bids = sum([float(b[1]) for b in res["data"][0]])
+        asks = sum([float(a[1]) for a in res["data"][1]])
         return (bids / (bids + asks)) * 100 if (bids + asks) > 0 else 50.0
     except: return 50.0
 
@@ -81,7 +81,6 @@ def review_trades(trades):
     return active_trades, new_trades
 
 def scan_market(trades):
-    # 👈 这里的判断会自动使用上面设置的 30 单上限
     if len(trades) >= MAX_OPEN_TRADES:
         print("⚠️ 持仓数量已达上限，暂停开新单。")
         return
