@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write # 【关键】允许机器人修改仓库文件（用来保存记账本）
+  contents: write # 赋予修改文件的权限
 
 jobs:
   build:
@@ -21,10 +21,11 @@ jobs:
         run: pip install requests
       - name: Run script
         run: python monitor.py
-      - name: Commit trades.json # 【关键】自动保存并提交记账本
+      - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add trades.json
-          git commit -m "Auto update trades" || exit 0
+          git add last_report.json
+          git commit -m "Auto update records" || exit 0
           git push
