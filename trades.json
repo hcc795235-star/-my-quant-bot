@@ -1106,6 +1106,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "GRASS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.6858,
+        "sl": 0.696087,
+        "tp1": 0.6652259999999999,
+        "tp2": 0.6549389999999998,
+        "time": "2026-10-25T14:40:37.159127+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "ETH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 2331.15,
@@ -1246,13 +1256,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "GRASS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.6858,
-        "sl": 0.696087,
-        "tp1": 0.6652259999999999,
-        "tp2": 0.6549389999999998,
-        "time": "2026-10-25T14:40:37.159127+00:00",
+        "symbol": "PEPE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 4.409e-06,
+        "sl": 4.342865e-06,
+        "tp1": 4.54127e-06,
+        "tp2": 4.607405e-06,
+        "time": "2026-10-25T14:50:30.447745+00:00",
         "status": "OPEN"
     }
 ]
