@@ -4,7 +4,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-TOKEN = "8611401535:AAFQiAe7UiOYNwQeiEuCnM-iDQo925Aa0Kk"  # ⚠️ 换成你的真 Token
+TOKEN = "你的新Token"  # ⚠️ 换成你的真 Token
 CHAT_ID = "6293141270"
 DB_FILE = "trades.json"
 
@@ -50,9 +50,7 @@ def get_current_price(symbol):
     except: pass
     return None
 
-# ================= AI 诊断专家系统 =================
 def ai_diagnose_loss(symbol, direction, entry_price, exit_price):
-    """当发生止损时，自动抓取数据并分析原因"""
     try:
         k_url = f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=10"
         res = requests.get(k_url).json()
@@ -61,13 +59,11 @@ def ai_diagnose_loss(symbol, direction, entry_price, exit_price):
         candles = [{"open": float(c[1]), "high": float(c[2]), "low": float(c[3]), "close": float(c[4]), "vol": float(c[6])} for c in reversed(res["data"])]
         
         curr = candles[-1]
-        prev = candles[-2]
         body = abs(curr["close"] - curr["open"])
         upper_shadow = curr["high"] - max(curr["close"], curr["open"])
         lower_shadow = min(curr["close"], curr["open"]) - curr["low"]
         avg_vol = sum([c["vol"] for c in candles[-8:-1]]) / 7
         
-        # 1. 检查大盘拖累 (看BTC)
         btc_res = requests.get("https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=5m&limit=3").json()
         btc_change = 0
         if btc_res.get("code") == "0":
@@ -75,33 +71,19 @@ def ai_diagnose_loss(symbol, direction, entry_price, exit_price):
             btc_change = (float(btc_candles[0][4]) - float(btc_candles[-1][1])) / float(btc_candles[-1][1]) * 100
 
         reasons = []
-        
-        # 分析逻辑
         if direction == "LONG":
-            if lower_shadow > body * 2:
-                reasons.append("⚡ 遭遇插针扫损：出现极长下影线，主力恶意洗盘爆多单。")
-            if curr["close"] < curr["open"] and curr["vol"] < avg_vol * 0.8:
-                reasons.append("📉 动能衰竭：突破后无量跟风，多头力竭被反杀。")
-            if btc_change < -0.5:
-                reasons.append(f"🌐 大盘拖累：BTC 同一时间下跌 {btc_change:.2f}%，带崩全场。")
-        else: # SHORT
-            if upper_shadow > body * 2:
-                reasons.append("⚡ 遭遇轧空插针：出现极长上影线，主力爆空单。")
-            if curr["close"] > curr["open"] and curr["vol"] > avg_vol * 2:
-                reasons.append("🚀 暴力反拉：空头遭遇大资金强行逼空，放量拉升。")
-            if btc_change > 0.5:
-                reasons.append(f"🌐 大盘带动：BTC 同一时间拉升 {btc_change:.2f}%，顺势轧空。")
+            if lower_shadow > body * 2: reasons.append("⚡ 遭遇插针扫损：出现极长下影线，主力恶意洗盘爆多单。")
+            if curr["close"] < curr["open"] and curr["vol"] < avg_vol * 0.8: reasons.append("📉 动能衰竭：突破后无量跟风，多头力竭被反杀。")
+            if btc_change < -0.5: reasons.append(f"🌐 大盘拖累：BTC 同一时间下跌 {btc_change:.2f}%，带崩全场。")
+        else:
+            if upper_shadow > body * 2: reasons.append("⚡ 遭遇轧空插针：出现极长上影线，主力爆空单。")
+            if curr["close"] > curr["open"] and curr["vol"] > avg_vol * 2: reasons.append("🚀 暴力反拉：空头遭遇大资金强行逼空，放量拉升。")
+            if btc_change > 0.5: reasons.append(f"🌐 大盘带动：BTC 同一时间拉升 {btc_change:.2f}%，顺势轧空。")
 
-        if not reasons:
-            reasons.append("💣 正常技术性破位：市场随机波动导致形态失效，属于盈亏比中必须承受的合理亏损。")
+        if not reasons: reasons.append("💣 正常技术性破位：市场随机波动导致形态失效。")
+        return f"🧠 【AI 深度复盘】\n" + "\n".join(reasons)
+    except: return "AI分析模块异常。"
 
-        diagnosis = "\n".join(reasons)
-        return f"🧠 【AI 深度复盘】\n{diagnosis}"
-
-    except Exception as e:
-        return "AI分析模块出现异常。"
-
-# ================= 复盘与检查 =================
 def review_trades(trades):
     active_trades = []
     new_trades = []
@@ -117,7 +99,6 @@ def review_trades(trades):
             continue
 
         closed = False
-        # 多单
         if t["direction"] == "LONG":
             if curr_price <= t["sl"]:
                 t["status"] = "LOSS"
@@ -133,7 +114,6 @@ def review_trades(trades):
                 send_tg(f"✅ {t['symbol']} 多单止盈1达成！\n入场: {t['entry']:.4f} | 出场: {t['tp1']:.4f}")
                 closed = True
                 
-        # 空单
         elif t["direction"] == "SHORT":
             if curr_price >= t["sl"]:
                 t["status"] = "LOSS"
@@ -149,26 +129,30 @@ def review_trades(trades):
                 send_tg(f"✅ {t['symbol']} 空单止盈1达成！\n入场: {t['entry']:.4f} | 出场: {t['tp1']:.4f}")
                 closed = True
 
-        if closed:
-            new_trades.append(t)
-        else:
-            active_trades.append(t)
+        if closed: new_trades.append(t)
+        else: active_trades.append(t)
                 
     return active_trades, new_trades
-
-def calculate_stats(trades):
-    closed = [t for t in trades if t["status"] != "OPEN"]
-    if not closed: return "暂无已完结交易"
-    wins = len([t for t in closed if "WIN" in t["status"]])
-    losses = len([t for t in closed if t["status"] == "LOSS"])
-    total = len(closed)
-    win_rate = (wins / total) * 100 if total > 0 else 0
-    return f"📊 总开单: {total} | 胜: {wins} | 负: {losses} | 胜率: {win_rate:.1f}%"
 
 def scan_market(trades):
     try:
         res = requests.get("https://www.okx.com/api/v5/market/tickers?instType=SWAP").json()
-        active_coins = [t["instId"] for t in res["data"] if t["instId"].endswith("USDT-SWAP") and float(t.get("volCcy24h", 0)) * float(t.get("last", 0)) > 5000000]
+        if res.get("code") != "0": return
+        
+        active_coins = []
+        # 【修复核心】：用 try-except 过滤掉脏数据（空字符串）
+        for t in res["data"]:
+            if t["instId"].endswith("USDT-SWAP"):
+                last_price = t.get("last", "")
+                vol_24h = t.get("volCcy24h", "")
+                # 必须确保不是空字符才能计算
+                if last_price and vol_24h:
+                    try:
+                        vol_usdt = float(vol_24h) * float(last_price)
+                        if vol_usdt > 5000000:
+                            active_coins.append(t["instId"])
+                    except ValueError:
+                        pass # 如果转换失败，直接跳过这个币，不报错
         
         alerts_sent = 0
         for symbol in active_coins:
@@ -186,34 +170,24 @@ def scan_market(trades):
             
             price_change = (curr["close"] - curr["open"]) / curr["open"] * 100
             
-            # 做多
             if curr["close"] > past_20_high and 0.5 < price_change < 3.0 and curr["vol"] > avg_vol * 1.5 and curr["vol"] > 150000:
                 if check_orderbook(symbol) > 40 and check_ls_ratio(symbol) < 1.5:
                     entry = curr["close"]
                     sl = curr["low"] * 0.999
                     risk = entry - sl
                     
-                    trade = {
-                        "symbol": symbol, "direction": "LONG", "entry": entry, "sl": sl, 
-                        "tp1": entry + risk*1.5, "tp2": entry + risk*2.5, 
-                        "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"
-                    }
+                    trade = {"symbol": symbol, "direction": "LONG", "entry": entry, "sl": sl, "tp1": entry + risk*1.5, "tp2": entry + risk*2.5, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"}
                     trades.append(trade)
                     send_tg(f"🐣 开多信号! {symbol}\n入场: {entry:.4f} | 止损: {sl:.4f}\n止盈1: {trade['tp1']:.4f} | 止盈2: {trade['tp2']:.4f}")
                     alerts_sent += 1
                     
-            # 做空
             elif curr["close"] < past_20_low and -3.0 < price_change < -0.5 and curr["vol"] > avg_vol * 1.5 and curr["vol"] > 150000:
                 if check_orderbook(symbol) < 60 and check_ls_ratio(symbol) > 0.6:
                     entry = curr["close"]
                     sl = curr["high"] * 1.001
                     risk = sl - entry
                     
-                    trade = {
-                        "symbol": symbol, "direction": "SHORT", "entry": entry, "sl": sl, 
-                        "tp1": entry - risk*1.5, "tp2": entry - risk*2.5, 
-                        "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"
-                    }
+                    trade = {"symbol": symbol, "direction": "SHORT", "entry": entry, "sl": sl, "tp1": entry - risk*1.5, "tp2": entry - risk*2.5, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"}
                     trades.append(trade)
                     send_tg(f"🩸 开空信号! {symbol}\n入场: {entry:.4f} | 止损: {sl:.4f}\n止盈1: {trade['tp1']:.4f} | 止盈2: {trade['tp2']:.4f}")
                     alerts_sent += 1
@@ -225,10 +199,7 @@ def scan_market(trades):
 if __name__ == "__main__":
     print("🚀 启动量化系统...")
     all_trades = load_trades()
-    
     active_trades, new_trades = review_trades(all_trades)
     scan_market(active_trades)
-    
-    # 合并旧的历史记录和当前活跃记录
     final_trades = new_trades + active_trades
     save_trades(final_trades)
