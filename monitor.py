@@ -28,10 +28,8 @@ def load_json(file, default):
 def save_json(file, data):
     with open(file, "w") as f: json.dump(data, f, indent=4)
 
-def send_tg(message):
-    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
+def send_tg(message"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": CHAT_ID, "text": message})
 
-# 👇 新增：计算 RSI 指标（防止在极度超买超卖时接盘）
 def calculate_rsi(candles, period=14):
     if len(candles) < period + 1: return 50.0
     gains, losses = 0, 0
@@ -42,6 +40,14 @@ def calculate_rsi(candles, period=14):
     if losses == 0: return 100.0
     rs = gains / losses
     return 100.0 - (100.0 / (1.0 + rs))
+
+def check_orderbook(symbol):
+    try:
+        res = requests.get(f"https://www.okx.com/api/v5/market/books?instId={symbol}&sz=20").json()
+        bids = sum([float(b[1]) for b in res["data"][0]])
+        asks = sum([float(a[1]) for a in res["data"][1]])
+        return (bids / (bids + asks)) * 100 if (bids + asks) > 0 else 50.0
+    except: return 50.0
 
 def get_current_price(symbol):
     try:
@@ -62,7 +68,6 @@ def review_trades(trades):
         if not curr_price: active_trades.append(t); continue
 
         closed = False
-        # 盘中触发的动态保本逻辑
         if t["direction"] == "LONG":
             risk = t["entry"] - t["sl"]
             if curr_price - t["entry"] >= risk and t["sl"] < t["entry"]:
@@ -83,27 +88,11 @@ def review_trades(trades):
         else: active_trades.append(t)
     return active_trades, new_trades
 
-# 👇 新增：3小时强制结算逻辑
 def force_cycle_settlement(active_trades):
     if not active_trades: return []
-    
-    now = datetime.now(timezone.utc)
-    wins = sum(1 for t in active_trades if "WIN" in t["status"])
-    losses = sum(1 for t in active_trades if t["status"] == "LOSS")
-    
-    msg = (
-        f" 【3小时周期结算强制平仓】\n"
-        f"因到达重新扫描时间，清理当前持仓 {len(active_trades)} 单。\n"
-        f"释放资金额度，开始新一轮扫描！\n"
-        f"-------------------\n"
-        f"💼 被清理的单子:\n"
-    )
-    for t in active_trades[:5]:
-        msg += f"- {t['symbol'].split('-')[0]} {t['direction']}\n"
-    if len(active_trades) > 5: msg += f"...等共 {len(active_trades)} 单\n"
-    
+    msg = f"⏰ 【3小时周期结算强制平仓】\n因到达重新扫描时间，清理当前持仓 {len(active_trades)} 单。\n释放资金额度，开始新一轮扫描！\n-------------------\n"
     send_tg(msg)
-    return [] # 返回空列表，相当于全部清仓
+    return [] 
 
 def scan_market(trades):
     if len(trades) >= MAX_OPEN_TRADES: return
@@ -125,10 +114,8 @@ def scan_market(trades):
             prev_candles = candles[:-1]
             
             avg_vol = sum([c["vol"] for c in prev_candles[-20:]]) / 20
-            ema50 = sum([c["close"] for c in candles[-50:]]) / 50  
-            rsi = calculate_rsi(candles, 14) # 计算 RSI
+            rsi = calculate_rsi(candles, 14) 
             
-            # 过滤插针
             bad_pin_count = sum(1 for c in prev_candles[-20:] if (c["high"] - max(c["close"], c["open"])) > abs(c["close"] - c["open"]) * 2 or (min(c["close"], c["open"]) - c["low"]) > abs(c["close"] - c["open"]) * 2)
             if bad_pin_count > 4: continue
             
@@ -138,15 +125,11 @@ def scan_market(trades):
             lower_shadow = min(curr["close"], curr["open"]) - curr["low"]
             price_change = (curr["close"] - curr["open"]) / curr["open"] * 100
 
-            # ================= 【做多逻辑增强】 =================
-            # 1. 慢涨
+            # 做多
             is_slow_rise = (curr["close"] > curr["open"] and prev["close"] > prev["open"] and 0.2 < price_change < 2.5)
-            # 2. 底部放量锤子线（长下影线）
             is_hammer = (lower_shadow > body * 2 and lower_shadow > total_length * 0.5 and curr["vol"] > avg_vol * 1.2)
-            # 3. 阳包阴（大阳线反包大阴线）
             is_bull_engulf = (prev["close"] < prev["open"] and curr["close"] > curr["open"] and curr["close"] > prev["open"] and curr["open"] < prev["close"] and curr["vol"] > avg_vol * 1.2)
             
-            # 只有 RSI 不超买 (RSI < 70) 才允许做多
             if (is_slow_rise or is_hammer or is_bull_engulf) and rsi < 70:
                 entry = curr["close"]
                 recent_low = min([c["low"] for c in candles[-10:]])
@@ -162,15 +145,22 @@ def scan_market(trades):
                 tp1, tp2 = entry + risk * rr1, entry + risk * rr2
                 
                 trades.append({"symbol": symbol, "direction": "LONG", "entry": entry, "sl": sl, "tp1": tp1, "tp2": tp2, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"})
-                send_tg(f"🐂 底部反转做多! {symbol1}\n入场: {fmt_price(entry)}\n止损: {:{fmt_price(sl)} (空间 {risk/entry*rr100:.22f}%)\n🥇止盈1}(1:{rr1}): {fmt):_price(tp1)}\n🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n(RSI: {rsi:.1f})\n⏰ {get_bj_time()}")
+                
+                # 优化消息格式，防止报错
+                msg = f"🐂 底部反转做多! {symbol}\n"
+                msg += f"入场: {fmt_price(entry)}\n"
+                msg += f"止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n"
+                msg += f"🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n"
+                msg += f"🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n"
+                msg += f"(RSI: {rsi:.1f})\n⏰ {get_bj_time()}"
+                send_tg(msg)
                 alerts_sent += 1
                 continue
 
-            # ================= 【做空逻辑增强】 =================
+            # 做空
             is_top_rejection = (upper_shadow > body * 2 and upper_shadow > total_length * 0.5)
             is_bearish_engulf = (prev["close"] > prev["open"] and curr["close"] < curr["open"] and curr["close"] < prev["open"] and curr["open"] > prev["close"])
             
-            # 只有 RSI 不超卖 (RSI > 30) 才允许做空
             if (is_top_rejection or is_bearish_engulf) and rsi > 30:
                 if check_orderbook(symbol) < 55:
                     entry = curr["close"]
@@ -185,10 +175,18 @@ def scan_market(trades):
                     if risk / entry > 0.04: continue
                         
                     tp1, tp2 = entry - risk * rr1, entry - risk * rr2
-                    
                     shape = "高位流星线" if is_top_rejection else "高位阴包阳"
+                    
                     trades.append({"symbol": symbol, "direction": "SHORT", "entry": entry, "sl": sl, "tp1": tp1, "tp2": tp2, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"})
-                    send_tg(f"🔪 {shape}做空! {symbol}\n入场: {fmt_price(entry)}\n止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n🥈止盈2( {fmt_price(tp2)}\n(RSI: {rsi:.1f})\n⏰ {get_bj_time()}")
+                    
+                    # 优化消息格式
+                    msg = f"🔪 {shape}做空! {symbol}\n"
+                    msg += f"入场: {fmt_price(entry)}\n"
+                    msg += f"止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n"
+                    msg += f"🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n"
+                    msg += f"🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n"
+                    msg += f"(RSI: {rsi:.1f})\n⏰ {get_bj_time()}"
+                    send_tg(msg)
                     alerts_sent += 1
 
     except Exception as e:
@@ -201,15 +199,11 @@ if __name__ == "__main__":
     
     now = datetime.now(timezone.utc)
     
-    # 检查是否到了 3 小时强制结算时间
     if now.timestamp() - cycle_data["last_reset"] >= CYCLE_HOURS * 3600:
         active_old = [t for t in all_trades if t["status"] == "OPEN"]
         closed_old = [t for t in all_trades if t["status"] != "OPEN"]
+        force_cycle_settlement(active_old)
         
-        # 强制清理旧单子
-        cleared_active = force_cycle_settlement(active_old)
-        
-        # 只保留历史已平仓的，把挂着超过3小时的全部变为 TIMEOUT 清理
         for t in active_old:
             t["status"] = "CYCLE_TIMEOUT"
             
@@ -218,7 +212,6 @@ if __name__ == "__main__":
         save_json(CYCLE_FILE, cycle_data)
         save_json(DB_FILE, all_trades)
         
-    # 正常巡检
     active_trades, new_trades = review_trades(all_trades)
     scan_market(active_trades)
     
