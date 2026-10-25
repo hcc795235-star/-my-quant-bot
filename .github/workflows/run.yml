@@ -7,12 +7,21 @@ on:
 permissions:
   contents: write
 
+# 关键修改 1：添加并发控制，确保同一时间只有一个任务在运行
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          # 关键修改 2：获取完整历史，以便后续进行 rebase 操作
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -28,5 +37,16 @@ jobs:
           git add trades.json
           git add last_report.json
           git add cycle_time.json
-          git commit -m "Auto update records" || exit 0
+          
+          # 如果没有任何改动，则直接退出，避免空提交
+          if git diff --staged --quiet; then
+            echo "没有变化需要提交"
+            exit 0
+          fi
+          
+          git commit -m "Auto update records"
+          
+          # 关键修改 3：推送前先拉取远程最新代码并 rebase
+          git pull --rebase origin main
+          
           git push
