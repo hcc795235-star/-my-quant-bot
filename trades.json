@@ -1104,5 +1104,55 @@
         "tp2": 0.0733058,
         "time": "2026-10-25T10:20:42.959536+00:00",
         "status": "CYCLE_TIMEOUT"
+    },
+    {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2331.15,
+        "sl": 2345.1369,
+        "tp1": 2310.1696500000003,
+        "tp2": 2303.1762000000003,
+        "time": "2026-10-25T14:20:32.535782+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ADA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.2032,
+        "sl": 0.206248,
+        "tp1": 0.197104,
+        "tp2": 0.194056,
+        "time": "2026-10-25T14:20:35.037883+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ONDO-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.4005,
+        "sl": 0.4065075,
+        "tp1": 0.388485,
+        "tp2": 0.3824775,
+        "time": "2026-10-25T14:20:37.741541+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BNB-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 737.5,
+        "sl": 748.5625,
+        "tp1": 715.375,
+        "tp2": 704.3125,
+        "time": "2026-10-25T14:20:39.734564+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "CRCL-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 84.94,
+        "sl": 83.6659,
+        "tp1": 87.4882,
+        "tp2": 88.76230000000001,
+        "time": "2026-10-25T14:20:49.792584+00:00",
+        "status": "OPEN"
     }
 ]
