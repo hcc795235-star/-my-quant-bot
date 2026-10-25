@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write # 赋予修改文件的权限
+  contents: write
 
 jobs:
   build:
@@ -27,5 +27,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git add trades.json
           git add last_report.json
+          git add cycle_time.json
           git commit -m "Auto update records" || exit 0
           git push
