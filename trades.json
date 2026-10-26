@@ -3046,6 +3046,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "SNDK-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1271.5,
+        "sl": 1282.4598,
+        "tp1": 1255.0602999999999,
+        "tp2": 1249.5803999999998,
+        "time": "2026-10-26T17:50:43.348331+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "SNXX-USDT-SWAP",
         "direction": "LONG",
         "entry": 8.616,
@@ -3166,16 +3176,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SNDK-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1271.5,
-        "sl": 1282.4598,
-        "tp1": 1255.0602999999999,
-        "tp2": 1249.5803999999998,
-        "time": "2026-10-26T17:50:43.348331+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "PYTH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.07461,
@@ -3183,6 +3183,16 @@
         "tp1": 0.07200696,
         "tp2": 0.07070544,
         "time": "2026-10-26T17:53:08.417407+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "UNI-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 7.121,
+        "sl": 7.014185,
+        "tp1": 7.334630000000001,
+        "tp2": 7.441445000000001,
+        "time": "2026-10-26T17:55:31.143078+00:00",
         "status": "OPEN"
     }
 ]
