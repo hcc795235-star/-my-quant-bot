@@ -1786,6 +1786,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SNXX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 8.39,
+        "sl": 8.39,
+        "tp1": 8.138300000000001,
+        "tp2": 8.012450000000001,
+        "time": "2026-10-25T23:20:39.761845+00:00",
+        "status": "WIN_TP1"
+    },
+    {
+        "symbol": "SNDK-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1258.5,
+        "sl": 1258.5,
+        "tp1": 1243.6023,
+        "tp2": 1238.6363999999999,
+        "time": "2026-10-25T23:20:45.557955+00:00",
+        "status": "WIN_TP2"
+    },
+    {
         "symbol": "TRUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.656,
@@ -1866,16 +1886,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SNXX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 8.39,
-        "sl": 8.39,
-        "tp1": 8.138300000000001,
-        "tp2": 8.012450000000001,
-        "time": "2026-10-25T23:20:39.761845+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BNB-USDT-SWAP",
         "direction": "SHORT",
         "entry": 739.6,
@@ -1883,16 +1893,6 @@
         "tp1": 717.4119999999999,
         "tp2": 706.3179999999999,
         "time": "2026-10-25T23:20:41.868990+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "SNDK-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1258.5,
-        "sl": 1258.5,
-        "tp1": 1243.6023,
-        "tp2": 1238.6363999999999,
-        "time": "2026-10-25T23:20:45.557955+00:00",
         "status": "OPEN"
     },
     {
