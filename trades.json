@@ -2876,6 +2876,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "GRASS-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.7194,
+        "sl": 0.7007956000000001,
+        "tp1": 0.7566088,
+        "tp2": 0.7752131999999999,
+        "time": "2026-10-26T14:50:42.927006+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "ZHIPU-USDT-SWAP",
         "direction": "SHORT",
         "entry": 65.41,
@@ -2946,16 +2956,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "GRASS-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.7194,
-        "sl": 0.7007956000000001,
-        "tp1": 0.7566088,
-        "tp2": 0.7752131999999999,
-        "time": "2026-10-26T14:50:42.927006+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MRVL-USDT-SWAP",
         "direction": "LONG",
         "entry": 233.57,
@@ -3023,6 +3023,16 @@
         "tp1": 0.8938550000000001,
         "tp2": 0.8800325000000001,
         "time": "2026-10-26T15:55:31.283430+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BCH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 277.47,
+        "sl": 281.63205000000005,
+        "tp1": 269.1459,
+        "tp2": 264.98384999999996,
+        "time": "2026-10-26T16:05:29.821171+00:00",
         "status": "OPEN"
     }
 ]
