@@ -2216,6 +2216,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "ZEC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1205.84,
+        "sl": 1213.91298,
+        "tp1": 1193.7305299999998,
+        "tp2": 1189.6940399999996,
+        "time": "2026-10-26T05:35:40.533206+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 6.928,
@@ -2336,16 +2346,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ZEC-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1205.84,
-        "sl": 1213.91298,
-        "tp1": 1193.7305299999998,
-        "tp2": 1189.6940399999996,
-        "time": "2026-10-26T05:35:40.533206+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "EWZ-USDT-SWAP",
         "direction": "SHORT",
         "entry": 34.36,
@@ -2363,6 +2363,16 @@
         "tp1": 138.36079999999998,
         "tp2": 136.22119999999998,
         "time": "2026-10-26T05:45:29.737038+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 978.2,
+        "sl": 993.1824,
+        "tp1": 948.2352000000001,
+        "tp2": 933.2528000000001,
+        "time": "2026-10-26T05:50:31.042125+00:00",
         "status": "OPEN"
     }
 ]
