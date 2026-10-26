@@ -2886,6 +2886,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "BCH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 277.47,
+        "sl": 281.63205000000005,
+        "tp1": 269.1459,
+        "tp2": 264.98384999999996,
+        "time": "2026-10-26T16:05:29.821171+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "ZHIPU-USDT-SWAP",
         "direction": "SHORT",
         "entry": 65.41,
@@ -3026,13 +3036,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "BCH-USDT-SWAP",
+        "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
-        "entry": 277.47,
-        "sl": 281.63205000000005,
-        "tp1": 269.1459,
-        "tp2": 264.98384999999996,
-        "time": "2026-10-26T16:05:29.821171+00:00",
+        "entry": 0.16974,
+        "sl": 0.1722861,
+        "tp1": 0.1646478,
+        "tp2": 0.16210170000000002,
+        "time": "2026-10-26T17:20:32.580670+00:00",
         "status": "OPEN"
     }
 ]
