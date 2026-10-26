@@ -2016,6 +2016,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SKHY-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 138.76,
+        "sl": 140.8414,
+        "tp1": 134.5972,
+        "tp2": 132.51579999999998,
+        "time": "2026-10-26T02:50:37.781641+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "APT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.6912,
+        "sl": 0.7025022,
+        "tp1": 0.6685956000000002,
+        "tp2": 0.6572934000000002,
+        "time": "2026-10-26T03:55:30.766493+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "BAT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.14925,
@@ -2086,16 +2106,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHY-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 138.76,
-        "sl": 140.8414,
-        "tp1": 134.5972,
-        "tp2": 132.51579999999998,
-        "time": "2026-10-26T02:50:37.781641+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "STRK-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.04493,
@@ -2126,16 +2136,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "APT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.6912,
-        "sl": 0.7025022,
-        "tp1": 0.6685956000000002,
-        "tp2": 0.6572934000000002,
-        "time": "2026-10-26T03:55:30.766493+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "DOS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.2834,
@@ -2153,6 +2153,26 @@
         "tp1": 1.5908,
         "tp2": 1.5662,
         "time": "2026-10-26T04:55:29.895153+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.6338,
+        "sl": 1.658307,
+        "tp1": 1.5847859999999998,
+        "tp2": 1.5602789999999997,
+        "time": "2026-10-26T05:00:50.335868+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "QUANT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 191.2,
+        "sl": 188.332,
+        "tp1": 196.93599999999998,
+        "tp2": 199.80399999999997,
+        "time": "2026-10-26T05:00:52.093835+00:00",
         "status": "OPEN"
     }
 ]
