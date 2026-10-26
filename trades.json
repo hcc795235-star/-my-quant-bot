@@ -2036,6 +2036,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "XAU-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 4000.1,
+        "sl": 4024.1005999999998,
+        "tp1": 3964.0991000000004,
+        "tp2": 3952.0988,
+        "time": "2026-10-26T02:20:52.785884+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "SAMSUNG-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 160.86,
+        "sl": 163.27290000000002,
+        "tp1": 156.0342,
+        "tp2": 153.6213,
+        "time": "2026-10-26T02:30:51.158761+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "BAT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.14925,
@@ -2056,16 +2076,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "XAU-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 4000.1,
-        "sl": 4024.1005999999998,
-        "tp1": 3964.0991000000004,
-        "tp2": 3952.0988,
-        "time": "2026-10-26T02:20:52.785884+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "VVV-USDT-SWAP",
         "direction": "SHORT",
         "entry": 24.864,
@@ -2083,16 +2093,6 @@
         "tp1": 7.51265,
         "tp2": 7.396475,
         "time": "2026-10-26T02:30:48.269557+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "SAMSUNG-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 160.86,
-        "sl": 163.27290000000002,
-        "tp1": 156.0342,
-        "tp2": 153.6213,
-        "time": "2026-10-26T02:30:51.158761+00:00",
         "status": "OPEN"
     },
     {
@@ -2173,6 +2173,26 @@
         "tp1": 196.93599999999998,
         "tp2": 199.80399999999997,
         "time": "2026-10-26T05:00:52.093835+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "UNI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 6.934,
+        "sl": 7.03801,
+        "tp1": 6.725980000000001,
+        "tp2": 6.621970000000001,
+        "time": "2026-10-26T05:05:30.537221+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2322.96,
+        "sl": 2336.89776,
+        "tp1": 2302.0533600000003,
+        "tp2": 2295.0844800000004,
+        "time": "2026-10-26T05:05:32.938466+00:00",
         "status": "OPEN"
     }
 ]
