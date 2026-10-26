@@ -2806,6 +2806,26 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "INTC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 87.36,
+        "sl": 88.6704,
+        "tp1": 84.7392,
+        "tp2": 83.4288,
+        "time": "2026-10-26T14:30:56.663535+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "GRASS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.7094,
+        "sl": 0.7203378,
+        "tp1": 0.6875244,
+        "tp2": 0.6765866,
+        "time": "2026-10-26T14:40:42.763183+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "RLS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.002615,
@@ -2823,16 +2843,6 @@
         "tp1": 63.4477,
         "tp2": 62.46655,
         "time": "2026-10-26T14:30:50.371779+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "INTC-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 87.36,
-        "sl": 88.6704,
-        "tp1": 84.7392,
-        "tp2": 83.4288,
-        "time": "2026-10-26T14:30:56.663535+00:00",
         "status": "OPEN"
     },
     {
@@ -2863,16 +2873,6 @@
         "tp1": 0.2007415,
         "tp2": 0.19763725,
         "time": "2026-10-26T14:40:40.567029+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "GRASS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.7094,
-        "sl": 0.7203378,
-        "tp1": 0.6875244,
-        "tp2": 0.6765866,
-        "time": "2026-10-26T14:40:42.763183+00:00",
         "status": "OPEN"
     },
     {
@@ -2913,6 +2913,36 @@
         "tp1": 74.46668000000003,
         "tp2": 77.11002000000003,
         "time": "2026-10-26T14:45:49.022922+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 807.84,
+        "sl": 779.55776,
+        "tp1": 864.40448,
+        "tp2": 892.68672,
+        "time": "2026-10-26T14:50:32.919007+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "META-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 647.84,
+        "sl": 657.5576,
+        "tp1": 628.4048000000001,
+        "tp2": 618.6872000000002,
+        "time": "2026-10-26T14:50:37.641274+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "GRASS-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.7194,
+        "sl": 0.7007956000000001,
+        "tp1": 0.7566088,
+        "tp2": 0.7752131999999999,
+        "time": "2026-10-26T14:50:42.927006+00:00",
         "status": "OPEN"
     }
 ]
