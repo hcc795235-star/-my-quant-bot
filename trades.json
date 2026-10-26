@@ -1766,6 +1766,26 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 972.2,
+        "sl": 986.783,
+        "tp1": 943.0340000000001,
+        "tp2": 928.4510000000001,
+        "time": "2026-10-25T23:25:26.606161+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "LIGHT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.2303,
+        "sl": 0.2337545,
+        "tp1": 0.223391,
+        "tp2": 0.2199365,
+        "time": "2026-10-25T23:30:44.140243+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "TRUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.656,
@@ -1876,16 +1896,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 972.2,
-        "sl": 986.783,
-        "tp1": 943.0340000000001,
-        "tp2": 928.4510000000001,
-        "time": "2026-10-25T23:25:26.606161+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ASTER-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.7015,
@@ -1896,16 +1906,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LIGHT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.2303,
-        "sl": 0.2337545,
-        "tp1": 0.223391,
-        "tp2": 0.2199365,
-        "time": "2026-10-25T23:30:44.140243+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "APT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.7002,
@@ -1913,6 +1913,16 @@
         "tp1": 0.7212060000000001,
         "tp2": 0.7317090000000002,
         "time": "2026-10-25T23:33:52.308938+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 990.0,
+        "sl": 1004.85,
+        "tp1": 960.3,
+        "tp2": 945.4499999999999,
+        "time": "2026-10-26T00:10:36.164813+00:00",
         "status": "OPEN"
     }
 ]
