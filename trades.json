@@ -2056,6 +2056,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "DOS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.2834,
+        "sl": 0.287651,
+        "tp1": 0.274898,
+        "tp2": 0.27064699999999997,
+        "time": "2026-10-26T04:55:27.982852+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "BAT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.14925,
@@ -2136,16 +2146,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "DOS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.2834,
-        "sl": 0.287651,
-        "tp1": 0.274898,
-        "tp2": 0.27064699999999997,
-        "time": "2026-10-26T04:55:27.982852+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "TRUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.64,
@@ -2193,6 +2193,16 @@
         "tp1": 2302.0533600000003,
         "tp2": 2295.0844800000004,
         "time": "2026-10-26T05:05:32.938466+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "APT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.7031,
+        "sl": 0.7136465,
+        "tp1": 0.6820069999999999,
+        "tp2": 0.6714604999999999,
+        "time": "2026-10-26T05:10:31.570004+00:00",
         "status": "OPEN"
     }
 ]
