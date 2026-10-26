@@ -2866,6 +2866,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "QUANT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 213.9,
+        "sl": 210.27859999999998,
+        "tp1": 221.14280000000005,
+        "tp2": 224.76420000000007,
+        "time": "2026-10-26T15:00:53.579450+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "ZHIPU-USDT-SWAP",
         "direction": "SHORT",
         "entry": 65.41,
@@ -2956,16 +2966,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "QUANT-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 213.9,
-        "sl": 210.27859999999998,
-        "tp1": 221.14280000000005,
-        "tp2": 224.76420000000007,
-        "time": "2026-10-26T15:00:53.579450+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "AAPL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 346.76,
@@ -3013,6 +3013,16 @@
         "tp1": 55.745900000000006,
         "tp2": 54.88385000000001,
         "time": "2026-10-26T15:15:40.316911+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SUI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.9215,
+        "sl": 0.9353225,
+        "tp1": 0.8938550000000001,
+        "tp2": 0.8800325000000001,
+        "time": "2026-10-26T15:55:31.283430+00:00",
         "status": "OPEN"
     }
 ]
