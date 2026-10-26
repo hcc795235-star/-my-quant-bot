@@ -2246,6 +2246,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "DOOD-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.002001,
+        "sl": 0.002001,
+        "tp1": 0.0019409700000000002,
+        "tp2": 0.0019109550000000002,
+        "time": "2026-10-26T06:55:25.211858+00:00",
+        "status": "WIN_TP2"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 6.928,
@@ -2386,13 +2396,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "DOOD-USDT-SWAP",
+        "symbol": "ZHONGJI-USDT-SWAP",
         "direction": "SHORT",
-        "entry": 0.002001,
-        "sl": 0.002031015,
-        "tp1": 0.0019409700000000002,
-        "tp2": 0.0019109550000000002,
-        "time": "2026-10-26T06:55:25.211858+00:00",
+        "entry": 92.34,
+        "sl": 93.7251,
+        "tp1": 89.56980000000001,
+        "tp2": 88.18470000000002,
+        "time": "2026-10-26T07:10:31.884095+00:00",
         "status": "OPEN"
     }
 ]
