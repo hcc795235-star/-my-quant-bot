@@ -3816,6 +3816,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "PONS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.242,
+        "sl": 0.24563,
+        "tp1": 0.23474,
+        "tp2": 0.23111,
+        "time": "2026-10-27T05:45:48.170574+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "SAND-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.04775,
@@ -3863,16 +3873,6 @@
         "tp1": 1206.00704,
         "tp2": 1200.85272,
         "time": "2026-10-27T05:45:45.614471+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "PONS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.242,
-        "sl": 0.24563,
-        "tp1": 0.23474,
-        "tp2": 0.23111,
-        "time": "2026-10-27T05:45:48.170574+00:00",
         "status": "OPEN"
     },
     {
@@ -3963,6 +3963,16 @@
         "tp1": 716.1413,
         "tp2": 705.06695,
         "time": "2026-10-27T06:00:37.958590+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "CHIP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.05108,
+        "sl": 0.052284359999999995,
+        "tp1": 0.04867128000000001,
+        "tp2": 0.04746692000000002,
+        "time": "2026-10-27T07:10:47.069786+00:00",
         "status": "OPEN"
     }
 ]
