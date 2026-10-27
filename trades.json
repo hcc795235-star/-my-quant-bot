@@ -4834,5 +4834,55 @@
         "tp2": 1281.5446799999997,
         "time": "2026-10-27T21:01:14.802307+00:00",
         "status": "OPEN"
+    },
+    {
+        "symbol": "W-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.012761,
+        "sl": 0.012952415,
+        "tp1": 0.012378169999999999,
+        "tp2": 0.012186754999999999,
+        "time": "2026-10-27T21:05:23.388877+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 43.55,
+        "sl": 44.20325,
+        "tp1": 42.2435,
+        "tp2": 41.59025,
+        "time": "2026-10-27T21:05:30.287475+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LTC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 56.69,
+        "sl": 57.54035,
+        "tp1": 54.9893,
+        "tp2": 54.13895,
+        "time": "2026-10-27T21:05:31.285188+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "GLW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 126.0,
+        "sl": 127.89,
+        "tp1": 122.22,
+        "tp2": 120.33,
+        "time": "2026-10-27T21:05:37.233260+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "CXMT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 6.713,
+        "sl": 6.813695,
+        "tp1": 6.51161,
+        "tp2": 6.410915,
+        "time": "2026-10-27T21:05:44.384964+00:00",
+        "status": "OPEN"
     }
 ]
