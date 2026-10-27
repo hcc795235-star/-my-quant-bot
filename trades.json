@@ -4634,5 +4634,75 @@
         "tp2": 0.0031297749999999996,
         "time": "2026-10-27T17:55:39.816821+00:00",
         "status": "OPEN"
+    },
+    {
+        "symbol": "DOGE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.07817,
+        "sl": 0.07934255,
+        "tp1": 0.07582490000000001,
+        "tp2": 0.07465235000000002,
+        "time": "2026-10-27T17:58:20.752393+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ADA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.2047,
+        "sl": 0.2077705,
+        "tp1": 0.19855899999999999,
+        "tp2": 0.19548849999999998,
+        "time": "2026-10-27T17:58:24.192415+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "TRUMP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.692,
+        "sl": 1.71738,
+        "tp1": 1.64124,
+        "tp2": 1.61586,
+        "time": "2026-10-27T17:58:25.157338+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SOL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 100.77,
+        "sl": 102.28155,
+        "tp1": 97.7469,
+        "tp2": 96.23535,
+        "time": "2026-10-27T17:58:26.344026+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "WLD-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.4364,
+        "sl": 0.442946,
+        "tp1": 0.423308,
+        "tp2": 0.416762,
+        "time": "2026-10-27T17:58:27.711880+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ONDO-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.4144,
+        "sl": 0.420616,
+        "tp1": 0.401968,
+        "tp2": 0.395752,
+        "time": "2026-10-27T17:58:29.559571+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LTC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 56.6,
+        "sl": 57.449,
+        "tp1": 54.90200000000001,
+        "tp2": 54.05300000000001,
+        "time": "2026-10-27T17:58:30.768003+00:00",
+        "status": "OPEN"
     }
 ]
