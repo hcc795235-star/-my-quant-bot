@@ -3656,6 +3656,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 48.13,
+        "sl": 48.85195,
+        "tp1": 46.6861,
+        "tp2": 45.964150000000004,
+        "time": "2026-10-27T03:10:39.031651+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "CHIP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.05121,
@@ -3726,16 +3736,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOXS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 48.13,
-        "sl": 48.85195,
-        "tp1": 46.6861,
-        "tp2": 45.964150000000004,
-        "time": "2026-10-27T03:10:39.031651+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ETHFI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6421,
@@ -3789,7 +3789,7 @@
         "symbol": "ZHONGJI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 95.31,
-        "sl": 96.73965,
+        "sl": 95.31,
         "tp1": 92.45070000000001,
         "tp2": 91.02105000000002,
         "time": "2026-10-27T03:40:32.504128+00:00",
@@ -3803,6 +3803,16 @@
         "tp1": 0.880469,
         "tp2": 0.8668534999999999,
         "time": "2026-10-27T04:40:36.279661+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "APT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.6768,
+        "sl": 0.6666479999999999,
+        "tp1": 0.6971040000000001,
+        "tp2": 0.7072560000000001,
+        "time": "2026-10-27T05:30:38.782670+00:00",
         "status": "OPEN"
     }
 ]
