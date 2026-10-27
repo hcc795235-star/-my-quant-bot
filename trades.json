@@ -4266,6 +4266,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "STRK-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.04685,
+        "sl": 0.04685,
+        "tp1": 0.0454445,
+        "tp2": 0.04474175,
+        "time": "2026-10-27T12:40:42.391350+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "MRVL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 238.08,
@@ -4356,16 +4366,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "STRK-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.04685,
-        "sl": 0.04685,
-        "tp1": 0.0454445,
-        "tp2": 0.04474175,
-        "time": "2026-10-27T12:40:42.391350+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "AVAX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 8.857,
@@ -4413,6 +4413,16 @@
         "tp1": 0.0262284,
         "tp2": 0.026787599999999998,
         "time": "2026-10-27T14:10:43.159397+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BZ-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 109.7,
+        "sl": 111.3455,
+        "tp1": 106.409,
+        "tp2": 104.76350000000001,
+        "time": "2026-10-27T14:30:56.651396+00:00",
         "status": "OPEN"
     }
 ]
