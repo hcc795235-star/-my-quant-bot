@@ -3996,6 +3996,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "BABY-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.014328,
+        "sl": 0.014328,
+        "tp1": 0.01389816,
+        "tp2": 0.01368324,
+        "time": "2026-10-27T09:01:01.679490+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "USELESS-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.15549,
@@ -4079,20 +4089,10 @@
         "symbol": "SOON-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.3047,
-        "sl": 0.3092705,
+        "sl": 0.3047,
         "tp1": 0.29555900000000007,
         "tp2": 0.2909885000000001,
         "time": "2026-10-27T09:00:56.427582+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "BABY-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.014328,
-        "sl": 0.014328,
-        "tp1": 0.01389816,
-        "tp2": 0.01368324,
-        "time": "2026-10-27T09:01:01.679490+00:00",
         "status": "OPEN"
     },
     {
@@ -4143,6 +4143,16 @@
         "tp1": 0.2571888,
         "tp2": 0.2501332,
         "time": "2026-10-27T09:10:37.011053+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "DOGE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.07697,
+        "sl": 0.07581544999999999,
+        "tp1": 0.0792791,
+        "tp2": 0.08043365000000001,
+        "time": "2026-10-27T09:43:05.256615+00:00",
         "status": "OPEN"
     }
 ]
