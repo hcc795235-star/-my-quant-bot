@@ -4176,6 +4176,26 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "CHIP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.05295,
+        "sl": 0.05378736,
+        "tp1": 0.05127527999999999,
+        "tp2": 0.05043791999999999,
+        "time": "2026-10-27T11:50:57.493784+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "ENA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.20068,
+        "sl": 0.20496912,
+        "tp1": 0.19210175999999998,
+        "tp2": 0.18781263999999998,
+        "time": "2026-10-27T12:01:02.404585+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "MRVL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 238.08,
@@ -4246,16 +4266,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "CHIP-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.05295,
-        "sl": 0.05378736,
-        "tp1": 0.05127527999999999,
-        "tp2": 0.05043791999999999,
-        "time": "2026-10-27T11:50:57.493784+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "HYPE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 77.935,
@@ -4286,16 +4296,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ENA-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.20068,
-        "sl": 0.20496912,
-        "tp1": 0.19210175999999998,
-        "tp2": 0.18781263999999998,
-        "time": "2026-10-27T12:01:02.404585+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BNB-USDT-SWAP",
         "direction": "SHORT",
         "entry": 739.24,
@@ -4323,6 +4323,16 @@
         "tp1": 144.32629999999997,
         "tp2": 142.09444999999997,
         "time": "2026-10-27T12:10:44.797005+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ONDO-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.4109,
+        "sl": 0.4170635,
+        "tp1": 0.398573,
+        "tp2": 0.3924095,
+        "time": "2026-10-27T12:25:33.289795+00:00",
         "status": "OPEN"
     }
 ]
