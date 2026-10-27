@@ -4846,6 +4846,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "BAT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.147,
+        "sl": 0.14479499999999998,
+        "tp1": 0.15141000000000002,
+        "tp2": 0.15361500000000003,
+        "time": "2026-10-27T21:10:44.118402+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "DASH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 55.42,
@@ -4936,16 +4946,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "BAT-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.147,
-        "sl": 0.14479499999999998,
-        "tp1": 0.15141000000000002,
-        "tp2": 0.15361500000000003,
-        "time": "2026-10-27T21:10:44.118402+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.053,
@@ -4993,6 +4993,16 @@
         "tp1": 137.0416,
         "tp2": 134.92239999999998,
         "time": "2026-10-27T22:55:24.412934+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ETHFI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.6666,
+        "sl": 0.676599,
+        "tp1": 0.646602,
+        "tp2": 0.636603,
+        "time": "2026-10-27T23:10:42.365459+00:00",
         "status": "OPEN"
     }
 ]
