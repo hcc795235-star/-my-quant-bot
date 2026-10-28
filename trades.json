@@ -5666,6 +5666,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "KORU-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 13.14,
+        "sl": 13.14,
+        "tp1": 13.534200000000002,
+        "tp2": 13.731300000000003,
+        "time": "2026-10-28T09:15:46.039701+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "SOXS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 41.64,
@@ -5703,16 +5713,6 @@
         "tp1": 4.82478e-06,
         "tp2": 4.75017e-06,
         "time": "2026-10-28T09:15:43.568096+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "KORU-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 13.14,
-        "sl": 13.14,
-        "tp1": 13.534200000000002,
-        "tp2": 13.731300000000003,
-        "time": "2026-10-28T09:15:46.039701+00:00",
         "status": "OPEN"
     },
     {
