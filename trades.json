@@ -6306,6 +6306,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "BAT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.13827,
+        "sl": 0.14059062,
+        "tp1": 0.13362876,
+        "tp2": 0.13130814000000002,
+        "time": "2026-10-28T18:25:40.465139+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "MSTR-USDT-SWAP",
         "direction": "SHORT",
         "entry": 139.72,
@@ -6386,16 +6396,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "BAT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.13827,
-        "sl": 0.14059062,
-        "tp1": 0.13362876,
-        "tp2": 0.13130814000000002,
-        "time": "2026-10-28T18:25:40.465139+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "USELESS-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.16217,
@@ -6409,7 +6409,7 @@
         "symbol": "CASHCAT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.0981,
-        "sl": 0.0966285,
+        "sl": 0.0981,
         "tp1": 0.10104300000000001,
         "tp2": 0.10251450000000001,
         "time": "2026-10-28T18:30:57.020616+00:00",
@@ -6453,6 +6453,16 @@
         "tp1": 0.20939900000000003,
         "tp2": 0.21244850000000004,
         "time": "2026-10-28T18:35:33.573247+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "HOOD-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 91.66,
+        "sl": 89.88986,
+        "tp1": 95.20027999999999,
+        "tp2": 96.97041999999999,
+        "time": "2026-10-28T18:40:52.549788+00:00",
         "status": "OPEN"
     }
 ]
