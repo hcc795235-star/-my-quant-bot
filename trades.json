@@ -5166,6 +5166,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "APR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.04847,
+        "sl": 0.049348500000000003,
+        "tp1": 0.04671299999999999,
+        "tp2": 0.045834499999999986,
+        "time": "2026-10-28T03:25:32.670046+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.004369,
@@ -5296,16 +5306,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "APR-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.04847,
-        "sl": 0.049348500000000003,
-        "tp1": 0.04671299999999999,
-        "tp2": 0.045834499999999986,
-        "time": "2026-10-28T03:25:32.670046+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "TRX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.33079,
@@ -5313,6 +5313,16 @@
         "tp1": 0.3208663,
         "tp2": 0.31590445,
         "time": "2026-10-28T03:30:51.310979+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "APR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.05008,
+        "sl": 0.0508312,
+        "tp1": 0.0485776,
+        "tp2": 0.0478264,
+        "time": "2026-10-28T03:35:36.941472+00:00",
         "status": "OPEN"
     }
 ]
