@@ -5834,5 +5834,75 @@
         "tp2": 4.44075,
         "time": "2026-10-28T12:10:42.313001+00:00",
         "status": "OPEN"
+    },
+    {
+        "symbol": "DOGE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.07957,
+        "sl": 0.07837645,
+        "tp1": 0.0819571,
+        "tp2": 0.08315065,
+        "time": "2026-10-28T12:15:30.987769+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "IRYS-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.02377,
+        "sl": 0.02341345,
+        "tp1": 0.0244831,
+        "tp2": 0.02483965,
+        "time": "2026-10-28T12:15:36.588266+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ONDO-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.4153,
+        "sl": 0.4090705,
+        "tp1": 0.427759,
+        "tp2": 0.4339885,
+        "time": "2026-10-28T12:15:37.502017+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "USELESS-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.16363,
+        "sl": 0.16117555,
+        "tp1": 0.1685389,
+        "tp2": 0.17099335,
+        "time": "2026-10-28T12:15:40.403690+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "FIL-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.898,
+        "sl": 0.88453,
+        "tp1": 0.92494,
+        "tp2": 0.93841,
+        "time": "2026-10-28T12:15:41.338481+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SKHY-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 156.56,
+        "sl": 158.9084,
+        "tp1": 151.8632,
+        "tp2": 149.5148,
+        "time": "2026-10-28T12:15:42.303277+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "APR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.04638,
+        "sl": 0.0470757,
+        "tp1": 0.0449886,
+        "tp2": 0.044292899999999996,
+        "time": "2026-10-28T12:15:45.159777+00:00",
+        "status": "OPEN"
     }
 ]
