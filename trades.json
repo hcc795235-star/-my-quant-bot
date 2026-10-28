@@ -6076,6 +6076,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "IRYS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.02293,
+        "sl": 0.02345682,
+        "tp1": 0.021876359999999997,
+        "tp2": 0.021349539999999997,
+        "time": "2026-10-28T15:20:38.246611+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.055,
@@ -6146,16 +6156,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "IRYS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.02293,
-        "sl": 0.02345682,
-        "tp1": 0.021876359999999997,
-        "tp2": 0.021349539999999997,
-        "time": "2026-10-28T15:20:38.246611+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 225.01,
@@ -6223,6 +6223,16 @@
         "tp1": 943.7712000000001,
         "tp2": 929.1768000000002,
         "time": "2026-10-28T15:35:45.265540+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "PENGU-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.007735,
+        "sl": 0.007851025,
+        "tp1": 0.00750295,
+        "tp2": 0.007386925000000001,
+        "time": "2026-10-28T15:50:46.527874+00:00",
         "status": "OPEN"
     }
 ]
