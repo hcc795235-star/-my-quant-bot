@@ -6336,6 +6336,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "CASHCAT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.0981,
+        "sl": 0.0981,
+        "tp1": 0.10104300000000001,
+        "tp2": 0.10251450000000001,
+        "time": "2026-10-28T18:30:57.020616+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "MSTR-USDT-SWAP",
         "direction": "SHORT",
         "entry": 139.72,
@@ -6406,16 +6416,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "CASHCAT-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.0981,
-        "sl": 0.0981,
-        "tp1": 0.10104300000000001,
-        "tp2": 0.10251450000000001,
-        "time": "2026-10-28T18:30:57.020616+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BZ-USDT-SWAP",
         "direction": "SHORT",
         "entry": 111.61,
@@ -6483,6 +6483,16 @@
         "tp1": 71.46960000000001,
         "tp2": 70.36440000000002,
         "time": "2026-10-28T18:50:48.002153+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BLUR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.008472,
+        "sl": 0.008626218,
+        "tp1": 0.008163564000000002,
+        "tp2": 0.008009346000000002,
+        "time": "2026-10-28T19:05:33.915708+00:00",
         "status": "OPEN"
     }
 ]
