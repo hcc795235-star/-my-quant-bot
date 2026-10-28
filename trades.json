@@ -6346,6 +6346,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "ENA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.20257,
+        "sl": 0.20560855,
+        "tp1": 0.1964929,
+        "tp2": 0.19345435,
+        "time": "2026-10-28T18:45:40.477643+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "MSTR-USDT-SWAP",
         "direction": "SHORT",
         "entry": 139.72,
@@ -6466,16 +6476,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ENA-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.20257,
-        "sl": 0.20560855,
-        "tp1": 0.1964929,
-        "tp2": 0.19345435,
-        "time": "2026-10-28T18:45:40.477643+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ZHIPU-USDT-SWAP",
         "direction": "SHORT",
         "entry": 73.68,
@@ -6493,6 +6493,16 @@
         "tp1": 0.008163564000000002,
         "tp2": 0.008009346000000002,
         "time": "2026-10-28T19:05:33.915708+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "AKE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.02341,
+        "sl": 0.0238977,
+        "tp1": 0.0224346,
+        "tp2": 0.0219469,
+        "time": "2026-10-28T19:27:34.315317+00:00",
         "status": "OPEN"
     }
 ]
