@@ -5406,6 +5406,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "PONS-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.3067,
+        "sl": 0.30119640000000003,
+        "tp1": 0.31770719999999986,
+        "tp2": 0.3232107999999998,
+        "time": "2026-10-28T06:10:53.556877+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "FIL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.9087,
@@ -5516,16 +5526,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "PONS-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.3067,
-        "sl": 0.30119640000000003,
-        "tp1": 0.31770719999999986,
-        "tp2": 0.3232107999999998,
-        "time": "2026-10-28T06:10:53.556877+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "TSLA-USDT-SWAP",
         "direction": "SHORT",
         "entry": 412.45,
@@ -5553,6 +5553,16 @@
         "tp1": 0.13863799999999998,
         "tp2": 0.14065699999999998,
         "time": "2026-10-28T06:25:26.243142+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SOL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 101.96,
+        "sl": 103.48939999999999,
+        "tp1": 98.9012,
+        "tp2": 97.37180000000001,
+        "time": "2026-10-28T06:55:28.850075+00:00",
         "status": "OPEN"
     }
 ]
