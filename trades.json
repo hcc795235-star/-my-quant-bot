@@ -5176,6 +5176,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "MINIMAX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 23.04,
+        "sl": 23.3856,
+        "tp1": 22.348799999999997,
+        "tp2": 22.003199999999996,
+        "time": "2026-10-28T03:20:04.528666+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.004369,
@@ -5263,16 +5273,6 @@
         "tp1": 85.2921,
         "tp2": 83.97315,
         "time": "2026-10-28T03:19:58.481247+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "MINIMAX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 23.04,
-        "sl": 23.3856,
-        "tp1": 22.348799999999997,
-        "tp2": 22.003199999999996,
-        "time": "2026-10-28T03:20:04.528666+00:00",
         "status": "OPEN"
     },
     {
