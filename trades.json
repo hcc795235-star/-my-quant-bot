@@ -5186,6 +5186,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "APR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.05008,
+        "sl": 0.05008,
+        "tp1": 0.0485776,
+        "tp2": 0.0478264,
+        "time": "2026-10-28T03:35:36.941472+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.004369,
@@ -5316,16 +5326,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "APR-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.05008,
-        "sl": 0.05008,
-        "tp1": 0.0485776,
-        "tp2": 0.0478264,
-        "time": "2026-10-28T03:35:36.941472+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BEAT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.09201,
@@ -5333,6 +5333,16 @@
         "tp1": 0.09621035999999998,
         "tp2": 0.09831053999999997,
         "time": "2026-10-28T03:45:50.215567+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SNXX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 9.842,
+        "sl": 9.98963,
+        "tp1": 9.546740000000002,
+        "tp2": 9.399110000000002,
+        "time": "2026-10-28T03:50:34.718172+00:00",
         "status": "OPEN"
     }
 ]
