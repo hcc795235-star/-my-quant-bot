@@ -6466,6 +6466,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "ORCL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 145.5,
+        "sl": 145.5,
+        "tp1": 141.135,
+        "tp2": 138.9525,
+        "time": "2026-10-28T19:55:39.543601+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "SKHY-USDT-SWAP",
         "direction": "SHORT",
         "entry": 163.92,
@@ -6549,20 +6559,10 @@
         "symbol": "ETHW-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.2449,
-        "sl": 0.2485735,
+        "sl": 0.2449,
         "tp1": 0.23755300000000001,
         "tp2": 0.23387950000000002,
         "time": "2026-10-28T19:51:00.390680+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "ORCL-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 145.5,
-        "sl": 145.5,
-        "tp1": 141.135,
-        "tp2": 138.9525,
-        "time": "2026-10-28T19:55:39.543601+00:00",
         "status": "OPEN"
     },
     {
