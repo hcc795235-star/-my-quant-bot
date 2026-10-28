@@ -6126,6 +6126,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "CSOPSKHYNIX2L-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 3.35,
+        "sl": 3.40025,
+        "tp1": 3.2495,
+        "tp2": 3.1992499999999997,
+        "time": "2026-10-28T15:30:58.840864+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.055,
@@ -6206,16 +6216,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "CSOPSKHYNIX2L-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 3.35,
-        "sl": 3.40025,
-        "tp1": 3.2495,
-        "tp2": 3.1992499999999997,
-        "time": "2026-10-28T15:30:58.840864+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MU-USDT-SWAP",
         "direction": "SHORT",
         "entry": 972.96,
@@ -6273,6 +6273,16 @@
         "tp1": 1132.4157,
         "tp2": 1128.9876000000002,
         "time": "2026-10-28T17:00:58.020482+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ZAMA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.07492,
+        "sl": 0.0760438,
+        "tp1": 0.07267240000000001,
+        "tp2": 0.07154860000000002,
+        "time": "2026-10-28T17:05:46.245831+00:00",
         "status": "OPEN"
     }
 ]
