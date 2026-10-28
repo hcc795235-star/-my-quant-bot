@@ -5846,6 +5846,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SKHY-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 156.56,
+        "sl": 158.9084,
+        "tp1": 151.8632,
+        "tp2": 149.5148,
+        "time": "2026-10-28T12:15:42.303277+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "HOOD-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 88.76,
+        "sl": 90.09140000000001,
+        "tp1": 86.0972,
+        "tp2": 84.7658,
+        "time": "2026-10-28T13:20:49.885641+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "NEAR-USDT-SWAP",
         "direction": "SHORT",
         "entry": 4.65,
@@ -5896,16 +5916,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHY-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 156.56,
-        "sl": 158.9084,
-        "tp1": 151.8632,
-        "tp2": 149.5148,
-        "time": "2026-10-28T12:15:42.303277+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MRVL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 247.74,
@@ -5929,7 +5939,7 @@
         "symbol": "CRWV-USDT-SWAP",
         "direction": "SHORT",
         "entry": 61.17,
-        "sl": 62.08755,
+        "sl": 61.17,
         "tp1": 59.334900000000005,
         "tp2": 58.417350000000006,
         "time": "2026-10-28T12:20:48.302331+00:00",
@@ -5986,13 +5996,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "HOOD-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 88.76,
-        "sl": 90.09140000000001,
-        "tp1": 86.0972,
-        "tp2": 84.7658,
-        "time": "2026-10-28T13:20:49.885641+00:00",
+        "symbol": "QQQ-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 725.06,
+        "sl": 714.1841,
+        "tp1": 746.8118,
+        "tp2": 757.6877,
+        "time": "2026-10-28T13:30:51.584168+00:00",
         "status": "OPEN"
     }
 ]
