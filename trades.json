@@ -6096,6 +6096,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "LTC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 58.49,
+        "sl": 59.36735,
+        "tp1": 56.7353,
+        "tp2": 55.85795,
+        "time": "2026-10-28T15:25:37.955996+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.055,
@@ -6186,16 +6196,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LTC-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 58.49,
-        "sl": 59.36735,
-        "tp1": 56.7353,
-        "tp2": 55.85795,
-        "time": "2026-10-28T15:25:37.955996+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "CSOPSKHYNIX2L-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3.35,
@@ -6243,6 +6243,16 @@
         "tp1": 106.9425,
         "tp2": 105.28875,
         "time": "2026-10-28T16:20:50.744339+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "DOGE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.07916,
+        "sl": 0.0803474,
+        "tp1": 0.07678519999999998,
+        "tp2": 0.07559779999999998,
+        "time": "2026-10-28T16:40:36.460793+00:00",
         "status": "OPEN"
     }
 ]
