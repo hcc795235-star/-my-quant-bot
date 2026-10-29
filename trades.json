@@ -6976,6 +6976,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "IRYS-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.02312,
+        "sl": 0.02312,
+        "tp1": 0.024030840000000005,
+        "tp2": 0.024486260000000006,
+        "time": "2026-10-29T02:15:40.104930+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "BZ-USDT-SWAP",
         "direction": "SHORT",
         "entry": 110.82,
@@ -7096,16 +7106,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "IRYS-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.02312,
-        "sl": 0.02312,
-        "tp1": 0.024030840000000005,
-        "tp2": 0.024486260000000006,
-        "time": "2026-10-29T02:15:40.104930+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ARB-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.1654,
@@ -7123,6 +7123,16 @@
         "tp1": 2321.42648,
         "tp2": 2328.32864,
         "time": "2026-10-29T02:33:01.467166+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "USELESS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.1551,
+        "sl": 0.1574265,
+        "tp1": 0.15044699999999997,
+        "tp2": 0.14812049999999996,
+        "time": "2026-10-29T03:15:42.625868+00:00",
         "status": "OPEN"
     }
 ]
