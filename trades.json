@@ -6686,6 +6686,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "IRYS-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.02396,
+        "sl": 0.023572759999999998,
+        "tp1": 0.02473448,
+        "tp2": 0.02512172,
+        "time": "2026-10-29T00:10:43.399550+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "DRAM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 52.91,
@@ -6826,13 +6836,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "IRYS-USDT-SWAP",
+        "symbol": "SOXS-USDT-SWAP",
         "direction": "LONG",
-        "entry": 0.02396,
-        "sl": 0.023572759999999998,
-        "tp1": 0.02473448,
-        "tp2": 0.02512172,
-        "time": "2026-10-29T00:10:43.399550+00:00",
+        "entry": 42.15,
+        "sl": 41.51775,
+        "tp1": 43.4145,
+        "tp2": 44.046749999999996,
+        "time": "2026-10-29T00:15:43.416855+00:00",
         "status": "OPEN"
     }
 ]
