@@ -8656,6 +8656,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 46.31,
+        "sl": 47.004650000000005,
+        "tp1": 44.9207,
+        "tp2": 44.226049999999994,
+        "time": "2026-10-29T21:00:55.365055+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "NVDA-USDT-SWAP",
         "direction": "SHORT",
         "entry": 212.96,
@@ -8786,16 +8796,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOXS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 46.31,
-        "sl": 47.004650000000005,
-        "tp1": 44.9207,
-        "tp2": 44.226049999999994,
-        "time": "2026-10-29T21:00:55.365055+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "QUANT-USDT-SWAP",
         "direction": "LONG",
         "entry": 185.5,
@@ -8803,6 +8803,16 @@
         "tp1": 196.82080000000002,
         "tp2": 202.48120000000003,
         "time": "2026-10-29T21:15:39.461453+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MSFT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 529.1,
+        "sl": 537.0365,
+        "tp1": 513.227,
+        "tp2": 505.29049999999995,
+        "time": "2026-10-29T21:20:35.929244+00:00",
         "status": "OPEN"
     }
 ]
