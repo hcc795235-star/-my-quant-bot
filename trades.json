@@ -7906,6 +7906,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "HOOD-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 89.95,
+        "sl": 91.29925,
+        "tp1": 87.25150000000001,
+        "tp2": 85.90225000000001,
+        "time": "2026-10-29T13:31:00.859541+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PURR-USDT-SWAP",
         "direction": "LONG",
         "entry": 11.157,
@@ -8026,16 +8036,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "HOOD-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 89.95,
-        "sl": 91.29925,
-        "tp1": 87.25150000000001,
-        "tp2": 85.90225000000001,
-        "time": "2026-10-29T13:31:00.859541+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SAMSUNG-USDT-SWAP",
         "direction": "SHORT",
         "entry": 171.95,
@@ -8053,6 +8053,16 @@
         "tp1": 380.7929,
         "tp2": 374.90434999999997,
         "time": "2026-10-29T13:40:37.383630+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "DOGE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.07921,
+        "sl": 0.08039815,
+        "tp1": 0.0768337,
+        "tp2": 0.07564555,
+        "time": "2026-10-29T14:05:33.334292+00:00",
         "status": "OPEN"
     }
 ]
