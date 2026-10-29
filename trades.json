@@ -7586,6 +7586,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "USELESS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.15114,
+        "sl": 0.1534071,
+        "tp1": 0.1466058,
+        "tp2": 0.14433870000000001,
+        "time": "2026-10-29T09:55:34.465895+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "WLD-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.4172,
@@ -7686,16 +7696,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "USELESS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.15114,
-        "sl": 0.1534071,
-        "tp1": 0.1466058,
-        "tp2": 0.14433870000000001,
-        "time": "2026-10-29T09:55:34.465895+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LAB-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.04708,
@@ -7733,6 +7733,16 @@
         "tp1": 0.193418,
         "tp2": 0.190427,
         "time": "2026-10-29T10:30:49.562738+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SNXX-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 9.951,
+        "sl": 9.672616,
+        "tp1": 10.507768000000002,
+        "tp2": 10.786152000000003,
+        "time": "2026-10-29T10:35:34.462991+00:00",
         "status": "OPEN"
     }
 ]
