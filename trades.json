@@ -7396,6 +7396,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "CAP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.07272,
+        "sl": 0.07536042,
+        "tp1": 0.06743916000000003,
+        "tp2": 0.06479874000000004,
+        "time": "2026-10-29T06:40:53.760352+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "HUMA-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.02825,
+        "sl": 0.02825,
+        "tp1": 0.029261200000000005,
+        "tp2": 0.029766800000000006,
+        "time": "2026-10-29T06:51:02.486079+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "EWY-USDT-SWAP",
         "direction": "SHORT",
         "entry": 162.24,
@@ -7456,16 +7476,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "CAP-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.07272,
-        "sl": 0.07536042,
-        "tp1": 0.06743916000000003,
-        "tp2": 0.06479874000000004,
-        "time": "2026-10-29T06:40:53.760352+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ASTER-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.7,
@@ -7506,16 +7516,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "HUMA-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.02825,
-        "sl": 0.02825,
-        "tp1": 0.029261200000000005,
-        "tp2": 0.029766800000000006,
-        "time": "2026-10-29T06:51:02.486079+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.004238,
@@ -7543,6 +7543,16 @@
         "tp1": 1118.3761,
         "tp2": 1113.3348,
         "time": "2026-10-29T07:33:21.144882+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.8088,
+        "sl": 1.835932,
+        "tp1": 1.754536,
+        "tp2": 1.7274040000000002,
+        "time": "2026-10-29T08:05:36.489502+00:00",
         "status": "OPEN"
     }
 ]
