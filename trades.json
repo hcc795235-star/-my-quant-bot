@@ -7996,6 +7996,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "ZHONGJI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 88.7,
+        "sl": 90.0305,
+        "tp1": 86.039,
+        "tp2": 84.7085,
+        "time": "2026-10-29T13:10:37.001774+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "TAO-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 253.48,
+        "sl": 257.2822,
+        "tp1": 245.8756,
+        "tp2": 242.0734,
+        "time": "2026-10-29T14:15:45.037072+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PURR-USDT-SWAP",
         "direction": "LONG",
         "entry": 11.157,
@@ -8036,16 +8056,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ZHONGJI-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 88.7,
-        "sl": 90.0305,
-        "tp1": 86.039,
-        "tp2": 84.7085,
-        "time": "2026-10-29T13:10:37.001774+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SOON-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.3173,
@@ -8073,16 +8083,6 @@
         "tp1": 0.0768337,
         "tp2": 0.07564555,
         "time": "2026-10-29T14:05:33.334292+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "TAO-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 253.48,
-        "sl": 257.2822,
-        "tp1": 245.8756,
-        "tp2": 242.0734,
-        "time": "2026-10-29T14:15:45.037072+00:00",
         "status": "OPEN"
     },
     {
@@ -8143,6 +8143,16 @@
         "tp1": 214.92289999999997,
         "tp2": 211.59934999999996,
         "time": "2026-10-29T15:20:10.845280+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 1.6181,
+        "sl": 1.5796344,
+        "tp1": 1.6950312000000003,
+        "tp2": 1.7334968000000004,
+        "time": "2026-10-29T15:35:32.216556+00:00",
         "status": "OPEN"
     }
 ]
