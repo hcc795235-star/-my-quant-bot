@@ -7196,6 +7196,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 1135.4,
+        "sl": 1135.4,
+        "tp1": 1160.2133000000003,
+        "tp2": 1168.4844000000003,
+        "time": "2026-10-29T03:55:33.802419+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "SPCX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 143.25,
@@ -7286,16 +7296,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 1135.4,
-        "sl": 1135.4,
-        "tp1": 1160.2133000000003,
-        "tp2": 1168.4844000000003,
-        "time": "2026-10-29T03:55:33.802419+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MSTR-USDT-SWAP",
         "direction": "SHORT",
         "entry": 140.59,
@@ -7343,6 +7343,16 @@
         "tp1": 375.25419999999997,
         "tp2": 369.45129999999995,
         "time": "2026-10-29T05:20:36.095072+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "WLD-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.4219,
+        "sl": 0.4282285,
+        "tp1": 0.40924299999999997,
+        "tp2": 0.40291449999999995,
+        "time": "2026-10-29T05:25:34.140815+00:00",
         "status": "OPEN"
     }
 ]
