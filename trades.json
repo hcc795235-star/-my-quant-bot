@@ -7676,6 +7676,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SOON-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.3122,
+        "sl": 0.31688299999999997,
+        "tp1": 0.302834,
+        "tp2": 0.298151,
+        "time": "2026-10-29T12:05:37.643369+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "STX-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.2878,
@@ -7816,13 +7826,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOON-USDT-SWAP",
+        "symbol": "EWY-USDT-SWAP",
         "direction": "SHORT",
-        "entry": 0.3122,
-        "sl": 0.31688299999999997,
-        "tp1": 0.302834,
-        "tp2": 0.298151,
-        "time": "2026-10-29T12:05:37.643369+00:00",
+        "entry": 160.94,
+        "sl": 163.3541,
+        "tp1": 156.11180000000002,
+        "tp2": 153.69770000000003,
+        "time": "2026-10-29T12:40:40.758180+00:00",
         "status": "OPEN"
     }
 ]
