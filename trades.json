@@ -7156,6 +7156,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 942.77,
+        "sl": 956.91155,
+        "tp1": 914.4868999999999,
+        "tp2": 900.3453499999998,
+        "time": "2026-10-29T03:40:37.494033+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "PEPE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 4.9428e-06,
+        "sl": 5.0241282e-06,
+        "tp1": 4.780143600000002e-06,
+        "tp2": 4.698815400000002e-06,
+        "time": "2026-10-29T03:45:37.517455+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "SPCX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 143.25,
@@ -7206,16 +7226,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 942.77,
-        "sl": 956.91155,
-        "tp1": 914.4868999999999,
-        "tp2": 900.3453499999998,
-        "time": "2026-10-29T03:40:37.494033+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "CBRS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 109.0,
@@ -7256,16 +7266,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "PEPE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 4.9428e-06,
-        "sl": 5.0241282e-06,
-        "tp1": 4.780143600000002e-06,
-        "tp2": 4.698815400000002e-06,
-        "time": "2026-10-29T03:45:37.517455+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ICP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 2.534,
@@ -7289,7 +7289,7 @@
         "symbol": "SKHYNIX-USDT-SWAP",
         "direction": "LONG",
         "entry": 1135.4,
-        "sl": 1118.8578,
+        "sl": 1135.4,
         "tp1": 1160.2133000000003,
         "tp2": 1168.4844000000003,
         "time": "2026-10-29T03:55:33.802419+00:00",
@@ -7303,6 +7303,16 @@
         "tp1": 136.37230000000002,
         "tp2": 134.26345000000003,
         "time": "2026-10-29T04:25:27.720807+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2323.18,
+        "sl": 2337.11908,
+        "tp1": 2302.2713799999997,
+        "tp2": 2295.3018399999996,
+        "time": "2026-10-29T04:55:33.036277+00:00",
         "status": "OPEN"
     }
 ]
