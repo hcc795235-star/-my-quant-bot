@@ -8646,6 +8646,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "TRX-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.3298,
+        "sl": 0.3298,
+        "tp1": 0.33969399999999994,
+        "tp2": 0.3446409999999999,
+        "time": "2026-10-29T20:45:58.385654+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "NVDA-USDT-SWAP",
         "direction": "SHORT",
         "entry": 212.96,
@@ -8716,16 +8726,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "TRX-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.3298,
-        "sl": 0.3298,
-        "tp1": 0.33969399999999994,
-        "tp2": 0.3446409999999999,
-        "time": "2026-10-29T20:45:58.385654+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MAGIC-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.07943,
@@ -8793,6 +8793,16 @@
         "tp1": 44.9207,
         "tp2": 44.226049999999994,
         "time": "2026-10-29T21:00:55.365055+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "QUANT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 185.5,
+        "sl": 179.8396,
+        "tp1": 196.82080000000002,
+        "tp2": 202.48120000000003,
+        "time": "2026-10-29T21:15:39.461453+00:00",
         "status": "OPEN"
     }
 ]
