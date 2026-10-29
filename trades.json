@@ -8266,6 +8266,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "APT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.6973,
+        "sl": 0.6973,
+        "tp1": 0.6738696000000002,
+        "tp2": 0.6621544000000003,
+        "time": "2026-10-29T16:20:38.260524+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "BCH-USDT-SWAP",
         "direction": "LONG",
         "entry": 285.03,
@@ -8346,16 +8356,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "APT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.6973,
-        "sl": 0.6973,
-        "tp1": 0.6738696000000002,
-        "tp2": 0.6621544000000003,
-        "time": "2026-10-29T16:20:38.260524+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ONDO-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.429,
@@ -8369,7 +8369,7 @@
         "symbol": "MRVL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 222.12,
-        "sl": 225.4518,
+        "sl": 222.12,
         "tp1": 215.45640000000003,
         "tp2": 212.12460000000004,
         "time": "2026-10-29T16:35:30.483125+00:00",
@@ -8413,6 +8413,16 @@
         "tp1": 610.0523999999999,
         "tp2": 600.6185999999999,
         "time": "2026-10-29T18:10:41.603053+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LTC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 57.66,
+        "sl": 58.524899999999995,
+        "tp1": 55.9302,
+        "tp2": 55.0653,
+        "time": "2026-10-29T18:30:51.599450+00:00",
         "status": "OPEN"
     }
 ]
