@@ -8256,6 +8256,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "MVLL-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 23.11,
+        "sl": 23.11,
+        "tp1": 23.8033,
+        "tp2": 24.14995,
+        "time": "2026-10-29T17:25:37.200670+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "BCH-USDT-SWAP",
         "direction": "LONG",
         "entry": 285.03,
@@ -8386,16 +8396,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "MVLL-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 23.11,
-        "sl": 23.11,
-        "tp1": 23.8033,
-        "tp2": 24.14995,
-        "time": "2026-10-29T17:25:37.200670+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "OL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.007441,
@@ -8403,6 +8403,16 @@
         "tp1": 0.00721777,
         "tp2": 0.007106155,
         "time": "2026-10-29T17:40:37.969140+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "META-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 628.92,
+        "sl": 638.3538,
+        "tp1": 610.0523999999999,
+        "tp2": 600.6185999999999,
+        "time": "2026-10-29T18:10:41.603053+00:00",
         "status": "OPEN"
     }
 ]
