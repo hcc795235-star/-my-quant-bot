@@ -6846,6 +6846,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "SNDK-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1380.9,
+        "sl": 1380.9,
+        "tp1": 1367.2884000000001,
+        "tp2": 1362.7512000000002,
+        "time": "2026-10-29T00:35:43.395693+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "PEPE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 5.0899e-06,
@@ -6946,16 +6956,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SNDK-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1380.9,
-        "sl": 1380.9,
-        "tp1": 1367.2884000000001,
-        "tp2": 1362.7512000000002,
-        "time": "2026-10-29T00:35:43.395693+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "DRAM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 53.82,
@@ -6993,6 +6993,16 @@
         "tp1": 0.6740529999999999,
         "tp2": 0.6636294999999999,
         "time": "2026-10-29T00:55:31.710233+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "HUMA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.02736,
+        "sl": 0.027770399999999997,
+        "tp1": 0.026539200000000002,
+        "tp2": 0.026128800000000004,
+        "time": "2026-10-29T01:21:01.312211+00:00",
         "status": "OPEN"
     }
 ]
