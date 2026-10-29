@@ -8186,6 +8186,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "PEPE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 5.6446e-06,
+        "sl": 5.6446e-06,
+        "tp1": 5.475262000000001e-06,
+        "tp2": 5.390593000000001e-06,
+        "time": "2026-10-29T16:10:40.441932+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.004512,
@@ -8326,13 +8336,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "PEPE-USDT-SWAP",
+        "symbol": "APT-USDT-SWAP",
         "direction": "SHORT",
-        "entry": 5.6446e-06,
-        "sl": 5.6446e-06,
-        "tp1": 5.475262000000001e-06,
-        "tp2": 5.390593000000001e-06,
-        "time": "2026-10-29T16:10:40.441932+00:00",
+        "entry": 0.6973,
+        "sl": 0.7090152,
+        "tp1": 0.6738696000000002,
+        "tp2": 0.6621544000000003,
+        "time": "2026-10-29T16:20:38.260524+00:00",
         "status": "OPEN"
     }
 ]
