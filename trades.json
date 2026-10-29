@@ -7926,6 +7926,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "WDC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 392.57,
+        "sl": 398.45855,
+        "tp1": 380.7929,
+        "tp2": 374.90434999999997,
+        "time": "2026-10-29T13:40:37.383630+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PURR-USDT-SWAP",
         "direction": "LONG",
         "entry": 11.157,
@@ -8046,16 +8056,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "WDC-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 392.57,
-        "sl": 398.45855,
-        "tp1": 380.7929,
-        "tp2": 374.90434999999997,
-        "time": "2026-10-29T13:40:37.383630+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "DOGE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.07921,
@@ -8073,6 +8073,16 @@
         "tp1": 245.8756,
         "tp2": 242.0734,
         "time": "2026-10-29T14:15:45.037072+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 229.99,
+        "sl": 222.28454,
+        "tp1": 245.40092000000004,
+        "tp2": 253.10638000000006,
+        "time": "2026-10-29T14:20:44.283894+00:00",
         "status": "OPEN"
     }
 ]
