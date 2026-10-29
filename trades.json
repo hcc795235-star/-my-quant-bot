@@ -7666,6 +7666,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 1140.2,
+        "sl": 1131.3328,
+        "tp1": 1153.5008000000003,
+        "tp2": 1157.9344000000003,
+        "time": "2026-10-29T10:54:33.421569+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "STX-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.2878,
@@ -7756,16 +7766,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 1140.2,
-        "sl": 1131.3328,
-        "tp1": 1153.5008000000003,
-        "tp2": 1157.9344000000003,
-        "time": "2026-10-29T10:54:33.421569+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "GLW-USDT-SWAP",
         "direction": "SHORT",
         "entry": 128.67,
@@ -7813,6 +7813,16 @@
         "tp1": 1.6029250000000002,
         "tp2": 1.5781375000000002,
         "time": "2026-10-29T12:00:53.138600+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SOON-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.3122,
+        "sl": 0.31688299999999997,
+        "tp1": 0.302834,
+        "tp2": 0.298151,
+        "time": "2026-10-29T12:05:37.643369+00:00",
         "status": "OPEN"
     }
 ]
