@@ -8206,6 +8206,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 41.1,
+        "sl": 41.7165,
+        "tp1": 39.867,
+        "tp2": 39.250499999999995,
+        "time": "2026-10-29T16:05:36.950846+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.004512,
@@ -8299,7 +8309,7 @@
         "symbol": "ETH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 2368.01,
-        "sl": 2382.21806,
+        "sl": 2368.01,
         "tp1": 2346.6979100000003,
         "tp2": 2339.5938800000004,
         "time": "2026-10-29T16:00:58.044883+00:00",
@@ -8326,16 +8336,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOXS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 41.1,
-        "sl": 41.7165,
-        "tp1": 39.867,
-        "tp2": 39.250499999999995,
-        "time": "2026-10-29T16:05:36.950846+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "APT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6973,
@@ -8353,6 +8353,16 @@
         "tp1": 0.41405759999999997,
         "tp2": 0.40658639999999996,
         "time": "2026-10-29T16:30:53.240615+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 222.12,
+        "sl": 225.4518,
+        "tp1": 215.45640000000003,
+        "tp2": 212.12460000000004,
+        "time": "2026-10-29T16:35:30.483125+00:00",
         "status": "OPEN"
     }
 ]
