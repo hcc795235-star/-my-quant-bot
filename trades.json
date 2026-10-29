@@ -8166,6 +8166,26 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "CASHCAT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.1055,
+        "sl": 0.1070825,
+        "tp1": 0.102335,
+        "tp2": 0.1007525,
+        "time": "2026-10-29T15:50:51.460070+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "AXTI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 61.24,
+        "sl": 62.1586,
+        "tp1": 59.402800000000006,
+        "tp2": 58.48420000000001,
+        "time": "2026-10-29T15:55:49.250550+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.004512,
@@ -8226,16 +8246,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "CASHCAT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.1055,
-        "sl": 0.1070825,
-        "tp1": 0.102335,
-        "tp2": 0.1007525,
-        "time": "2026-10-29T15:50:51.460070+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "DRAM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 52.39,
@@ -8266,16 +8276,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "AXTI-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 61.24,
-        "sl": 62.1586,
-        "tp1": 59.402800000000006,
-        "tp2": 58.48420000000001,
-        "time": "2026-10-29T15:55:49.250550+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "AAVE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 136.74,
@@ -8283,6 +8283,36 @@
         "tp1": 132.63780000000003,
         "tp2": 130.58670000000004,
         "time": "2026-10-29T15:55:52.612629+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2368.01,
+        "sl": 2382.21806,
+        "tp1": 2346.6979100000003,
+        "tp2": 2339.5938800000004,
+        "time": "2026-10-29T16:00:58.044883+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SUI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.954,
+        "sl": 0.96831,
+        "tp1": 0.9253799999999999,
+        "tp2": 0.9110699999999998,
+        "time": "2026-10-29T16:00:59.055049+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ORCL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 140.48,
+        "sl": 142.5872,
+        "tp1": 136.26559999999998,
+        "tp2": 134.15839999999997,
+        "time": "2026-10-29T16:01:03.366914+00:00",
         "status": "OPEN"
     }
 ]
