@@ -8673,7 +8673,7 @@
         "tp1": 206.5712,
         "tp2": 203.3768,
         "time": "2026-10-29T19:16:01.839686+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "SKHYNIX-USDT-SWAP",
@@ -8683,7 +8683,7 @@
         "tp1": 1069.6426000000001,
         "tp2": 1055.9568000000002,
         "time": "2026-10-29T20:10:38.314565+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "ZHIPU-USDT-SWAP",
@@ -8693,7 +8693,7 @@
         "tp1": 64.7766,
         "tp2": 63.7749,
         "time": "2026-10-29T20:35:45.696474+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "LTC-USDT-SWAP",
@@ -8703,7 +8703,7 @@
         "tp1": 57.0311,
         "tp2": 57.861650000000004,
         "time": "2026-10-29T20:45:44.321073+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "SPCX-USDT-SWAP",
@@ -8713,7 +8713,7 @@
         "tp1": 137.75340000000003,
         "tp2": 135.52510000000004,
         "time": "2026-10-29T20:45:48.088335+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "STX-USDT-SWAP",
@@ -8723,7 +8723,7 @@
         "tp1": 0.286855,
         "tp2": 0.2910325,
         "time": "2026-10-29T20:45:54.797995+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "XAG-USDT-SWAP",
@@ -8733,7 +8733,7 @@
         "tp1": 53.8484,
         "tp2": 54.6326,
         "time": "2026-10-29T20:45:57.674809+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "MAGIC-USDT-SWAP",
@@ -8743,7 +8743,7 @@
         "tp1": 0.08314092000000001,
         "tp2": 0.08499638000000001,
         "time": "2026-10-29T20:50:42.753627+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "BNB-USDT-SWAP",
@@ -8753,7 +8753,7 @@
         "tp1": 756.6498800000002,
         "tp2": 783.4948200000002,
         "time": "2026-10-29T20:50:44.710579+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "OKB-USDT-SWAP",
@@ -8763,7 +8763,7 @@
         "tp1": 115.39283999999999,
         "tp2": 117.85925999999999,
         "time": "2026-10-29T20:50:53.100699+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "BEAT-USDT-SWAP",
@@ -8773,7 +8773,7 @@
         "tp1": 0.1062086,
         "tp2": 0.1092929,
         "time": "2026-10-29T20:50:57.294653+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "APT-USDT-SWAP",
@@ -8783,7 +8783,7 @@
         "tp1": 0.6696048000000001,
         "tp2": 0.6928072000000002,
         "time": "2026-10-29T20:55:30.310867+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "ETHFI-USDT-SWAP",
@@ -8793,7 +8793,7 @@
         "tp1": 0.6580004000000002,
         "tp2": 0.6777006000000002,
         "time": "2026-10-29T20:55:38.607559+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "QUANT-USDT-SWAP",
@@ -8803,7 +8803,7 @@
         "tp1": 196.82080000000002,
         "tp2": 202.48120000000003,
         "time": "2026-10-29T21:15:39.461453+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "MSFT-USDT-SWAP",
@@ -8813,6 +8813,26 @@
         "tp1": 513.227,
         "tp2": 505.29049999999995,
         "time": "2026-10-29T21:20:35.929244+00:00",
+        "status": "CYCLE_TIMEOUT"
+    },
+    {
+        "symbol": "MSFT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 529.21,
+        "sl": 537.14815,
+        "tp1": 513.3337000000001,
+        "tp2": 505.3955500000002,
+        "time": "2026-10-29T22:00:50.576176+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "CL-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 102.87,
+        "sl": 101.32695000000001,
+        "tp1": 105.95609999999999,
+        "tp2": 107.49914999999999,
+        "time": "2026-10-29T22:01:21.902553+00:00",
         "status": "OPEN"
     }
 ]
