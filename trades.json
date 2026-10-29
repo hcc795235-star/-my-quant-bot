@@ -8196,6 +8196,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "SNXX-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 9.887,
+        "sl": 9.738695,
+        "tp1": 10.183610000000002,
+        "tp2": 10.331915000000002,
+        "time": "2026-10-29T15:55:36.631659+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.004512,
@@ -8266,16 +8276,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SNXX-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 9.887,
-        "sl": 9.738695,
-        "tp1": 10.183610000000002,
-        "tp2": 10.331915000000002,
-        "time": "2026-10-29T15:55:36.631659+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "DASH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 51.45,
@@ -8343,6 +8343,16 @@
         "tp1": 0.6738696000000002,
         "tp2": 0.6621544000000003,
         "time": "2026-10-29T16:20:38.260524+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ONDO-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.429,
+        "sl": 0.4364712,
+        "tp1": 0.41405759999999997,
+        "tp2": 0.40658639999999996,
+        "time": "2026-10-29T16:30:53.240615+00:00",
         "status": "OPEN"
     }
 ]
