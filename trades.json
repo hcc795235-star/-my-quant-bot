@@ -6856,16 +6856,6 @@
         "status": "WIN_TP1"
     },
     {
-        "symbol": "PEPE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 5.0899e-06,
-        "sl": 5.166312e-06,
-        "tp1": 4.937076e-06,
-        "tp2": 4.860664e-06,
-        "time": "2026-10-29T00:25:32.181403+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SNXX-USDT-SWAP",
         "direction": "LONG",
         "entry": 10.068,
@@ -6873,6 +6863,16 @@
         "tp1": 10.713059999999997,
         "tp2": 11.035589999999996,
         "time": "2026-10-29T00:25:36.552492+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "PEPE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 5.0899e-06,
+        "sl": 5.166312e-06,
+        "tp1": 4.937076e-06,
+        "tp2": 4.860664e-06,
+        "time": "2026-10-29T00:25:32.181403+00:00",
         "status": "OPEN"
     },
     {
