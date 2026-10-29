@@ -8286,6 +8286,26 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "FIL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.9161,
+        "sl": 0.9161,
+        "tp1": 0.8886170000000001,
+        "tp2": 0.8748755000000001,
+        "time": "2026-10-29T15:50:48.803901+00:00",
+        "status": "WIN_TP1"
+    },
+    {
+        "symbol": "SUI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.954,
+        "sl": 0.954,
+        "tp1": 0.9253799999999999,
+        "tp2": 0.9110699999999998,
+        "time": "2026-10-29T16:00:59.055049+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "BCH-USDT-SWAP",
         "direction": "LONG",
         "entry": 285.03,
@@ -8316,16 +8336,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "FIL-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.9161,
-        "sl": 0.9161,
-        "tp1": 0.8886170000000001,
-        "tp2": 0.8748755000000001,
-        "time": "2026-10-29T15:50:48.803901+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "DRAM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 52.39,
@@ -8333,16 +8343,6 @@
         "tp1": 50.81830000000001,
         "tp2": 50.03245000000001,
         "time": "2026-10-29T15:50:54.209300+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "SUI-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.954,
-        "sl": 0.954,
-        "tp1": 0.9253799999999999,
-        "tp2": 0.9110699999999998,
-        "time": "2026-10-29T16:00:59.055049+00:00",
         "status": "OPEN"
     },
     {
