@@ -8826,6 +8826,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "CSOPSKHYNIX2L-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 3.085,
+        "sl": 3.085,
+        "tp1": 2.99245,
+        "tp2": 2.9461749999999998,
+        "time": "2026-10-29T22:35:45.665436+00:00",
+        "status": "WIN_TP2"
+    },
+    {
         "symbol": "MSFT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 529.21,
@@ -8929,7 +8939,7 @@
         "symbol": "QUANT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 183.0,
-        "sl": 187.0734,
+        "sl": 183.0,
         "tp1": 174.85320000000002,
         "tp2": 170.77980000000002,
         "time": "2026-10-29T22:22:42.658675+00:00",
@@ -8956,23 +8966,23 @@
         "status": "OPEN"
     },
     {
-        "symbol": "CSOPSKHYNIX2L-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 3.085,
-        "sl": 3.085,
-        "tp1": 2.99245,
-        "tp2": 2.9461749999999998,
-        "time": "2026-10-29T22:35:45.665436+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SKHYNIX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1081.5,
-        "sl": 1094.8854000000001,
+        "sl": 1081.5,
         "tp1": 1061.4218999999998,
         "tp2": 1054.7291999999998,
         "time": "2026-10-29T23:25:31.609593+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MUU-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 24.99,
+        "sl": 25.450799999999997,
+        "tp1": 24.0684,
+        "tp2": 23.6076,
+        "time": "2026-10-30T00:10:55.538891+00:00",
         "status": "OPEN"
     }
 ]
