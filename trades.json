@@ -10026,6 +10026,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "KORU-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 10.76,
+        "sl": 10.9214,
+        "tp1": 10.437199999999999,
+        "tp2": 10.275799999999998,
+        "time": "2026-10-30T13:11:06.416812+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "SOXL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 81.45,
+        "sl": 82.67175,
+        "tp1": 79.0065,
+        "tp2": 77.78475,
+        "time": "2026-10-30T13:20:50.010308+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PEOPLE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.006953,
@@ -10086,16 +10106,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "KORU-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 10.76,
-        "sl": 10.9214,
-        "tp1": 10.437199999999999,
-        "tp2": 10.275799999999998,
-        "time": "2026-10-30T13:11:06.416812+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "WLD-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.4013,
@@ -10126,16 +10136,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOXL-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 81.45,
-        "sl": 82.67175,
-        "tp1": 79.0065,
-        "tp2": 77.78475,
-        "time": "2026-10-30T13:20:50.010308+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LITE-USDT-SWAP",
         "direction": "LONG",
         "entry": 859.38,
@@ -10163,6 +10163,26 @@
         "tp1": 3.3183700000000003,
         "tp2": 3.2670550000000005,
         "time": "2026-10-30T13:35:38.114242+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "AMZN-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 237.63,
+        "sl": 241.19445,
+        "tp1": 230.5011,
+        "tp2": 226.93665000000001,
+        "time": "2026-10-30T13:40:54.668486+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "AXIS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.1384,
+        "sl": 0.1415826,
+        "tp1": 0.13203479999999998,
+        "tp2": 0.12885219999999997,
+        "time": "2026-10-30T13:41:01.764192+00:00",
         "status": "OPEN"
     }
 ]
