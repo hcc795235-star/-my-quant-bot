@@ -9276,6 +9276,26 @@
         "status": "LOSS"
     },
     {
+        "symbol": "SUI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.8789,
+        "sl": 0.8920835,
+        "tp1": 0.852533,
+        "tp2": 0.8393495,
+        "time": "2026-10-30T04:05:29.620740+00:00",
+        "status": "LOSS"
+    },
+    {
+        "symbol": "BONK-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2.838e-06,
+        "sl": 2.88057e-06,
+        "tp1": 2.7528600000000005e-06,
+        "tp2": 2.7102900000000007e-06,
+        "time": "2026-10-30T04:05:33.584625+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "W-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.011269,
@@ -9286,16 +9306,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SUI-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.8789,
-        "sl": 0.8920835,
-        "tp1": 0.852533,
-        "tp2": 0.8393495,
-        "time": "2026-10-30T04:05:29.620740+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "TRUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.543,
@@ -9303,16 +9313,6 @@
         "tp1": 1.49671,
         "tp2": 1.473565,
         "time": "2026-10-30T04:05:32.527976+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "BONK-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 2.838e-06,
-        "sl": 2.88057e-06,
-        "tp1": 2.7528600000000005e-06,
-        "tp2": 2.7102900000000007e-06,
-        "time": "2026-10-30T04:05:33.584625+00:00",
         "status": "OPEN"
     },
     {
@@ -9423,6 +9423,16 @@
         "tp1": 0.598393,
         "tp2": 0.5891394999999999,
         "time": "2026-10-30T04:35:30.583767+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SUI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.893,
+        "sl": 0.9063950000000001,
+        "tp1": 0.8662099999999999,
+        "tp2": 0.8528149999999999,
+        "time": "2026-10-30T04:55:32.189256+00:00",
         "status": "OPEN"
     }
 ]
