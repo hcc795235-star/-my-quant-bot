@@ -9836,6 +9836,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "XLM-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.16542,
+        "sl": 0.1679013,
+        "tp1": 0.16045740000000003,
+        "tp2": 0.15797610000000004,
+        "time": "2026-10-30T12:05:29.525552+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "ASTER-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6803,
@@ -9976,13 +9986,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "XLM-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.16542,
-        "sl": 0.1679013,
-        "tp1": 0.16045740000000003,
-        "tp2": 0.15797610000000004,
-        "time": "2026-10-30T12:05:29.525552+00:00",
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 1.2882,
+        "sl": 1.2638672,
+        "tp1": 1.3368656,
+        "tp2": 1.3611984000000001,
+        "time": "2026-10-30T13:00:55.229272+00:00",
         "status": "OPEN"
     }
 ]
