@@ -8876,6 +8876,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 47.89,
+        "sl": 48.60835,
+        "tp1": 46.4533,
+        "tp2": 45.73495,
+        "time": "2026-10-30T00:30:53.394052+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "MSFT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 529.21,
@@ -8993,16 +9003,6 @@
         "tp1": 130.38739999999999,
         "tp2": 128.37109999999998,
         "time": "2026-10-30T00:20:39.151152+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "SOXS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 47.89,
-        "sl": 48.60835,
-        "tp1": 46.4533,
-        "tp2": 45.73495,
-        "time": "2026-10-30T00:30:53.394052+00:00",
         "status": "OPEN"
     },
     {
