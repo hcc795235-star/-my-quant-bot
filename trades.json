@@ -9746,6 +9746,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "PEPE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 4.8826e-06,
+        "sl": 4.955838999999999e-06,
+        "tp1": 4.7361220000000005e-06,
+        "tp2": 4.662883000000001e-06,
+        "time": "2026-10-30T10:15:38.215493+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "ASTER-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6803,
@@ -9866,16 +9876,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "PEPE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 4.8826e-06,
-        "sl": 4.955838999999999e-06,
-        "tp1": 4.7361220000000005e-06,
-        "tp2": 4.662883000000001e-06,
-        "time": "2026-10-30T10:15:38.215493+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "USELESS-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.13377,
@@ -9893,6 +9893,16 @@
         "tp1": 0.24560399999999993,
         "tp2": 0.2418059999999999,
         "time": "2026-10-30T10:20:43.031596+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "W-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.011375,
+        "sl": 0.011545625,
+        "tp1": 0.011033749999999998,
+        "tp2": 0.010863124999999998,
+        "time": "2026-10-30T10:25:31.689316+00:00",
         "status": "OPEN"
     }
 ]
