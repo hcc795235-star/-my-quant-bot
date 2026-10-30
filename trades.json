@@ -10176,6 +10176,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2245.53,
+        "sl": 2245.53,
+        "tp1": 2225.3202300000003,
+        "tp2": 2218.5836400000003,
+        "time": "2026-10-30T15:05:35.876210+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "PI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.07746,
@@ -10256,16 +10266,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ETH-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 2245.53,
-        "sl": 2245.53,
-        "tp1": 2225.3202300000003,
-        "tp2": 2218.5836400000003,
-        "time": "2026-10-30T15:05:35.876210+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "QQQ-USDT-SWAP",
         "direction": "SHORT",
         "entry": 698.18,
@@ -10323,6 +10323,16 @@
         "tp1": 0.007679136,
         "tp2": 0.007411203999999999,
         "time": "2026-10-30T15:45:40.128567+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ADA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.1918,
+        "sl": 0.1951896,
+        "tp1": 0.1850208,
+        "tp2": 0.18163120000000002,
+        "time": "2026-10-30T16:00:57.844747+00:00",
         "status": "OPEN"
     }
 ]
