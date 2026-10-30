@@ -9076,6 +9076,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "ASTER-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.676,
+        "sl": 0.6861400000000001,
+        "tp1": 0.65572,
+        "tp2": 0.6455799999999999,
+        "time": "2026-10-30T01:10:46.634874+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "CASHCAT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.0888,
@@ -9156,16 +9166,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ASTER-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.676,
-        "sl": 0.6861400000000001,
-        "tp1": 0.65572,
-        "tp2": 0.6455799999999999,
-        "time": "2026-10-30T01:10:46.634874+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MRNA-USDT-SWAP",
         "direction": "LONG",
         "entry": 219.74,
@@ -9223,6 +9223,16 @@
         "tp1": 0.08002448000000001,
         "tp2": 0.08137672000000001,
         "time": "2026-10-30T02:25:30.012255+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "EWY-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 154.28,
+        "sl": 156.5942,
+        "tp1": 149.6516,
+        "tp2": 147.3374,
+        "time": "2026-10-30T02:40:45.635797+00:00",
         "status": "OPEN"
     }
 ]
