@@ -9373,7 +9373,17 @@
         "tp1": 0.01093093,
         "tp2": 0.010761895,
         "time": "2026-10-30T04:05:26.578413+00:00",
-        "status": "OPEN"
+        "status": "LOSS"
+    },
+    {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2.9577,
+        "sl": 2.9577,
+        "tp1": 2.868969,
+        "tp2": 2.8246035,
+        "time": "2026-10-30T05:20:36.080591+00:00",
+        "status": "LOSS"
     },
     {
         "symbol": "SPY-USDT-SWAP",
@@ -9476,16 +9486,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LIT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 2.9577,
-        "sl": 2.9577,
-        "tp1": 2.868969,
-        "tp2": 2.8246035,
-        "time": "2026-10-30T05:20:36.080591+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "TRUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.565,
@@ -9513,6 +9513,16 @@
         "tp1": 0.670852,
         "tp2": 0.660478,
         "time": "2026-10-30T05:40:45.537081+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 2.9708,
+        "sl": 2.896695,
+        "tp1": 3.1190100000000007,
+        "tp2": 3.193115000000001,
+        "time": "2026-10-30T06:35:30.610027+00:00",
         "status": "OPEN"
     }
 ]
