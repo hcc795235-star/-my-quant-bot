@@ -10616,6 +10616,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "ONDO-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.4068,
+        "sl": 0.412902,
+        "tp1": 0.394596,
+        "tp2": 0.388494,
+        "time": "2026-10-30T20:07:09.585515+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "WDC-USDT-SWAP",
         "direction": "LONG",
         "entry": 366.5,
@@ -10746,16 +10756,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ONDO-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.4068,
-        "sl": 0.412902,
-        "tp1": 0.394596,
-        "tp2": 0.388494,
-        "time": "2026-10-30T20:07:09.585515+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "DOT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.9733,
@@ -10763,6 +10763,16 @@
         "tp1": 0.9441010000000001,
         "tp2": 0.9295015000000001,
         "time": "2026-10-30T21:15:50.816673+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "DOS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.2038,
+        "sl": 0.206857,
+        "tp1": 0.197686,
+        "tp2": 0.194629,
+        "time": "2026-10-30T21:50:36.606465+00:00",
         "status": "OPEN"
     }
 ]
