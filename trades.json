@@ -9996,6 +9996,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 1.2779,
+        "sl": 1.2556836,
+        "tp1": 1.3223328,
+        "tp2": 1.3445492,
+        "time": "2026-10-30T13:10:39.171806+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "MU-USDT-SWAP",
         "direction": "SHORT",
         "entry": 876.65,
@@ -10043,16 +10053,6 @@
         "tp1": 2.6607144,
         "tp2": 2.6136215999999997,
         "time": "2026-10-30T13:10:37.067240+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "BTW-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 1.2779,
-        "sl": 1.2556836,
-        "tp1": 1.3223328,
-        "tp2": 1.3445492,
-        "time": "2026-10-30T13:10:39.171806+00:00",
         "status": "OPEN"
     },
     {
@@ -10113,6 +10113,26 @@
         "tp1": 0.6607640000000001,
         "tp2": 0.6505460000000002,
         "time": "2026-10-30T13:15:46.882248+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "TSLA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 395.44,
+        "sl": 401.3716,
+        "tp1": 383.5768,
+        "tp2": 377.6452,
+        "time": "2026-10-30T13:20:44.261503+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SOXL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 81.45,
+        "sl": 82.67175,
+        "tp1": 79.0065,
+        "tp2": 77.78475,
+        "time": "2026-10-30T13:20:50.010308+00:00",
         "status": "OPEN"
     }
 ]
