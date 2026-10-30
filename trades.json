@@ -9046,16 +9046,6 @@
         "status": "LOSS"
     },
     {
-        "symbol": "CASHCAT-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.0888,
-        "sl": 0.08562840000000001,
-        "tp1": 0.0951432,
-        "tp2": 0.0983148,
-        "time": "2026-10-30T01:01:05.700881+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ZHIPU-USDT-SWAP",
         "direction": "SHORT",
         "entry": 63.63,
@@ -9063,6 +9053,16 @@
         "tp1": 61.7211,
         "tp2": 60.76665,
         "time": "2026-10-30T01:01:08.791385+00:00",
+        "status": "WIN_TP1"
+    },
+    {
+        "symbol": "CASHCAT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.0888,
+        "sl": 0.08562840000000001,
+        "tp1": 0.0951432,
+        "tp2": 0.0983148,
+        "time": "2026-10-30T01:01:05.700881+00:00",
         "status": "OPEN"
     },
     {
@@ -9193,6 +9193,16 @@
         "tp1": 360.452,
         "tp2": 354.878,
         "time": "2026-10-30T01:35:27.561028+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "GRASS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.5614,
+        "sl": 0.5722422,
+        "tp1": 0.5397156,
+        "tp2": 0.5288733999999999,
+        "time": "2026-10-30T01:55:46.659116+00:00",
         "status": "OPEN"
     }
 ]
