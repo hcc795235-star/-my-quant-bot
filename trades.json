@@ -10046,6 +10046,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 859.38,
+        "sl": 844.22816,
+        "tp1": 889.68368,
+        "tp2": 904.83552,
+        "time": "2026-10-30T13:25:28.504031+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "PEOPLE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.006953,
@@ -10059,7 +10069,7 @@
         "symbol": "CHIP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.04412,
-        "sl": 0.0447818,
+        "sl": 0.04412,
         "tp1": 0.042796400000000005,
         "tp2": 0.04213460000000001,
         "time": "2026-10-30T13:05:59.561881+00:00",
@@ -10136,16 +10146,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 859.38,
-        "sl": 844.22816,
-        "tp1": 889.68368,
-        "tp2": 904.83552,
-        "time": "2026-10-30T13:25:28.504031+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "GRAM-USDT-SWAP",
         "direction": "LONG",
         "entry": 1.161,
@@ -10179,7 +10179,7 @@
         "symbol": "AXIS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.1384,
-        "sl": 0.1415826,
+        "sl": 0.1384,
         "tp1": 0.13203479999999998,
         "tp2": 0.12885219999999997,
         "time": "2026-10-30T13:41:01.764192+00:00",
@@ -10193,6 +10193,16 @@
         "tp1": 0.01975476,
         "tp2": 0.02012214,
         "time": "2026-10-30T13:44:23.228259+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 204.35,
+        "sl": 201.28475,
+        "tp1": 210.48049999999998,
+        "tp2": 213.54574999999997,
+        "time": "2026-10-30T13:50:37.517814+00:00",
         "status": "OPEN"
     }
 ]
