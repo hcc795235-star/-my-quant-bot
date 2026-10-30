@@ -10816,6 +10816,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "PUMP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.004114,
+        "sl": 0.00417571,
+        "tp1": 0.003990579999999999,
+        "tp2": 0.003928869999999998,
+        "time": "2026-10-30T22:30:42.889616+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "ASTER-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6818,
@@ -10886,16 +10896,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "PUMP-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.004114,
-        "sl": 0.00417571,
-        "tp1": 0.003990579999999999,
-        "tp2": 0.003928869999999998,
-        "time": "2026-10-30T22:30:42.889616+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BONK-USDT-SWAP",
         "direction": "SHORT",
         "entry": 2.971e-06,
@@ -10963,6 +10963,16 @@
         "tp1": 145.5776,
         "tp2": 143.32639999999998,
         "time": "2026-10-30T23:35:39.774732+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ZHONGJI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 81.67,
+        "sl": 82.89505,
+        "tp1": 79.21990000000001,
+        "tp2": 77.99485000000001,
+        "time": "2026-10-30T23:40:38.609519+00:00",
         "status": "OPEN"
     }
 ]
