@@ -10804,5 +10804,65 @@
         "tp2": 0.04235425,
         "time": "2026-10-30T22:16:02.418497+00:00",
         "status": "OPEN"
+    },
+    {
+        "symbol": "UNI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 6.966,
+        "sl": 7.07049,
+        "tp1": 6.75702,
+        "tp2": 6.65253,
+        "time": "2026-10-30T22:20:30.652609+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "RAY-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.6216,
+        "sl": 1.645924,
+        "tp1": 1.572952,
+        "tp2": 1.548628,
+        "time": "2026-10-30T22:20:32.153979+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "DOS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.2057,
+        "sl": 0.20878549999999998,
+        "tp1": 0.199529,
+        "tp2": 0.19644350000000002,
+        "time": "2026-10-30T22:20:35.642795+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ORDI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 3.495,
+        "sl": 3.547425,
+        "tp1": 3.39015,
+        "tp2": 3.3377250000000003,
+        "time": "2026-10-30T22:20:41.751452+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "KAITO-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.2438,
+        "sl": 0.24745699999999998,
+        "tp1": 0.236486,
+        "tp2": 0.232829,
+        "time": "2026-10-30T22:20:44.782843+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SPCX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 136.24,
+        "sl": 138.2836,
+        "tp1": 132.1528,
+        "tp2": 130.10920000000002,
+        "time": "2026-10-30T22:20:47.345857+00:00",
+        "status": "OPEN"
     }
 ]
