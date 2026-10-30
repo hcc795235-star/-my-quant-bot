@@ -9036,6 +9036,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "MINIMAX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 20.38,
+        "sl": 20.6857,
+        "tp1": 19.768599999999996,
+        "tp2": 19.462899999999994,
+        "time": "2026-10-30T01:16:09.343840+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "CASHCAT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.0888,
@@ -9146,16 +9156,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "MINIMAX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 20.38,
-        "sl": 20.6857,
-        "tp1": 19.768599999999996,
-        "tp2": 19.462899999999994,
-        "time": "2026-10-30T01:16:09.343840+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MRNA-USDT-SWAP",
         "direction": "LONG",
         "entry": 219.74,
@@ -9183,6 +9183,16 @@
         "tp1": 90.13983999999999,
         "tp2": 92.75475999999999,
         "time": "2026-10-30T01:30:47.860804+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "WDC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 371.6,
+        "sl": 377.17400000000004,
+        "tp1": 360.452,
+        "tp2": 354.878,
+        "time": "2026-10-30T01:35:27.561028+00:00",
         "status": "OPEN"
     }
 ]
