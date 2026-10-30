@@ -9066,6 +9066,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "SOL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 93.47,
+        "sl": 94.87205,
+        "tp1": 90.6659,
+        "tp2": 89.26384999999999,
+        "time": "2026-10-30T02:05:39.116466+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "CASHCAT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.0888,
@@ -9206,13 +9216,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOL-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 93.47,
-        "sl": 94.87205,
-        "tp1": 90.6659,
-        "tp2": 89.26384999999999,
-        "time": "2026-10-30T02:05:39.116466+00:00",
+        "symbol": "PI-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.07732,
+        "sl": 0.07596776,
+        "tp1": 0.08002448000000001,
+        "tp2": 0.08137672000000001,
+        "time": "2026-10-30T02:25:30.012255+00:00",
         "status": "OPEN"
     }
 ]
