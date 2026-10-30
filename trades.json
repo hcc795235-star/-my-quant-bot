@@ -10576,6 +10576,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "NIGHT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.039208,
+        "sl": 0.03979612,
+        "tp1": 0.038031760000000005,
+        "tp2": 0.03744364000000001,
+        "time": "2026-10-30T19:30:56.367688+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "WDC-USDT-SWAP",
         "direction": "LONG",
         "entry": 366.5,
@@ -10646,16 +10656,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "NIGHT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.039208,
-        "sl": 0.03979612,
-        "tp1": 0.038031760000000005,
-        "tp2": 0.03744364000000001,
-        "time": "2026-10-30T19:30:56.367688+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "HYPE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 90.364,
@@ -10703,6 +10703,26 @@
         "tp1": 131.5805,
         "tp2": 129.54575,
         "time": "2026-10-30T19:50:50.039507+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 845.19,
+        "sl": 857.8678500000001,
+        "tp1": 819.8343,
+        "tp2": 807.15645,
+        "time": "2026-10-30T19:55:31.612144+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ZHONGJI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 81.39,
+        "sl": 82.61085,
+        "tp1": 78.9483,
+        "tp2": 77.72745,
+        "time": "2026-10-30T19:55:34.471704+00:00",
         "status": "OPEN"
     }
 ]
