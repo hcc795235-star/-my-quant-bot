@@ -10856,6 +10856,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "AAVE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 128.73,
+        "sl": 130.66094999999999,
+        "tp1": 124.8681,
+        "tp2": 122.93715,
+        "time": "2026-10-30T23:05:52.586931+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "ASTER-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6818,
@@ -10946,16 +10956,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "AAVE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 128.73,
-        "sl": 130.66094999999999,
-        "tp1": 124.8681,
-        "tp2": 122.93715,
-        "time": "2026-10-30T23:05:52.586931+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ETH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 2238.82,
@@ -11003,6 +11003,16 @@
         "tp1": 0.1665975,
         "tp2": 0.16402125,
         "time": "2026-10-31T00:15:33.384231+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MSTR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 132.82,
+        "sl": 134.8123,
+        "tp1": 128.8354,
+        "tp2": 126.84309999999999,
+        "time": "2026-10-31T00:30:44.309936+00:00",
         "status": "OPEN"
     }
 ]
