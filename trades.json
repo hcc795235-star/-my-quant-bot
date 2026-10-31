@@ -11226,6 +11226,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "AKE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.01148,
+        "sl": 0.0112275,
+        "tp1": 0.011985000000000003,
+        "tp2": 0.012237500000000004,
+        "time": "2026-10-31T04:35:33.583351+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "MAGIC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.08196,
@@ -11306,16 +11316,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "AKE-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.01148,
-        "sl": 0.0112275,
-        "tp1": 0.011985000000000003,
-        "tp2": 0.012237500000000004,
-        "time": "2026-10-31T04:35:33.583351+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BEAT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.0992,
@@ -11373,6 +11373,16 @@
         "tp1": 0.479053,
         "tp2": 0.4860295,
         "time": "2026-10-31T04:50:54.197003+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "XAU-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 3889.8,
+        "sl": 3913.1388,
+        "tp1": 3854.7918,
+        "tp2": 3843.1224,
+        "time": "2026-10-31T05:01:12.192263+00:00",
         "status": "OPEN"
     }
 ]
