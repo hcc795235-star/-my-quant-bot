@@ -11266,6 +11266,16 @@
         "status": "WIN_TP1"
     },
     {
+        "symbol": "PEPE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 4.8507e-06,
+        "sl": 4.9337478000000005e-06,
+        "tp1": 4.684604399999999e-06,
+        "tp2": 4.6015565999999985e-06,
+        "time": "2026-10-31T04:40:37.505680+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "MAGIC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.08196,
@@ -11336,16 +11346,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "PEPE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 4.8507e-06,
-        "sl": 4.9337478000000005e-06,
-        "tp1": 4.684604399999999e-06,
-        "tp2": 4.6015565999999985e-06,
-        "time": "2026-10-31T04:40:37.505680+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.16868,
@@ -11413,6 +11413,16 @@
         "tp1": 0.05645436,
         "tp2": 0.05827654,
         "time": "2026-10-31T06:01:00.114226+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2.736,
+        "sl": 2.7770400000000004,
+        "tp1": 2.65392,
+        "tp2": 2.6128799999999996,
+        "time": "2026-10-31T06:10:37.150711+00:00",
         "status": "OPEN"
     }
 ]
