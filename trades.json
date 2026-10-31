@@ -11642,6 +11642,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.1235,
+        "sl": 1.1431818,
+        "tp1": 1.0841363999999998,
+        "tp2": 1.0644545999999997,
+        "time": "2026-10-31T10:30:45.348445+00:00",
+        "status": "LOSS",
+        "close_time": "2026-10-31T11:20:33.752079+00:00"
+    },
+    {
         "symbol": "APT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6349,
@@ -11752,16 +11763,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "BTW-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1.1235,
-        "sl": 1.1431818,
-        "tp1": 1.0841363999999998,
-        "tp2": 1.0644545999999997,
-        "time": "2026-10-31T10:30:45.348445+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SUI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.8976,
@@ -11789,6 +11790,16 @@
         "tp1": 0.16374569999999997,
         "tp2": 0.16121354999999996,
         "time": "2026-10-31T10:40:36.583102+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "EDGE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.3387,
+        "sl": 0.3336195,
+        "tp1": 0.348861,
+        "tp2": 0.35394149999999996,
+        "time": "2026-10-31T11:20:35.496990+00:00",
         "status": "OPEN"
     }
 ]
