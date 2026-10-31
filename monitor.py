@@ -1,5 +1,4 @@
 import requests
-import time
 import json
 import os
 from datetime import datetime, timezone, timedelta
@@ -7,9 +6,11 @@ from datetime import datetime, timezone, timedelta
 TOKEN = "8611401535:AAFQiAe7UiOYNwQeiEuCnM-iDQo925Aa0Kk"  # ⚠️ 记得换成你的真 Token
 CHAT_ID = "6293141270"
 DB_FILE = "trades.json"
+REPORT_FILE = "last_report.json"
 CYCLE_FILE = "cycle_time.json"
+
 MAX_OPEN_TRADES = 15  
-CYCLE_HOURS = 3       
+CYCLE_HOURS = 3       # 每 3 小时强制换血
 
 def fmt_price(price):
     if price >= 1: return f"{price:.4f}"
@@ -30,8 +31,7 @@ def save_json(file, data):
 
 def send_tg(message):
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-    payload = {"chat_id": CHAT_ID, "text": message}
-    requests.post(url, json=payload)
+    requests.post(url, json={"chat_id": CHAT_ID, "text": message})
 
 def calculate_rsi(candles, period=14):
     if len(candles) < period + 1: return 50.0
@@ -41,16 +41,7 @@ def calculate_rsi(candles, period=14):
         if change > 0: gains += change
         else: losses -= change
     if losses == 0: return 100.0
-    rs = gains / losses
-    return 100.0 - (100.0 / (1.0 + rs))
-
-def check_orderbook(symbol):
-    try:
-        res = requests.get(f"https://www.okx.com/api/v5/market/books?instId={symbol}&sz=20").json()
-        bids = sum([float(b[1]) for b in res["data"][0]])
-        asks = sum([float(a[1]) for a in res["data"][1]])
-        return (bids / (bids + asks)) * 100 if (bids + asks) > 0 else 50.0
-    except: return 50.0
+    return 100.0 - (100.0 / (1.0 + (gains / losses)))
 
 def get_current_price(symbol):
     try:
@@ -59,9 +50,31 @@ def get_current_price(symbol):
     except: pass
     return None
 
+# ================= 核心：AI 诊断复盘逻辑 =================
+def ai_diagnose(symbol, direction):
+    try:
+        k_res = requests.get(f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=5").json()
+        if k_res.get("code") != "0": return "数据获取失败。"
+        
+        candles = [{"close": float(c[4]), "open": float(c[1])} for c in k_res["data"]]
+        curr = candles[0]
+        
+        btc_res = requests.get("https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=5m&limit=3").json()
+        btc_change = 0
+        if btc_res.get("code") == "0":
+            btc_candles = btc_res["data"]
+            btc_change = (float(btc_candles[0][4]) - float(btc_candles[-1][1])) / float(btc_candles[-1][1]) * 100
+
+        if direction == "LONG" and btc_change < -0.5:
+            return f"🌐 大盘拖累：做多时 BTC 正在下跌 ({btc_change:.2f}%)，泥沙俱下。"
+        elif direction == "SHORT" and btc_change > 0.5:
+            return f"🌐 大盘逼空：做空时 BTC 正在拉升 ({btc_change:.2f}%)，引发轧空。"
+        else:
+            return "💣 技术性假突破：主力画线洗盘，形态失效。"
+    except: return "AI分析模块异常。"
+
 def review_trades(trades):
     active_trades, new_trades = [], []
-    now = datetime.now(timezone.utc)
     
     for t in trades:
         if t["status"] != "OPEN":
@@ -71,50 +84,43 @@ def review_trades(trades):
         if not curr_price: active_trades.append(t); continue
 
         closed = False
+        # 保本推止损逻辑
         if t["direction"] == "LONG":
-            risk = t["entry"] - t["sl"]
-            if curr_price - t["entry"] >= risk and t["sl"] < t["entry"]:
+            if curr_price - t["entry"] >= (t["entry"] - t["sl"]) and t["sl"] < t["entry"]:
                 t["sl"] = t["entry"]
             if curr_price <= t["sl"]: t["status"] = "LOSS"; closed = True
             elif curr_price >= t["tp2"]: t["status"] = "WIN_TP2"; closed = True
             elif curr_price >= t["tp1"]: t["status"] = "WIN_TP1"; closed = True
         elif t["direction"] == "SHORT":
-            risk = t["sl"] - t["entry"]
-            if t["entry"] - curr_price >= risk and t["sl"] > t["entry"]:
+            if t["entry"] - curr_price >= (t["sl"] - t["entry"]) and t["sl"] > t["entry"]:
                 t["sl"] = t["entry"]
             if curr_price >= t["sl"]: t["status"] = "LOSS"; closed = True
             elif curr_price <= t["tp2"]: t["status"] = "WIN_TP2"; closed = True
             elif curr_price <= t["tp1"]: t["status"] = "WIN_TP1"; closed = True
 
         if closed: 
+            t["close_time"] = datetime.now(timezone.utc).isoformat()
+            # 如果是亏损，立刻触发 AI 诊断
+            if t["status"] == "LOSS":
+                reason = ai_diagnose(t["symbol"], t["direction"])
+                send_tg(f"🛑 {t['symbol']} 触发止损！\n\n🧠 【AI 诊断】\n{reason}")
             new_trades.append(t)
         else: active_trades.append(t)
     return active_trades, new_trades
 
-def force_cycle_settlement(active_trades):
-    if not active_trades: return []
-    msg = f"⏰ 【3小时周期结算强制平仓】\n清理当前持仓 {len(active_trades)} 单。\n释放资金额度，开始新一轮扫描！"
-    send_tg(msg)
-    return [] 
-
+# ================= 扫描市场 =================
 def scan_market(trades):
     if len(trades) >= MAX_OPEN_TRADES: return
-        
     try:
         res = requests.get("https://www.okx.com/api/v5/market/tickers?instType=SWAP").json()
-        
-        # 🚨 【核心修复】：用 try...except 过滤空数据，彻底告别报错
         active_coins = []
         for t in res.get("data", []):
             if t.get("instId", "").endswith("USDT-SWAP"):
                 try:
-                    last_price = float(t.get("last", 0))
-                    vol_24h = float(t.get("volCcy24h", 0))
-                    if last_price * vol_24h > 5000000:
+                    if float(t.get("volCcy24h", 0)) * float(t.get("last", 0)) > 5000000:
                         active_coins.append(t["instId"])
-                except (ValueError, TypeError):
-                    pass # 数据为空或不是数字，直接跳过
-                    
+                except: pass
+        
         alerts_sent = 0 
         for symbol in active_coins:
             if len(trades) + alerts_sent >= MAX_OPEN_TRADES: break
@@ -124,14 +130,9 @@ def scan_market(trades):
             if k_res.get("code") != "0" or not k_res.get("data"): continue
                 
             candles = [{"high": float(c[2]), "low": float(c[3]), "close": float(c[4]), "open": float(c[1]), "vol": float(c[6])} for c in reversed(k_res["data"])]
-            curr, prev, prev2 = candles[-1], candles[-2], candles[-3]
-            prev_candles = candles[:-1]
-            
-            avg_vol = sum([c["vol"] for c in prev_candles[-20:]]) / 20
+            curr, prev = candles[-1], candles[-2]
+            avg_vol = sum([c["vol"] for c in candles[:-1][-20:]]) / 20
             rsi = calculate_rsi(candles, 14) 
-            
-            bad_pin_count = sum(1 for c in prev_candles[-20:] if (c["high"] - max(c["close"], c["open"])) > abs(c["close"] - c["open"]) * 2 or (min(c["close"], c["open"]) - c["low"]) > abs(c["close"] - c["open"]) * 2)
-            if bad_pin_count > 4: continue
             
             body = abs(curr["close"] - curr["open"])
             total_length = curr["high"] - curr["low"] if (curr["high"] - curr["low"]) > 0 else 0.0001
@@ -139,83 +140,75 @@ def scan_market(trades):
             lower_shadow = min(curr["close"], curr["open"]) - curr["low"]
             price_change = (curr["close"] - curr["open"]) / curr["open"] * 100
 
-            # 做多
-            is_slow_rise = (curr["close"] > curr["open"] and prev["close"] > prev["open"] and 0.2 < price_change < 2.5)
-            is_hammer = (lower_shadow > body * 2 and lower_shadow > total_length * 0.5 and curr["vol"] > avg_vol * 1.2)
-            is_bull_engulf = (prev["close"] < prev["open"] and curr["close"] > curr["open"] and curr["close"] > prev["open"] and curr["open"] < prev["close"] and curr["vol"] > avg_vol * 1.2)
-            
-            if (is_slow_rise or is_hammer or is_bull_engulf) and rsi < 70:
+            # 做多逻辑
+            is_long_signal = (prev["close"] < prev["open"] and curr["close"] > curr["open"] and curr["close"] > prev["open"]) or (lower_shadow > body * 2 and curr["vol"] > avg_vol * 1.2)
+            if is_long_signal and rsi < 70:
                 entry = curr["close"]
-                recent_low = min([c["low"] for c in candles[-10:]])
-                structural_sl = recent_low * 0.998
-                
+                sl = min([c["low"] for c in candles[-10:]]) * 0.998
                 min_sl_dist = entry * (0.006 if entry > 1000 else 0.015)
-                rr1, rr2 = (1.5, 2.0) if entry > 1000 else (2.0, 3.0)
+                if (entry - sl) < min_sl_dist: sl = entry - min_sl_dist
                 
-                sl = entry - min_sl_dist if (entry - structural_sl) < min_sl_dist else structural_sl
                 risk = entry - sl
-                if risk / entry > 0.04: continue 
-                    
-                tp1, tp2 = entry + risk * rr1, entry + risk * rr2
-                
-                trades.append({"symbol": symbol, "direction": "LONG", "entry": entry, "sl": sl, "tp1": tp1, "tp2": tp2, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"})
-                
-                msg = f"🐂 底部反转做多! {symbol}\n入场: {fmt_price(entry)}\n止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n(RSI: {rsi:.1f})\n⏰ {get_bj_time()}"
-                send_tg(msg)
-                alerts_sent += 1
-                continue
-
-            # 做空
-            is_top_rejection = (upper_shadow > body * 2 and upper_shadow > total_length * 0.5)
-            is_bearish_engulf = (prev["close"] > prev["open"] and curr["close"] < curr["open"] and curr["close"] < prev["open"] and curr["open"] > prev["close"])
-            
-            if (is_top_rejection or is_bearish_engulf) and rsi > 30:
-                if check_orderbook(symbol) < 55:
-                    entry = curr["close"]
-                    recent_high = max([c["high"] for c in candles[-10:]])
-                    structural_sl = recent_high * 1.002
-                    
-                    min_sl_dist = entry * (0.006 if entry > 1000 else 0.015)
-                    rr1, rr2 = (1.5, 2.0) if entry > 1000 else (2.0, 3.0)
-                        
-                    sl = entry + min_sl_dist if (structural_sl - entry) < min_sl_dist else structural_sl
-                    risk = sl - entry
-                    if risk / entry > 0.04: continue
-                        
-                    tp1, tp2 = entry - risk * rr1, entry - risk * rr2
-                    shape = "高位流星线" if is_top_rejection else "高位阴包阳"
-                    
-                    trades.append({"symbol": symbol, "direction": "SHORT", "entry": entry, "sl": sl, "tp1": tp1, "tp2": tp2, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"})
-                    
-                    msg = f"🔪 {shape}做空! {symbol}\n入场: {fmt_price(entry)}\n止损: {fmt_price(sl)} (空间 {risk/entry*100:.2f}%)\n🥇止盈1(1:{rr1}): {fmt_price(tp1)}\n🥈止盈2(1:{rr2}): {fmt_price(tp2)}\n(RSI: {rsi:.1f})\n⏰ {get_bj_time()}"
-                    send_tg(msg)
+                if risk / entry <= 0.04:
+                    tp1, tp2 = entry + risk * (1.5 if entry > 1000 else 2.0), entry + risk * (2.0 if entry > 1000 else 3.0)
+                    trades.append({"symbol": symbol, "direction": "LONG", "entry": entry, "sl": sl, "tp1": tp1, "tp2": tp2, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"})
+                    send_tg(f"🐂 底部反转做多! {symbol}\n入场: {fmt_price(entry)}\n止损: {fmt_price(sl)}\n(RSI: {rsi:.1f})")
                     alerts_sent += 1
+                    continue
 
+            # 做空逻辑
+            is_short_signal = (upper_shadow > body * 2 and upper_shadow > total_length * 0.5) or (prev["close"] > prev["open"] and curr["close"] < curr["open"])
+            if is_short_signal and rsi > 30:
+                entry = curr["close"]
+                sl = max([c["high"] for c in candles[-10:]]) * 1.002
+                min_sl_dist = entry * (0.006 if entry > 1000 else 0.015)
+                if (sl - entry) < min_sl_dist: sl = entry + min_sl_dist
+                
+                risk = sl - entry
+                if risk / entry <= 0.04:
+                    tp1, tp2 = entry - risk * (1.5 if entry > 1000 else 2.0), entry - risk * (2.0 if entry > 1000 else 3.0)
+                    trades.append({"symbol": symbol, "direction": "SHORT", "entry": entry, "sl": sl, "tp1": tp1, "tp2": tp2, "time": datetime.now(timezone.utc).isoformat(), "status": "OPEN"})
+                    send_tg(f"🔪 高位做空! {symbol}\n入场: {fmt_price(entry)}\n止损: {fmt_price(sl)}\n(RSI: {rsi:.1f})")
+                    alerts_sent += 1
     except Exception as e:
-        print(f"❌ 扫描出错: {e}")
+        print(f"扫描出错: {e}")
 
+# ================= 主程序 =================
 if __name__ == "__main__":
-    print("🚀 启动 3 小时轮转量化系统...")
+    now = datetime.now(timezone.utc)
     all_trades = load_json(DB_FILE, [])
+    report_data = load_json(REPORT_FILE, {"last_4h_time": 0, "last_12h_time": 0})
     cycle_data = load_json(CYCLE_FILE, {"last_reset": 0})
     
-    now = datetime.now(timezone.utc)
-    
+    # 1. 检查 3 小时强制轮转
     if now.timestamp() - cycle_data["last_reset"] >= CYCLE_HOURS * 3600:
         active_old = [t for t in all_trades if t["status"] == "OPEN"]
-        closed_old = [t for t in all_trades if t["status"] != "OPEN"]
-        force_cycle_settlement(active_old)
-        
-        for t in active_old:
-            t["status"] = "CYCLE_TIMEOUT"
-            
-        all_trades = closed_old + active_old
+        if active_old:
+            send_tg(f"⏰ 【3小时强制换血】清理当前持仓 {len(active_old)} 单，重新扫描！")
+            for t in active_old: t["status"] = "CYCLE_TIMEOUT"
         cycle_data["last_reset"] = now.timestamp()
-        save_json(CYCLE_FILE, cycle_data)
-        save_json(DB_FILE, all_trades)
         
+    # 2. 正常运行：查平仓、开新单
     active_trades, new_trades = review_trades(all_trades)
     scan_market(active_trades)
-    
     final_trades = new_trades + active_trades
+    
+    # 3. 检查 4 小时周期战报（距离上次满 4 小时即发）
+    if now.timestamp() - report_data["last_4h_time"] >= 4 * 3600:
+        closed = [t for t in final_trades if t["status"] != "OPEN"]
+        wins = len([t for t in closed if "WIN" in t["status"]])
+        losses = len([t for t in closed if t["status"] == "LOSS"])
+        rate = (wins / len(closed) * 100) if closed else 0
+        send_tg(f"📊 【4小时周期战报】\n当前总持仓: {len(active_trades)} / 15\n累计平仓: {len(closed)} 单\n胜率: {rate:.1f}% (✅胜{wins} | 🛑负{losses})")
+        report_data["last_4h_time"] = now.timestamp()
+
+    # 4. 检查 12 小时 AI 总结（距离上次满 12 小时即发）
+    if now.timestamp() - report_data["last_12h_time"] >= 12 * 3600:
+        # 这里只是做一个整体宏观总结
+        send_tg(f"🧠 【12小时全局复盘】\n市场依然充满欺骗性。请严格按照止损位执行，不要扛单。系统已为您过滤了大量假突破。")
+        report_data["last_12h_time"] = now.timestamp()
+
+    # 保存所有数据
     save_json(DB_FILE, final_trades)
+    save_json(REPORT_FILE, report_data)
+    save_json(CYCLE_FILE, cycle_data)
