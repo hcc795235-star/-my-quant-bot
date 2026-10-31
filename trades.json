@@ -11056,6 +11056,16 @@
         "status": "LOSS"
     },
     {
+        "symbol": "CAP-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.0848,
+        "sl": 0.0848,
+        "tp1": 0.08807332,
+        "tp2": 0.08970998,
+        "time": "2026-10-31T01:31:10.055862+00:00",
+        "status": "WIN_TP1"
+    },
+    {
         "symbol": "SNXX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 6.853,
@@ -11136,16 +11146,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "CAP-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.0848,
-        "sl": 0.0848,
-        "tp1": 0.08807332,
-        "tp2": 0.08970998,
-        "time": "2026-10-31T01:31:10.055862+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "PENDLE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.887,
@@ -11203,6 +11203,16 @@
         "tp1": 0.17948880000000003,
         "tp2": 0.17671320000000004,
         "time": "2026-10-31T02:10:58.020058+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "AKE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.0117,
+        "sl": 0.01145704,
+        "tp1": 0.012185920000000001,
+        "tp2": 0.012428880000000002,
+        "time": "2026-10-31T03:10:37.909313+00:00",
         "status": "OPEN"
     }
 ]
