@@ -10,7 +10,7 @@ REPORT_FILE = "last_report.json"
 CYCLE_FILE = "cycle_time.json"
 
 MAX_OPEN_TRADES = 15  
-CYCLE_HOURS = 3       # 每 3 小时强制换血
+CYCLE_HOURS = 3       
 
 def fmt_price(price):
     if price >= 1: return f"{price:.4f}"
@@ -23,7 +23,9 @@ def get_bj_time(dt=None):
 
 def load_json(file, default):
     if os.path.exists(file):
-        with open(file, "r") as f: return json.load(f)
+        try:
+            with open(file, "r") as f: return json.load(f)
+        except: return default
     return default
 
 def save_json(file, data):
@@ -50,15 +52,8 @@ def get_current_price(symbol):
     except: pass
     return None
 
-# ================= 核心：AI 诊断复盘逻辑 =================
 def ai_diagnose(symbol, direction):
     try:
-        k_res = requests.get(f"https://www.okx.com/api/v5/market/candles?instId={symbol}&bar=5m&limit=5").json()
-        if k_res.get("code") != "0": return "数据获取失败。"
-        
-        candles = [{"close": float(c[4]), "open": float(c[1])} for c in k_res["data"]]
-        curr = candles[0]
-        
         btc_res = requests.get("https://www.okx.com/api/v5/market/candles?instId=BTC-USDT-SWAP&bar=5m&limit=3").json()
         btc_change = 0
         if btc_res.get("code") == "0":
@@ -84,7 +79,6 @@ def review_trades(trades):
         if not curr_price: active_trades.append(t); continue
 
         closed = False
-        # 保本推止损逻辑
         if t["direction"] == "LONG":
             if curr_price - t["entry"] >= (t["entry"] - t["sl"]) and t["sl"] < t["entry"]:
                 t["sl"] = t["entry"]
@@ -100,7 +94,6 @@ def review_trades(trades):
 
         if closed: 
             t["close_time"] = datetime.now(timezone.utc).isoformat()
-            # 如果是亏损，立刻触发 AI 诊断
             if t["status"] == "LOSS":
                 reason = ai_diagnose(t["symbol"], t["direction"])
                 send_tg(f"🛑 {t['symbol']} 触发止损！\n\n🧠 【AI 诊断】\n{reason}")
@@ -108,7 +101,6 @@ def review_trades(trades):
         else: active_trades.append(t)
     return active_trades, new_trades
 
-# ================= 扫描市场 =================
 def scan_market(trades):
     if len(trades) >= MAX_OPEN_TRADES: return
     try:
@@ -138,9 +130,7 @@ def scan_market(trades):
             total_length = curr["high"] - curr["low"] if (curr["high"] - curr["low"]) > 0 else 0.0001
             upper_shadow = curr["high"] - max(curr["close"], curr["open"])
             lower_shadow = min(curr["close"], curr["open"]) - curr["low"]
-            price_change = (curr["close"] - curr["open"]) / curr["open"] * 100
 
-            # 做多逻辑
             is_long_signal = (prev["close"] < prev["open"] and curr["close"] > curr["open"] and curr["close"] > prev["open"]) or (lower_shadow > body * 2 and curr["vol"] > avg_vol * 1.2)
             if is_long_signal and rsi < 70:
                 entry = curr["close"]
@@ -156,7 +146,6 @@ def scan_market(trades):
                     alerts_sent += 1
                     continue
 
-            # 做空逻辑
             is_short_signal = (upper_shadow > body * 2 and upper_shadow > total_length * 0.5) or (prev["close"] > prev["open"] and curr["close"] < curr["open"])
             if is_short_signal and rsi > 30:
                 entry = curr["close"]
@@ -173,27 +162,27 @@ def scan_market(trades):
     except Exception as e:
         print(f"扫描出错: {e}")
 
-# ================= 主程序 =================
 if __name__ == "__main__":
     now = datetime.now(timezone.utc)
     all_trades = load_json(DB_FILE, [])
-    report_data = load_json(REPORT_FILE, {"last_4h_time": 0, "last_12h_time": 0})
     cycle_data = load_json(CYCLE_FILE, {"last_reset": 0})
     
-    # 1. 检查 3 小时强制轮转
-    if now.timestamp() - cycle_data["last_reset"] >= CYCLE_HOURS * 3600:
+    # 🚨 核心补丁：强制把旧账本升级为新格式
+    report_data = load_json(REPORT_FILE, {})
+    if "last_4h_time" not in report_data: report_data["last_4h_time"] = 0
+    if "last_12h_time" not in report_data: report_data["last_12h_time"] = 0
+    
+    if now.timestamp() - cycle_data.get("last_reset", 0) >= CYCLE_HOURS * 3600:
         active_old = [t for t in all_trades if t["status"] == "OPEN"]
         if active_old:
             send_tg(f"⏰ 【3小时强制换血】清理当前持仓 {len(active_old)} 单，重新扫描！")
             for t in active_old: t["status"] = "CYCLE_TIMEOUT"
         cycle_data["last_reset"] = now.timestamp()
         
-    # 2. 正常运行：查平仓、开新单
     active_trades, new_trades = review_trades(all_trades)
     scan_market(active_trades)
     final_trades = new_trades + active_trades
     
-    # 3. 检查 4 小时周期战报（距离上次满 4 小时即发）
     if now.timestamp() - report_data["last_4h_time"] >= 4 * 3600:
         closed = [t for t in final_trades if t["status"] != "OPEN"]
         wins = len([t for t in closed if "WIN" in t["status"]])
@@ -202,13 +191,10 @@ if __name__ == "__main__":
         send_tg(f"📊 【4小时周期战报】\n当前总持仓: {len(active_trades)} / 15\n累计平仓: {len(closed)} 单\n胜率: {rate:.1f}% (✅胜{wins} | 🛑负{losses})")
         report_data["last_4h_time"] = now.timestamp()
 
-    # 4. 检查 12 小时 AI 总结（距离上次满 12 小时即发）
     if now.timestamp() - report_data["last_12h_time"] >= 12 * 3600:
-        # 这里只是做一个整体宏观总结
         send_tg(f"🧠 【12小时全局复盘】\n市场依然充满欺骗性。请严格按照止损位执行，不要扛单。系统已为您过滤了大量假突破。")
         report_data["last_12h_time"] = now.timestamp()
 
-    # 保存所有数据
     save_json(DB_FILE, final_trades)
     save_json(REPORT_FILE, report_data)
     save_json(CYCLE_FILE, cycle_data)
