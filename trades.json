@@ -11276,6 +11276,17 @@
         "status": "LOSS"
     },
     {
+        "symbol": "TIA-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.4651,
+        "sl": 0.4651,
+        "tp1": 0.479053,
+        "tp2": 0.4860295,
+        "time": "2026-10-31T04:50:54.197003+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-10-31T06:35:27.676018+00:00"
+    },
+    {
         "symbol": "MAGIC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.08196,
@@ -11376,16 +11387,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "TIA-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.4651,
-        "sl": 0.4651,
-        "tp1": 0.479053,
-        "tp2": 0.4860295,
-        "time": "2026-10-31T04:50:54.197003+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "XAU-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3889.8,
@@ -11423,6 +11424,16 @@
         "tp1": 2.65392,
         "tp2": 2.6128799999999996,
         "time": "2026-10-31T06:10:37.150711+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "UNI-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 6.983,
+        "sl": 6.878254999999999,
+        "tp1": 7.19249,
+        "tp2": 7.297235000000001,
+        "time": "2026-10-31T06:35:29.051755+00:00",
         "status": "OPEN"
     }
 ]
