@@ -11036,6 +11036,16 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "IRYS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.02314,
+        "sl": 0.0234871,
+        "tp1": 0.022445800000000002,
+        "tp2": 0.022098700000000002,
+        "time": "2026-10-31T01:35:37.489519+00:00",
+        "status": "LOSS"
+    },
+    {
         "symbol": "SNXX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 6.853,
@@ -11146,16 +11156,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "IRYS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.02314,
-        "sl": 0.0234871,
-        "tp1": 0.022445800000000002,
-        "tp2": 0.022098700000000002,
-        "time": "2026-10-31T01:35:37.489519+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LTC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 55.6,
@@ -11183,6 +11183,16 @@
         "tp1": 79.59819999999999,
         "tp2": 78.36729999999999,
         "time": "2026-10-31T01:40:36.261745+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SAND-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.04711,
+        "sl": 0.04781665,
+        "tp1": 0.04569669999999999,
+        "tp2": 0.04499004999999999,
+        "time": "2026-10-31T01:50:48.282206+00:00",
         "status": "OPEN"
     }
 ]
