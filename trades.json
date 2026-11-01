@@ -12905,6 +12905,17 @@
         "close_time": "2026-11-01T06:10:34.632531+00:00"
     },
     {
+        "symbol": "OL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.006787,
+        "sl": 0.006787,
+        "tp1": 0.00658339,
+        "tp2": 0.006481585,
+        "time": "2026-11-01T06:00:48.493699+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-01T06:45:34.530625+00:00"
+    },
+    {
         "symbol": "MSTR-USDT-SWAP",
         "direction": "SHORT",
         "entry": 134.17,
@@ -13035,16 +13046,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "OL-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.006787,
-        "sl": 0.006787,
-        "tp1": 0.00658339,
-        "tp2": 0.006481585,
-        "time": "2026-11-01T06:00:48.493699+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "DOS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.1997,
@@ -13052,6 +13053,16 @@
         "tp1": 0.19370899999999996,
         "tp2": 0.19071349999999995,
         "time": "2026-11-01T06:10:37.614265+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.1735,
+        "sl": 1.1911025,
+        "tp1": 1.138295,
+        "tp2": 1.1206925,
+        "time": "2026-11-01T06:45:36.087093+00:00",
         "status": "OPEN"
     }
 ]
