@@ -13875,6 +13875,17 @@
         "close_time": "2026-11-01T22:10:36.817584+00:00"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1055.4,
+        "sl": 1055.4,
+        "tp1": 1045.9014000000002,
+        "tp2": 1042.7352,
+        "time": "2026-11-01T20:10:39.136723+00:00",
+        "status": "WIN_TP2",
+        "close_time": "2026-11-01T23:00:53.032478+00:00"
+    },
+    {
         "symbol": "ETH-USDT-SWAP",
         "direction": "LONG",
         "entry": 2258.5,
@@ -13955,16 +13966,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1055.4,
-        "sl": 1061.7324,
-        "tp1": 1045.9014000000002,
-        "tp2": 1042.7352,
-        "time": "2026-11-01T20:10:39.136723+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ONDO-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.4008,
@@ -14022,6 +14023,16 @@
         "tp1": 6.95296,
         "tp2": 6.84544,
         "time": "2026-11-01T22:10:40.822352+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "PUMP-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.004134,
+        "sl": 0.004071989999999999,
+        "tp1": 0.00425802,
+        "tp2": 0.004320030000000001,
+        "time": "2026-11-01T23:00:55.541317+00:00",
         "status": "OPEN"
     }
 ]
