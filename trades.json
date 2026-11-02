@@ -14329,6 +14329,28 @@
         "close_time": "2026-11-02T03:21:56.564504+00:00"
     },
     {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2291.37,
+        "sl": 2305.11822,
+        "tp1": 2270.7476699999997,
+        "tp2": 2263.87356,
+        "time": "2026-11-02T02:10:41.904931+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-02T03:25:27.170461+00:00"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1093.2,
+        "sl": 1099.7592,
+        "tp1": 1083.3612000000003,
+        "tp2": 1080.0816000000002,
+        "time": "2026-11-02T03:10:37.301018+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-02T03:25:29.028756+00:00"
+    },
+    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.16893,
@@ -14389,16 +14411,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ETH-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 2291.37,
-        "sl": 2305.11822,
-        "tp1": 2270.7476699999997,
-        "tp2": 2263.87356,
-        "time": "2026-11-02T02:10:41.904931+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SNXX-USDT-SWAP",
         "direction": "LONG",
         "entry": 7.158,
@@ -14449,16 +14461,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1093.2,
-        "sl": 1099.7592,
-        "tp1": 1083.3612000000003,
-        "tp2": 1080.0816000000002,
-        "time": "2026-11-02T03:10:37.301018+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SOXS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 48.89,
@@ -14476,6 +14478,16 @@
         "tp1": 3.3621331999999997,
         "tp2": 3.4404997999999996,
         "time": "2026-11-02T03:21:58.460093+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2311.92,
+        "sl": 2325.79152,
+        "tp1": 2291.11272,
+        "tp2": 2284.17696,
+        "time": "2026-11-02T03:25:30.814375+00:00",
         "status": "OPEN"
     }
 ]
