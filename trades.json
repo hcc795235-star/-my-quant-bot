@@ -14069,6 +14069,28 @@
         "close_time": "2026-11-02T00:35:28.889992+00:00"
     },
     {
+        "symbol": "SKHY-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 148.75,
+        "sl": 148.75,
+        "tp1": 153.21249999999998,
+        "tp2": 155.44374999999997,
+        "time": "2026-11-01T23:14:11.352599+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-02T00:50:35.681292+00:00"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1055.3,
+        "sl": 1070.7371999999998,
+        "tp1": 1032.1442000000002,
+        "tp2": 1024.4256000000003,
+        "time": "2026-11-02T00:15:34.639840+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-02T00:50:36.733001+00:00"
+    },
+    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.16784,
@@ -14149,16 +14171,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHY-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 148.75,
-        "sl": 148.75,
-        "tp1": 153.21249999999998,
-        "tp2": 155.44374999999997,
-        "time": "2026-11-01T23:14:11.352599+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.231,
@@ -14199,16 +14211,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1055.3,
-        "sl": 1070.7371999999998,
-        "tp1": 1032.1442000000002,
-        "tp2": 1024.4256000000003,
-        "time": "2026-11-02T00:15:34.639840+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "AKE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.00865,
@@ -14216,6 +14218,16 @@
         "tp1": 0.00837492,
         "tp2": 0.008237379999999999,
         "time": "2026-11-02T00:35:32.083074+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "PUMP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.004175,
+        "sl": 0.004237625,
+        "tp1": 0.0040497499999999995,
+        "tp2": 0.003987124999999999,
+        "time": "2026-11-02T00:50:38.704048+00:00",
         "status": "OPEN"
     }
 ]
