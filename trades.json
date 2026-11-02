@@ -15790,6 +15790,17 @@
         "close_time": "2026-11-02T22:35:25.670115+00:00"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1036.2,
+        "sl": 1050.6971999999998,
+        "tp1": 1014.4542000000004,
+        "tp2": 1007.2056000000005,
+        "time": "2026-11-02T20:45:38.753036+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-02T23:10:35.488179+00:00"
+    },
+    {
         "symbol": "ETHFI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.5745,
@@ -15870,16 +15881,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1036.2,
-        "sl": 1050.6971999999998,
-        "tp1": 1014.4542000000004,
-        "tp2": 1007.2056000000005,
-        "time": "2026-11-02T20:45:38.753036+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.16465,
@@ -15937,6 +15938,16 @@
         "tp1": 2.958694,
         "tp2": 2.912941,
         "time": "2026-11-02T22:35:28.270089+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 174.64,
+        "sl": 177.25959999999998,
+        "tp1": 169.4008,
+        "tp2": 166.7812,
+        "time": "2026-11-02T23:10:37.512598+00:00",
         "status": "OPEN"
     }
 ]
