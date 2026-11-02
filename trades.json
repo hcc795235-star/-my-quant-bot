@@ -15486,6 +15486,17 @@
         "close_time": "2026-11-02T19:05:31.016315+00:00"
     },
     {
+        "symbol": "SNXX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 6.408,
+        "sl": 6.408,
+        "tp1": 6.1418880000000025,
+        "tp2": 6.0088320000000035,
+        "time": "2026-11-02T17:40:29.471814+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-02T19:20:35.771439+00:00"
+    },
+    {
         "symbol": "DOOD-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.001898,
@@ -15566,16 +15577,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SNXX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 6.408,
-        "sl": 6.408,
-        "tp1": 6.1418880000000025,
-        "tp2": 6.0088320000000035,
-        "time": "2026-11-02T17:40:29.471814+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LIT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3.0775,
@@ -15633,6 +15634,16 @@
         "tp1": 84.6034,
         "tp2": 83.29509999999999,
         "time": "2026-11-02T19:10:35.787182+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "PEPE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 4.6586e-06,
+        "sl": 4.728479e-06,
+        "tp1": 4.518842e-06,
+        "tp2": 4.448963e-06,
+        "time": "2026-11-02T19:20:39.393981+00:00",
         "status": "OPEN"
     }
 ]
