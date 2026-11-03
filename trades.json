@@ -16870,6 +16870,28 @@
         "close_time": "2026-11-03T12:05:29.702335+00:00"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1053.9,
+        "sl": 1061.3184,
+        "tp1": 1042.7724,
+        "tp2": 1039.0632,
+        "time": "2026-11-03T11:45:37.882219+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-03T12:25:33.095078+00:00"
+    },
+    {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2267.46,
+        "sl": 2281.06476,
+        "tp1": 2247.05286,
+        "tp2": 2240.2504799999997,
+        "time": "2026-11-03T11:50:38.410084+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-03T12:25:34.143212+00:00"
+    },
+    {
         "symbol": "LITE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 698.43,
@@ -16980,26 +17002,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1053.9,
-        "sl": 1061.3184,
-        "tp1": 1042.7724,
-        "tp2": 1039.0632,
-        "time": "2026-11-03T11:45:37.882219+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "ETH-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 2267.46,
-        "sl": 2281.06476,
-        "tp1": 2247.05286,
-        "tp2": 2240.2504799999997,
-        "time": "2026-11-03T11:50:38.410084+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.19,
@@ -17017,6 +17019,16 @@
         "tp1": 135.14630000000002,
         "tp2": 137.11445000000003,
         "time": "2026-11-03T12:10:37.157585+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "XLM-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.16557,
+        "sl": 0.16805355,
+        "tp1": 0.1606029,
+        "tp2": 0.15811935,
+        "time": "2026-11-03T12:25:35.572863+00:00",
         "status": "OPEN"
     }
 ]
