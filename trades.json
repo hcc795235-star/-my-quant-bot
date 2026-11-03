@@ -17013,6 +17013,28 @@
         "close_time": "2026-11-03T14:10:35.998115+00:00"
     },
     {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 179.92,
+        "sl": 179.92,
+        "tp1": 174.52239999999998,
+        "tp2": 171.82359999999997,
+        "time": "2026-11-03T13:40:37.289294+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-03T14:30:43.549228+00:00"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 707.85,
+        "sl": 707.85,
+        "tp1": 686.6145,
+        "tp2": 675.99675,
+        "time": "2026-11-03T14:10:36.381386+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-03T14:30:44.193976+00:00"
+    },
+    {
         "symbol": "LTC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 54.32,
@@ -17113,16 +17135,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "MRVL-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 179.92,
-        "sl": 179.92,
-        "tp1": 174.52239999999998,
-        "tp2": 171.82359999999997,
-        "time": "2026-11-03T13:40:37.289294+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "TRUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.606,
@@ -17153,13 +17165,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 707.85,
-        "sl": 707.85,
-        "tp1": 686.6145,
-        "tp2": 675.99675,
-        "time": "2026-11-03T14:10:36.381386+00:00",
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 2289.79,
+        "sl": 2270.72944,
+        "tp1": 2318.38084,
+        "tp2": 2327.9111199999998,
+        "time": "2026-11-03T14:30:45.220737+00:00",
         "status": "OPEN"
     }
 ]
