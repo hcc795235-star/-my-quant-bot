@@ -16383,6 +16383,17 @@
         "close_time": "2026-11-03T06:55:27.677807+00:00"
     },
     {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 3.1008,
+        "sl": 3.054288,
+        "tp1": 3.1938239999999998,
+        "tp2": 3.2403359999999997,
+        "time": "2026-11-03T05:50:34.599201+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-03T07:05:30.657132+00:00"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "LONG",
         "entry": 6.976,
@@ -16503,16 +16514,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LIT-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 3.1008,
-        "sl": 3.054288,
-        "tp1": 3.1938239999999998,
-        "tp2": 3.2403359999999997,
-        "time": "2026-11-03T05:50:34.599201+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SKHYNIX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1041.0,
@@ -16530,6 +16531,16 @@
         "tp1": 0.907338,
         "tp2": 0.893307,
         "time": "2026-11-03T06:55:30.143197+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BCH-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 274.73,
+        "sl": 270.60905,
+        "tp1": 282.9719,
+        "tp2": 287.09285,
+        "time": "2026-11-03T07:05:33.717696+00:00",
         "status": "OPEN"
     }
 ]
