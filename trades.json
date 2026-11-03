@@ -17175,6 +17175,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "NBIS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 148.29,
+        "sl": 150.51434999999998,
+        "tp1": 143.84130000000002,
+        "tp2": 141.61695000000003,
+        "time": "2026-11-03T14:40:40.347136+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-03T14:45:36.095083+00:00"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.369,
@@ -17275,16 +17286,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "NBIS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 148.29,
-        "sl": 150.51434999999998,
-        "tp1": 143.84130000000002,
-        "tp2": 141.61695000000003,
-        "time": "2026-11-03T14:40:40.347136+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SNXX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 6.652,
@@ -17292,6 +17293,26 @@
         "tp1": 6.45244,
         "tp2": 6.35266,
         "time": "2026-11-03T14:40:42.014393+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "QUANT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 195.3,
+        "sl": 192.37050000000002,
+        "tp1": 201.159,
+        "tp2": 204.08849999999998,
+        "time": "2026-11-03T14:45:38.730720+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ORCL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 123.94,
+        "sl": 125.7991,
+        "tp1": 120.2218,
+        "tp2": 118.3627,
+        "time": "2026-11-03T14:45:41.296720+00:00",
         "status": "OPEN"
     }
 ]
