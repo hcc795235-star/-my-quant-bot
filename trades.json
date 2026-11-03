@@ -16145,6 +16145,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "ZHONGJI-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 85.07,
+        "sl": 83.79395,
+        "tp1": 87.62209999999999,
+        "tp2": 88.89814999999999,
+        "time": "2026-11-03T02:45:36.990881+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-03T03:30:48.226108+00:00"
+    },
+    {
         "symbol": "APT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.6177,
@@ -16285,13 +16296,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ZHONGJI-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 85.07,
-        "sl": 83.79395,
-        "tp1": 87.62209999999999,
-        "tp2": 88.89814999999999,
-        "time": "2026-11-03T02:45:36.990881+00:00",
+        "symbol": "ORCL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 120.08,
+        "sl": 121.88119999999999,
+        "tp1": 116.47760000000001,
+        "tp2": 114.67640000000002,
+        "time": "2026-11-03T03:30:52.826445+00:00",
         "status": "OPEN"
     }
 ]
