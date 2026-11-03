@@ -17252,6 +17252,17 @@
         "close_time": "2026-11-03T16:05:31.841438+00:00"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1075.5,
+        "sl": 1075.5,
+        "tp1": 1065.8205,
+        "tp2": 1062.594,
+        "time": "2026-11-03T16:05:34.602412+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-03T16:30:46.397998+00:00"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.369,
@@ -17355,7 +17366,7 @@
         "symbol": "BTW-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.0531,
-        "sl": 1.0688965,
+        "sl": 1.0531,
         "tp1": 1.021507,
         "tp2": 1.0057105,
         "time": "2026-11-03T15:10:41.321109+00:00",
@@ -17392,13 +17403,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
+        "symbol": "LIT-USDT-SWAP",
         "direction": "SHORT",
-        "entry": 1075.5,
-        "sl": 1075.5,
-        "tp1": 1065.8205,
-        "tp2": 1062.594,
-        "time": "2026-11-03T16:05:34.602412+00:00",
+        "entry": 3.3683,
+        "sl": 3.4646154,
+        "tp1": 3.1756692,
+        "tp2": 3.0793538000000003,
+        "time": "2026-11-03T16:30:47.191980+00:00",
         "status": "OPEN"
     }
 ]
