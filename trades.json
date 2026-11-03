@@ -16980,6 +16980,17 @@
         "close_time": "2026-11-03T13:40:35.351610+00:00"
     },
     {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 3.2276,
+        "sl": 3.276014,
+        "tp1": 3.1307719999999994,
+        "tp2": 3.0823579999999993,
+        "time": "2026-11-03T12:55:32.531735+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-03T14:00:56.975121+00:00"
+    },
+    {
         "symbol": "LTC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 54.32,
@@ -17060,16 +17071,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LIT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 3.2276,
-        "sl": 3.276014,
-        "tp1": 3.1307719999999994,
-        "tp2": 3.0823579999999993,
-        "time": "2026-11-03T12:55:32.531735+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ZHONGJI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 81.48,
@@ -17127,6 +17128,16 @@
         "tp1": 628.5883999999999,
         "tp2": 637.7425999999998,
         "time": "2026-11-03T13:45:34.871967+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "PUMP-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.004214,
+        "sl": 0.00415079,
+        "tp1": 0.00434042,
+        "tp2": 0.00440363,
+        "time": "2026-11-03T14:01:00.504013+00:00",
         "status": "OPEN"
     }
 ]
