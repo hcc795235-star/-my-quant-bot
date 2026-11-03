@@ -16156,6 +16156,28 @@
         "close_time": "2026-11-03T03:30:48.226108+00:00"
     },
     {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 3.1084,
+        "sl": 3.1084,
+        "tp1": 3.0151480000000004,
+        "tp2": 2.9685220000000005,
+        "time": "2026-11-03T02:35:31.870485+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-03T04:20:40.384442+00:00"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1054.3,
+        "sl": 1054.3,
+        "tp1": 1038.8125,
+        "tp2": 1033.6499999999999,
+        "time": "2026-11-03T02:40:40.824469+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-03T04:20:41.698923+00:00"
+    },
+    {
         "symbol": "APT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.6177,
@@ -16246,16 +16268,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LIT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 3.1084,
-        "sl": 3.1084,
-        "tp1": 3.0151480000000004,
-        "tp2": 2.9685220000000005,
-        "time": "2026-11-03T02:35:31.870485+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MRVL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 174.9,
@@ -16276,16 +16288,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1054.3,
-        "sl": 1054.3,
-        "tp1": 1038.8125,
-        "tp2": 1033.6499999999999,
-        "time": "2026-11-03T02:40:40.824469+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "QUANT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 193.3,
@@ -16303,6 +16305,16 @@
         "tp1": 116.47760000000001,
         "tp2": 114.67640000000002,
         "time": "2026-11-03T03:30:52.826445+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 3.1111,
+        "sl": 3.1577665,
+        "tp1": 3.0177669999999996,
+        "tp2": 2.9711004999999995,
+        "time": "2026-11-03T04:20:43.099779+00:00",
         "status": "OPEN"
     }
 ]
