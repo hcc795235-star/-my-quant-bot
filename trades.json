@@ -18732,6 +18732,28 @@
         "close_time": "2026-11-04T08:05:32.760779+00:00"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1042.4,
+        "sl": 1049.2944,
+        "tp1": 1032.0584000000003,
+        "tp2": 1028.6112000000003,
+        "time": "2026-11-04T06:10:37.050082+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-04T08:10:41.048535+00:00"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 691.19,
+        "sl": 701.55785,
+        "tp1": 670.4543000000001,
+        "tp2": 660.0864500000001,
+        "time": "2026-11-04T07:15:36.006604+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-04T08:10:43.308310+00:00"
+    },
+    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.16325,
@@ -18802,16 +18824,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1042.4,
-        "sl": 1049.2944,
-        "tp1": 1032.0584000000003,
-        "tp2": 1028.6112000000003,
-        "time": "2026-11-04T06:10:37.050082+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MSTR-USDT-SWAP",
         "direction": "SHORT",
         "entry": 135.81,
@@ -18842,16 +18854,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 691.19,
-        "sl": 701.55785,
-        "tp1": 670.4543000000001,
-        "tp2": 660.0864500000001,
-        "time": "2026-11-04T07:15:36.006604+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.524,
@@ -18869,6 +18871,26 @@
         "tp1": 268.16619999999995,
         "tp2": 264.01929999999993,
         "time": "2026-11-04T08:05:34.926634+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 174.21,
+        "sl": 176.82315,
+        "tp1": 168.98370000000003,
+        "tp2": 166.37055000000004,
+        "time": "2026-11-04T08:10:45.979307+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "PUMP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.004438,
+        "sl": 0.00450457,
+        "tp1": 0.00430486,
+        "tp2": 0.00423829,
+        "time": "2026-11-04T08:10:47.843173+00:00",
         "status": "OPEN"
     }
 ]
