@@ -18182,6 +18182,28 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 3.2437,
+        "sl": 3.2437,
+        "tp1": 3.1463889999999997,
+        "tp2": 3.0977334999999995,
+        "time": "2026-11-04T02:55:29.195795+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-04T03:10:35.662820+00:00"
+    },
+    {
+        "symbol": "ZHIPU-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 54.97,
+        "sl": 54.14545,
+        "tp1": 56.6191,
+        "tp2": 57.443650000000005,
+        "time": "2026-11-04T03:01:05.657141+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-04T03:10:37.244063+00:00"
+    },
+    {
         "symbol": "MSTR-USDT-SWAP",
         "direction": "SHORT",
         "entry": 131.2,
@@ -18199,16 +18221,6 @@
         "tp1": 0.5871409999999999,
         "tp2": 0.5780614999999999,
         "time": "2026-11-04T02:55:28.414300+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "LIT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 3.2437,
-        "sl": 3.2437,
-        "tp1": 3.1463889999999997,
-        "tp2": 3.0977334999999995,
-        "time": "2026-11-04T02:55:29.195795+00:00",
         "status": "OPEN"
     },
     {
@@ -18282,16 +18294,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ZHIPU-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 54.97,
-        "sl": 54.14545,
-        "tp1": 56.6191,
-        "tp2": 57.443650000000005,
-        "time": "2026-11-04T03:01:05.657141+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "OKB-USDT-SWAP",
         "direction": "SHORT",
         "entry": 106.18,
@@ -18319,6 +18321,26 @@
         "tp1": 137.67732,
         "tp2": 134.91598000000002,
         "time": "2026-11-04T03:05:36.246363+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SQQQ-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 45.77,
+        "sl": 46.45655,
+        "tp1": 44.39690000000001,
+        "tp2": 43.71035000000001,
+        "time": "2026-11-04T03:10:42.857935+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 59.09,
+        "sl": 59.976350000000004,
+        "tp1": 57.3173,
+        "tp2": 56.43095,
+        "time": "2026-11-04T03:10:43.608862+00:00",
         "status": "OPEN"
     }
 ]
