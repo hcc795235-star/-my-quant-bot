@@ -19175,6 +19175,17 @@
         "close_time": "2026-11-04T13:45:33.573284+00:00"
     },
     {
+        "symbol": "MUBARAK-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.042282,
+        "sl": 0.042282,
+        "tp1": 0.04355046,
+        "tp2": 0.04418469,
+        "time": "2026-11-04T12:10:38.335828+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-04T14:15:33.844441+00:00"
+    },
+    {
         "symbol": "DOGE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.07524,
@@ -19295,16 +19306,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "MUBARAK-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.042282,
-        "sl": 0.042282,
-        "tp1": 0.04355046,
-        "tp2": 0.04418469,
-        "time": "2026-11-04T12:10:38.335828+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LIT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3.4555,
@@ -19322,6 +19323,16 @@
         "tp1": 7.55093,
         "tp2": 7.660895,
         "time": "2026-11-04T13:45:35.612770+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "WDC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 333.33,
+        "sl": 338.32995,
+        "tp1": 323.33009999999996,
+        "tp2": 318.33014999999995,
+        "time": "2026-11-04T14:15:35.805725+00:00",
         "status": "OPEN"
     }
 ]
