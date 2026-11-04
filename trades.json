@@ -17922,6 +17922,28 @@
         "close_time": "2026-11-04T00:20:37.057848+00:00"
     },
     {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 51.98,
+        "sl": 51.98,
+        "tp1": 55.161959999999986,
+        "tp2": 56.75293999999998,
+        "time": "2026-11-03T23:55:34.741263+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-04T01:02:58.252517+00:00"
+    },
+    {
+        "symbol": "MVLL-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 13.28,
+        "sl": 13.0808,
+        "tp1": 13.678399999999998,
+        "tp2": 13.877599999999997,
+        "time": "2026-11-04T00:20:46.086352+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-04T01:02:58.998004+00:00"
+    },
+    {
         "symbol": "LITE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 683.33,
@@ -18002,16 +18024,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOXS-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 51.98,
-        "sl": 51.98,
-        "tp1": 55.161959999999986,
-        "tp2": 56.75293999999998,
-        "time": "2026-11-03T23:55:34.741263+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BCH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 274.6,
@@ -18042,16 +18054,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "MVLL-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 13.28,
-        "sl": 13.0808,
-        "tp1": 13.678399999999998,
-        "tp2": 13.877599999999997,
-        "time": "2026-11-04T00:20:46.086352+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "TRX-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.32166,
@@ -18069,6 +18071,16 @@
         "tp1": 175.48110000000003,
         "tp2": 178.03665000000004,
         "time": "2026-11-04T00:25:29.763639+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2266.08,
+        "sl": 2282.556,
+        "tp1": 2241.366,
+        "tp2": 2233.1279999999997,
+        "time": "2026-11-04T01:03:01.369927+00:00",
         "status": "OPEN"
     }
 ]
