@@ -19795,6 +19795,17 @@
         "close_time": "2026-11-04T20:35:28.589316+00:00"
     },
     {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 608.99,
+        "sl": 619.80714,
+        "tp1": 587.35572,
+        "tp2": 576.53858,
+        "time": "2026-11-04T19:50:35.995688+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-04T20:50:37.456582+00:00"
+    },
+    {
         "symbol": "WDC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 329.42,
@@ -19925,16 +19936,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 608.99,
-        "sl": 619.80714,
-        "tp1": 587.35572,
-        "tp2": 576.53858,
-        "time": "2026-11-04T19:50:35.995688+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "APT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6341,
@@ -19942,6 +19943,16 @@
         "tp1": 0.615077,
         "tp2": 0.6055655,
         "time": "2026-11-04T20:35:32.082800+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 621.38,
+        "sl": 607.4327,
+        "tp1": 649.2746000000001,
+        "tp2": 663.2219000000001,
+        "time": "2026-11-04T20:50:38.865656+00:00",
         "status": "OPEN"
     }
 ]
