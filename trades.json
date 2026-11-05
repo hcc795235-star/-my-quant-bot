@@ -21451,6 +21451,39 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "SQQQ-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 47.52,
+        "sl": 48.232800000000005,
+        "tp1": 46.0944,
+        "tp2": 45.3816,
+        "time": "2026-11-05T15:30:56.545624+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-05T15:45:39.382795+00:00"
+    },
+    {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 74.92,
+        "sl": 76.96362,
+        "tp1": 70.83276,
+        "tp2": 68.78913999999999,
+        "time": "2026-11-05T15:30:59.131129+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-05T15:45:40.429412+00:00"
+    },
+    {
+        "symbol": "MSTR-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 130.05,
+        "sl": 128.09925,
+        "tp1": 133.9515,
+        "tp2": 135.90225,
+        "time": "2026-11-05T15:40:48.412012+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-05T15:45:42.437965+00:00"
+    },
+    {
         "symbol": "APP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 358.48,
@@ -21511,26 +21544,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SQQQ-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 47.52,
-        "sl": 48.232800000000005,
-        "tp1": 46.0944,
-        "tp2": 45.3816,
-        "time": "2026-11-05T15:30:56.545624+00:00",
-        "status": "OPEN"
-    },
-    {
-        "symbol": "SOXS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 74.92,
-        "sl": 76.96362,
-        "tp1": 70.83276,
-        "tp2": 68.78913999999999,
-        "time": "2026-11-05T15:30:59.131129+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "NG-USDT-SWAP",
         "direction": "LONG",
         "entry": 2.973,
@@ -21581,16 +21594,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "MSTR-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 130.05,
-        "sl": 128.09925,
-        "tp1": 133.9515,
-        "tp2": 135.90225,
-        "time": "2026-11-05T15:40:48.412012+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "TRUMP-USDT-SWAP",
         "direction": "LONG",
         "entry": 1.182,
@@ -21598,6 +21601,26 @@
         "tp1": 1.242616,
         "tp2": 1.272924,
         "time": "2026-11-05T15:43:30.654314+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.0275,
+        "sl": 1.0429125000000001,
+        "tp1": 0.996675,
+        "tp2": 0.9812624999999999,
+        "time": "2026-11-05T15:45:46.138821+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BCH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 281.58,
+        "sl": 285.8037,
+        "tp1": 273.13259999999997,
+        "tp2": 268.90889999999996,
+        "time": "2026-11-05T15:45:47.889544+00:00",
         "status": "OPEN"
     }
 ]
