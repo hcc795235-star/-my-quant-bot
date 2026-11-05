@@ -21810,6 +21810,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "TRUMP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.186,
+        "sl": 1.20379,
+        "tp1": 1.15042,
+        "tp2": 1.13263,
+        "time": "2026-11-05T18:35:34.314821+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-05T19:35:30.689381+00:00"
+    },
+    {
         "symbol": "RAY-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.6745,
@@ -21900,16 +21911,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "TRUMP-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1.186,
-        "sl": 1.20379,
-        "tp1": 1.15042,
-        "tp2": 1.13263,
-        "time": "2026-11-05T18:35:34.314821+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SQQQ-USDT-SWAP",
         "direction": "SHORT",
         "entry": 48.96,
@@ -21957,6 +21958,16 @@
         "tp1": 6.62995,
         "tp2": 6.527425,
         "time": "2026-11-05T18:45:35.012825+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MSTR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 128.55,
+        "sl": 130.47825,
+        "tp1": 124.69350000000003,
+        "tp2": 122.76525000000004,
+        "time": "2026-11-05T19:35:33.100058+00:00",
         "status": "OPEN"
     }
 ]
