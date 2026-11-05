@@ -20626,6 +20626,17 @@
         "close_time": "2026-11-05T06:50:33.566660+00:00"
     },
     {
+        "symbol": "ZHONGJI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 78.4,
+        "sl": 79.57600000000001,
+        "tp1": 76.048,
+        "tp2": 74.872,
+        "time": "2026-11-05T06:19:00.664506+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-05T07:10:32.888928+00:00"
+    },
+    {
         "symbol": "APP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 325.54,
@@ -20706,16 +20717,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ZHONGJI-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 78.4,
-        "sl": 79.57600000000001,
-        "tp1": 76.048,
-        "tp2": 74.872,
-        "time": "2026-11-05T06:19:00.664506+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BTW-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.0351,
@@ -20773,6 +20774,16 @@
         "tp1": 305.08439999999996,
         "tp2": 300.36659999999995,
         "time": "2026-11-05T06:50:36.777546+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ETH-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 2429.74,
+        "sl": 2444.3184399999996,
+        "tp1": 2407.87234,
+        "tp2": 2400.5831200000002,
+        "time": "2026-11-05T07:10:36.311713+00:00",
         "status": "OPEN"
     }
 ]
