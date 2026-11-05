@@ -20637,6 +20637,17 @@
         "close_time": "2026-11-05T07:10:32.888928+00:00"
     },
     {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.0351,
+        "sl": 1.0506265,
+        "tp1": 1.004047,
+        "tp2": 0.9885204999999999,
+        "time": "2026-11-05T06:19:01.534046+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-05T07:45:37.015762+00:00"
+    },
+    {
         "symbol": "APP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 325.54,
@@ -20717,16 +20728,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "BTW-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1.0351,
-        "sl": 1.0506265,
-        "tp1": 1.004047,
-        "tp2": 0.9885204999999999,
-        "time": "2026-11-05T06:19:01.534046+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MRVL-USDT-SWAP",
         "direction": "LONG",
         "entry": 153.76,
@@ -20780,10 +20781,20 @@
         "symbol": "ETH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 2429.74,
-        "sl": 2444.3184399999996,
+        "sl": 2429.74,
         "tp1": 2407.87234,
         "tp2": 2400.5831200000002,
         "time": "2026-11-05T07:10:36.311713+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "APT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.6361,
+        "sl": 0.6456415,
+        "tp1": 0.617017,
+        "tp2": 0.6074755000000001,
+        "time": "2026-11-05T07:45:38.947081+00:00",
         "status": "OPEN"
     }
 ]
