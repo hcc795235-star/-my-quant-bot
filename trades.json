@@ -22563,6 +22563,28 @@
         "close_time": "2026-11-06T02:35:29.421206+00:00"
     },
     {
+        "symbol": "WDC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 280.1,
+        "sl": 284.30150000000003,
+        "tp1": 271.697,
+        "tp2": 267.4955,
+        "time": "2026-11-06T02:15:39.425896+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-06T02:50:33.758196+00:00"
+    },
+    {
+        "symbol": "ZHONGJI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 73.15,
+        "sl": 74.24725000000001,
+        "tp1": 70.9555,
+        "tp2": 69.85825,
+        "time": "2026-11-06T02:35:30.649220+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-06T02:50:35.167627+00:00"
+    },
+    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.15535,
@@ -22663,16 +22685,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "WDC-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 280.1,
-        "sl": 284.30150000000003,
-        "tp1": 271.697,
-        "tp2": 267.4955,
-        "time": "2026-11-06T02:15:39.425896+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SUI-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.8613,
@@ -22703,13 +22715,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ZHONGJI-USDT-SWAP",
+        "symbol": "WDC-USDT-SWAP",
         "direction": "SHORT",
-        "entry": 73.15,
-        "sl": 74.24725000000001,
-        "tp1": 70.9555,
-        "tp2": 69.85825,
-        "time": "2026-11-06T02:35:30.649220+00:00",
+        "entry": 285.15,
+        "sl": 289.42724999999996,
+        "tp1": 276.5955,
+        "tp2": 272.31825000000003,
+        "time": "2026-11-06T02:50:36.283098+00:00",
         "status": "OPEN"
     }
 ]
