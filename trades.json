@@ -23559,6 +23559,17 @@
         "close_time": "2026-11-06T13:40:37.132331+00:00"
     },
     {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 67.41,
+        "sl": 67.41,
+        "tp1": 65.3877,
+        "tp2": 64.37655,
+        "time": "2026-11-06T12:50:46.267960+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-06T14:20:36.832150+00:00"
+    },
+    {
         "symbol": "LIT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3.4566,
@@ -23639,16 +23650,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOXS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 67.41,
-        "sl": 67.41,
-        "tp1": 65.3877,
-        "tp2": 64.37655,
-        "time": "2026-11-06T12:50:46.267960+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LITE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 557.72,
@@ -23706,6 +23707,16 @@
         "tp1": 1.727958,
         "tp2": 1.701237,
         "time": "2026-11-06T13:40:40.569499+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "W-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.011368,
+        "sl": 0.011662278,
+        "tp1": 0.010779444,
+        "tp2": 0.010485165999999999,
+        "time": "2026-11-06T14:20:38.323184+00:00",
         "status": "OPEN"
     }
 ]
