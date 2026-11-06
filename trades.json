@@ -23896,6 +23896,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 537.25,
+        "sl": 537.25,
+        "tp1": 521.1324999999999,
+        "tp2": 513.0737499999999,
+        "time": "2026-11-06T15:55:30.501851+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-06T16:35:29.241368+00:00"
+    },
+    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.15495,
@@ -23976,16 +23987,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 537.25,
-        "sl": 537.25,
-        "tp1": 521.1324999999999,
-        "tp2": 513.0737499999999,
-        "time": "2026-11-06T15:55:30.501851+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SUI-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.8717,
@@ -24043,6 +24044,16 @@
         "tp1": 371.7622,
         "tp2": 366.0133,
         "time": "2026-11-06T16:05:34.571907+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 139.93,
+        "sl": 142.02895,
+        "tp1": 135.7321,
+        "tp2": 133.63315,
+        "time": "2026-11-06T16:35:32.091831+00:00",
         "status": "OPEN"
     }
 ]
