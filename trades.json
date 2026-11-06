@@ -23526,6 +23526,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 66.31,
+        "sl": 67.30465000000001,
+        "tp1": 64.32069999999999,
+        "tp2": 63.32604999999998,
+        "time": "2026-11-06T12:45:49.978446+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-06T12:50:37.110552+00:00"
+    },
+    {
         "symbol": "W-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.011348,
@@ -23586,16 +23597,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SOXS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 66.31,
-        "sl": 67.30465000000001,
-        "tp1": 64.32069999999999,
-        "tp2": 63.32604999999998,
-        "time": "2026-11-06T12:45:49.978446+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ASTER-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.6859,
@@ -23603,6 +23604,46 @@
         "tp1": 0.6653229999999999,
         "tp2": 0.6550344999999999,
         "time": "2026-11-06T12:45:50.875280+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "APT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.6121,
+        "sl": 0.6029185,
+        "tp1": 0.6304629999999999,
+        "tp2": 0.6396444999999998,
+        "time": "2026-11-06T12:50:39.235269+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ALGO-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.09453,
+        "sl": 0.09594795,
+        "tp1": 0.0916941,
+        "tp2": 0.09027615,
+        "time": "2026-11-06T12:50:42.512325+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "VIRTUAL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.5782,
+        "sl": 0.5868730000000001,
+        "tp1": 0.560854,
+        "tp2": 0.5521809999999999,
+        "time": "2026-11-06T12:50:45.282441+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SOXS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 67.41,
+        "sl": 68.42115,
+        "tp1": 65.3877,
+        "tp2": 64.37655,
+        "time": "2026-11-06T12:50:46.267960+00:00",
         "status": "OPEN"
     }
 ]
