@@ -24167,6 +24167,17 @@
         "close_time": "2026-11-06T20:10:37.393081+00:00"
     },
     {
+        "symbol": "WDC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 262.11,
+        "sl": 266.04165,
+        "tp1": 254.24670000000003,
+        "tp2": 250.31505000000004,
+        "time": "2026-11-06T19:00:56.781640+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-06T20:35:31.377417+00:00"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "LONG",
         "entry": 6.901,
@@ -24257,16 +24268,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "WDC-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 262.11,
-        "sl": 266.04165,
-        "tp1": 254.24670000000003,
-        "tp2": 250.31505000000004,
-        "time": "2026-11-06T19:00:56.781640+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LIT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3.3202,
@@ -24314,6 +24315,16 @@
         "tp1": 1.1872800000000001,
         "tp2": 1.1689200000000002,
         "time": "2026-11-06T20:15:42.624037+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 865.0,
+        "sl": 877.975,
+        "tp1": 839.05,
+        "tp2": 826.0749999999999,
+        "time": "2026-11-06T20:35:33.979861+00:00",
         "status": "OPEN"
     }
 ]
