@@ -26147,6 +26147,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "ONE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.001848,
+        "sl": 0.00187572,
+        "tp1": 0.0017925600000000001,
+        "tp2": 0.0017648400000000002,
+        "time": "2026-11-08T04:20:39.649796+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-08T04:55:27.088457+00:00"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.125,
@@ -26227,16 +26238,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ONE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.001848,
-        "sl": 0.00187572,
-        "tp1": 0.0017925600000000001,
-        "tp2": 0.0017648400000000002,
-        "time": "2026-11-08T04:20:39.649796+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "BTC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 75887.9,
@@ -26294,6 +26295,16 @@
         "tp1": 123.75260000000002,
         "tp2": 121.83890000000002,
         "time": "2026-11-08T04:29:40.121341+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SUI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.8506,
+        "sl": 0.863359,
+        "tp1": 0.8250820000000001,
+        "tp2": 0.8123230000000001,
+        "time": "2026-11-08T04:55:29.784168+00:00",
         "status": "OPEN"
     }
 ]
