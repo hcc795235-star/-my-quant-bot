@@ -26180,6 +26180,17 @@
         "close_time": "2026-11-08T05:55:31.099443+00:00"
     },
     {
+        "symbol": "PIEVERSE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.3887,
+        "sl": 1.4095305,
+        "tp1": 1.347039,
+        "tp2": 1.3262085000000001,
+        "time": "2026-11-08T04:20:46.554508+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-08T07:15:34.230037+00:00"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.125,
@@ -26260,16 +26271,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "PIEVERSE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1.3887,
-        "sl": 1.4095305,
-        "tp1": 1.347039,
-        "tp2": 1.3262085000000001,
-        "time": "2026-11-08T04:20:46.554508+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.15037,
@@ -26327,6 +26328,16 @@
         "tp1": 0.06905430000000001,
         "tp2": 0.06798645000000002,
         "time": "2026-11-08T05:55:33.032063+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "WLD-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.3305,
+        "sl": 0.3354575,
+        "tp1": 0.320585,
+        "tp2": 0.3156275,
+        "time": "2026-11-08T07:15:37.039001+00:00",
         "status": "OPEN"
     }
 ]
