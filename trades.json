@@ -26546,6 +26546,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "AKE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.005773,
+        "sl": 0.005859595,
+        "tp1": 0.00559981,
+        "tp2": 0.005513215,
+        "time": "2026-11-08T10:26:12.802313+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-08T10:35:29.392349+00:00"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 7.023,
@@ -26636,16 +26647,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "AKE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.005773,
-        "sl": 0.005859595,
-        "tp1": 0.00559981,
-        "tp2": 0.005513215,
-        "time": "2026-11-08T10:26:12.802313+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SOXL-USDT-SWAP",
         "direction": "SHORT",
         "entry": 46.33,
@@ -26693,6 +26694,16 @@
         "tp1": 0.003521279999999999,
         "tp2": 0.0034659199999999986,
         "time": "2026-11-08T10:33:08.694754+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "QQQ-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 657.21,
+        "sl": 647.35185,
+        "tp1": 676.9263000000001,
+        "tp2": 686.7844500000001,
+        "time": "2026-11-08T10:35:31.620068+00:00",
         "status": "OPEN"
     }
 ]
