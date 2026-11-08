@@ -27000,6 +27000,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "RSR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.001687,
+        "sl": 0.001712305,
+        "tp1": 0.00163639,
+        "tp2": 0.001611085,
+        "time": "2026-11-08T16:30:50.863173+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-08T16:35:32.139750+00:00"
+    },
+    {
         "symbol": "UNI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 6.996,
@@ -27070,13 +27081,43 @@
         "status": "OPEN"
     },
     {
-        "symbol": "RSR-USDT-SWAP",
+        "symbol": "SKHYNIX-USDT-SWAP",
         "direction": "SHORT",
-        "entry": 0.001687,
-        "sl": 0.001712305,
-        "tp1": 0.00163639,
-        "tp2": 0.001611085,
-        "time": "2026-11-08T16:30:50.863173+00:00",
+        "entry": 874.5,
+        "sl": 887.6175,
+        "tp1": 848.2650000000001,
+        "tp2": 835.1475000000002,
+        "time": "2026-11-08T16:35:33.517260+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MET-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.3068,
+        "sl": 0.30219440000000003,
+        "tp1": 0.3160112,
+        "tp2": 0.3206168,
+        "time": "2026-11-08T16:35:38.195312+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ARX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.2097,
+        "sl": 0.21753419999999998,
+        "tp1": 0.19403160000000003,
+        "tp2": 0.18619740000000004,
+        "time": "2026-11-08T16:35:39.396654+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "APR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.04109,
+        "sl": 0.04170635,
+        "tp1": 0.0398573,
+        "tp2": 0.03924095,
+        "time": "2026-11-08T16:35:40.093577+00:00",
         "status": "OPEN"
     }
 ]
