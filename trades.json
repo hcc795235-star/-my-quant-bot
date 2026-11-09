@@ -27923,6 +27923,17 @@
         "close_time": "2026-11-09T02:30:43.114695+00:00"
     },
     {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.1496,
+        "sl": 1.1496,
+        "tp1": 1.1151119999999999,
+        "tp2": 1.0978679999999998,
+        "time": "2026-11-09T01:35:32.864896+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-09T03:27:13.646568+00:00"
+    },
+    {
         "symbol": "EDGE-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.3294,
@@ -27993,16 +28004,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "BTW-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1.1496,
-        "sl": 1.1496,
-        "tp1": 1.1151119999999999,
-        "tp2": 1.0978679999999998,
-        "time": "2026-11-09T01:35:32.864896+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ONE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.0017231,
@@ -28070,6 +28071,16 @@
         "tp1": 0.1438704,
         "tp2": 0.1416456,
         "time": "2026-11-09T02:30:45.222736+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 142.2,
+        "sl": 140.06699999999998,
+        "tp1": 146.466,
+        "tp2": 148.59900000000002,
+        "time": "2026-11-09T03:27:15.544496+00:00",
         "status": "OPEN"
     }
 ]
