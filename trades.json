@@ -31088,6 +31088,17 @@
         "close_time": "2026-11-10T15:45:41.073389+00:00"
     },
     {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 892.1,
+        "sl": 878.7185000000001,
+        "tp1": 918.8629999999999,
+        "tp2": 932.2444999999999,
+        "time": "2026-11-10T15:30:50.873889+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-10T15:55:31.274682+00:00"
+    },
+    {
         "symbol": "QQQ-USDT-SWAP",
         "direction": "LONG",
         "entry": 672.9,
@@ -31168,16 +31179,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 892.1,
-        "sl": 878.7185000000001,
-        "tp1": 918.8629999999999,
-        "tp2": 932.2444999999999,
-        "time": "2026-11-10T15:30:50.873889+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ZHONGJI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 73.35,
@@ -31225,6 +31226,16 @@
         "tp1": 0.13403424,
         "tp2": 0.12980136,
         "time": "2026-11-10T15:50:43.271294+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "RKLB-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 59.32,
+        "sl": 60.2098,
+        "tp1": 57.5404,
+        "tp2": 56.6506,
+        "time": "2026-11-10T15:55:37.223047+00:00",
         "status": "OPEN"
     }
 ]
