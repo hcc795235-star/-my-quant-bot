@@ -30458,6 +30458,17 @@
         "close_time": "2026-11-10T09:20:38.435809+00:00"
     },
     {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 596.34,
+        "sl": 596.34,
+        "tp1": 614.2302000000001,
+        "tp2": 623.1753000000001,
+        "time": "2026-11-10T08:00:56.437638+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-10T10:35:31.157994+00:00"
+    },
+    {
         "symbol": "EDGE-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.3992,
@@ -30538,16 +30549,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 596.34,
-        "sl": 596.34,
-        "tp1": 614.2302000000001,
-        "tp2": 623.1753000000001,
-        "time": "2026-11-10T08:00:56.437638+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "MRVL-USDT-SWAP",
         "direction": "LONG",
         "entry": 154.81,
@@ -30605,6 +30606,16 @@
         "tp1": 6.82201,
         "tp2": 6.716514999999999,
         "time": "2026-11-10T09:20:40.054267+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 595.11,
+        "sl": 607.82322,
+        "tp1": 569.68356,
+        "tp2": 556.9703400000001,
+        "time": "2026-11-10T10:35:33.485015+00:00",
         "status": "OPEN"
     }
 ]
