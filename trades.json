@@ -30187,6 +30187,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "NIGHT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.0416,
+        "sl": 0.042224,
+        "tp1": 0.040352,
+        "tp2": 0.039728,
+        "time": "2026-11-10T04:55:43.784139+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-10T05:25:31.291154+00:00"
+    },
+    {
         "symbol": "LITE-USDT-SWAP",
         "direction": "LONG",
         "entry": 596.32,
@@ -30257,16 +30268,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "NIGHT-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.0416,
-        "sl": 0.042224,
-        "tp1": 0.040352,
-        "tp2": 0.039728,
-        "time": "2026-11-10T04:55:43.784139+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "RAY-USDT-SWAP",
         "direction": "SHORT",
         "entry": 1.6981,
@@ -30334,6 +30335,16 @@
         "tp1": 6.75217,
         "tp2": 6.647754999999999,
         "time": "2026-11-10T05:05:31.178359+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 155.33,
+        "sl": 157.65995,
+        "tp1": 150.67010000000002,
+        "tp2": 148.34015000000002,
+        "time": "2026-11-10T05:25:34.715326+00:00",
         "status": "OPEN"
     }
 ]
