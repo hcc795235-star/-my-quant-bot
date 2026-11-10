@@ -30956,6 +30956,28 @@
         "close_time": "2026-11-10T14:45:40.085713+00:00"
     },
     {
+        "symbol": "EDGE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.3972,
+        "sl": 0.403158,
+        "tp1": 0.38528399999999996,
+        "tp2": 0.37932599999999994,
+        "time": "2026-11-10T14:30:50.356049+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-10T14:55:33.946946+00:00"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 595.04,
+        "sl": 603.9656,
+        "tp1": 577.1887999999999,
+        "tp2": 568.2631999999999,
+        "time": "2026-11-10T14:45:41.406788+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-10T14:55:35.280775+00:00"
+    },
+    {
         "symbol": "MSTR-USDT-SWAP",
         "direction": "LONG",
         "entry": 122.83,
@@ -30969,7 +30991,7 @@
         "symbol": "SKHYNIX-USDT-SWAP",
         "direction": "LONG",
         "entry": 883.9,
-        "sl": 870.6415,
+        "sl": 883.9,
         "tp1": 910.417,
         "tp2": 923.6755,
         "time": "2026-11-10T14:00:57.060989+00:00",
@@ -31066,16 +31088,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "EDGE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.3972,
-        "sl": 0.403158,
-        "tp1": 0.38528399999999996,
-        "tp2": 0.37932599999999994,
-        "time": "2026-11-10T14:30:50.356049+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LIT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3.3885,
@@ -31086,16 +31098,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 595.04,
-        "sl": 603.9656,
-        "tp1": 577.1887999999999,
-        "tp2": 568.2631999999999,
-        "time": "2026-11-10T14:45:41.406788+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ZHONGJI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 73.4,
@@ -31103,6 +31105,16 @@
         "tp1": 71.19800000000001,
         "tp2": 70.09700000000001,
         "time": "2026-11-10T14:50:40.084914+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SPY-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 750.5,
+        "sl": 739.2425,
+        "tp1": 773.0150000000001,
+        "tp2": 784.2725000000002,
+        "time": "2026-11-10T14:55:43.122005+00:00",
         "status": "OPEN"
     }
 ]
