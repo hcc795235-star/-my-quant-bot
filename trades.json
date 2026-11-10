@@ -30729,6 +30729,28 @@
         "close_time": "2026-11-10T13:30:53.318870+00:00"
     },
     {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 585.38,
+        "sl": 585.38,
+        "tp1": 567.8186,
+        "tp2": 559.0378999999999,
+        "time": "2026-11-10T12:25:34.668642+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-10T13:35:32.971491+00:00"
+    },
+    {
+        "symbol": "MSTR-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 124.53,
+        "sl": 122.66205000000001,
+        "tp1": 128.2659,
+        "tp2": 130.13385,
+        "time": "2026-11-10T12:55:34.217238+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-10T13:35:33.367639+00:00"
+    },
+    {
         "symbol": "PENGU-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.006272,
@@ -30839,16 +30861,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "LITE-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 585.38,
-        "sl": 585.38,
-        "tp1": 567.8186,
-        "tp2": 559.0378999999999,
-        "time": "2026-11-10T12:25:34.668642+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "PUMP-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.003539,
@@ -30859,16 +30871,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "MSTR-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 124.53,
-        "sl": 122.66205000000001,
-        "tp1": 128.2659,
-        "tp2": 130.13385,
-        "time": "2026-11-10T12:55:34.217238+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "EDGE-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.3919,
@@ -30876,6 +30878,16 @@
         "tp1": 0.380112,
         "tp2": 0.374218,
         "time": "2026-11-10T13:30:55.775371+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "GRAM-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.088,
+        "sl": 1.10432,
+        "tp1": 1.0553600000000003,
+        "tp2": 1.0390400000000004,
+        "time": "2026-11-10T13:35:36.848996+00:00",
         "status": "OPEN"
     }
 ]
