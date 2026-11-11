@@ -32611,6 +32611,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "GRAM-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.196,
+        "sl": 1.21743,
+        "tp1": 1.1531399999999998,
+        "tp2": 1.1317099999999998,
+        "time": "2026-11-11T11:25:36.045537+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-11T12:35:31.306864+00:00"
+    },
+    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.14782,
@@ -32681,16 +32692,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "GRAM-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1.196,
-        "sl": 1.21743,
-        "tp1": 1.1531399999999998,
-        "tp2": 1.1317099999999998,
-        "time": "2026-11-11T11:25:36.045537+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LITE-USDT-SWAP",
         "direction": "LONG",
         "entry": 638.63,
@@ -32758,6 +32759,16 @@
         "tp1": 941.967,
         "tp2": 927.4005,
         "time": "2026-11-11T11:39:50.669720+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "GRAM-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.222,
+        "sl": 1.24033,
+        "tp1": 1.18534,
+        "tp2": 1.16701,
+        "time": "2026-11-11T12:35:34.458426+00:00",
         "status": "OPEN"
     }
 ]
