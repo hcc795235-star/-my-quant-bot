@@ -32882,6 +32882,17 @@
         "close_time": "2026-11-11T15:05:31.368051+00:00"
     },
     {
+        "symbol": "H-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.03029,
+        "sl": 0.029835650000000002,
+        "tp1": 0.0311987,
+        "tp2": 0.03165305,
+        "time": "2026-11-11T14:35:35.398983+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-11T15:20:37.171127+00:00"
+    },
+    {
         "symbol": "EDGE-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.3709,
@@ -32952,16 +32963,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "H-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.03029,
-        "sl": 0.029835650000000002,
-        "tp1": 0.0311987,
-        "tp2": 0.03165305,
-        "time": "2026-11-11T14:35:35.398983+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "APT-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.5752,
@@ -33029,6 +33030,16 @@
         "tp1": 3.260844,
         "tp2": 3.207516,
         "time": "2026-11-11T15:05:33.147821+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "AAPL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 353.5,
+        "sl": 358.8025,
+        "tp1": 342.895,
+        "tp2": 337.5925,
+        "time": "2026-11-11T15:20:44.365619+00:00",
         "status": "OPEN"
     }
 ]
