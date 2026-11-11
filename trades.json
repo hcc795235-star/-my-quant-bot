@@ -32805,6 +32805,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "NBIS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 149.4,
+        "sl": 152.56452,
+        "tp1": 143.07096000000004,
+        "tp2": 139.90644000000006,
+        "time": "2026-11-11T14:25:38.458123+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-11T14:30:47.088179+00:00"
+    },
+    {
         "symbol": "EDGE-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.3709,
@@ -32865,16 +32876,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "NBIS-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 149.4,
-        "sl": 152.56452,
-        "tp1": 143.07096000000004,
-        "tp2": 139.90644000000006,
-        "time": "2026-11-11T14:25:38.458123+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ORCL-USDT-SWAP",
         "direction": "LONG",
         "entry": 124.0,
@@ -32882,6 +32883,46 @@
         "tp1": 127.72,
         "tp2": 129.57999999999998,
         "time": "2026-11-11T14:25:39.526765+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 642.94,
+        "sl": 633.2959000000001,
+        "tp1": 662.2282,
+        "tp2": 671.8723,
+        "time": "2026-11-11T14:30:49.128645+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MSTR-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 121.74,
+        "sl": 119.9139,
+        "tp1": 125.39219999999999,
+        "tp2": 127.21829999999999,
+        "time": "2026-11-11T14:30:49.984151+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LIT-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 3.4093,
+        "sl": 3.3581605,
+        "tp1": 3.5115790000000002,
+        "tp2": 3.5627185000000003,
+        "time": "2026-11-11T14:30:51.182470+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 167.32,
+        "sl": 164.81019999999998,
+        "tp1": 172.33960000000002,
+        "tp2": 174.84940000000003,
+        "time": "2026-11-11T14:30:51.900114+00:00",
         "status": "OPEN"
     }
 ]
