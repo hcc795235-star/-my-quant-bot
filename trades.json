@@ -32168,6 +32168,17 @@
         "status": "CYCLE_TIMEOUT"
     },
     {
+        "symbol": "EDGE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.3726,
+        "sl": 0.367011,
+        "tp1": 0.383778,
+        "tp2": 0.389367,
+        "time": "2026-11-11T05:28:39.805658+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-11T06:10:35.986941+00:00"
+    },
+    {
         "symbol": "PI-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.07233,
@@ -32308,13 +32319,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "EDGE-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.3726,
-        "sl": 0.367011,
-        "tp1": 0.383778,
-        "tp2": 0.389367,
-        "time": "2026-11-11T05:28:39.805658+00:00",
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 163.61,
+        "sl": 166.06415,
+        "tp1": 158.70170000000002,
+        "tp2": 156.24755000000002,
+        "time": "2026-11-11T06:10:37.866892+00:00",
         "status": "OPEN"
     }
 ]
