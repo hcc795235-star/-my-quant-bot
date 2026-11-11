@@ -32860,6 +32860,17 @@
         "close_time": "2026-11-11T14:50:36.285014+00:00"
     },
     {
+        "symbol": "SNXX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 4.179,
+        "sl": 4.241685,
+        "tp1": 4.05363,
+        "tp2": 3.990945,
+        "time": "2026-11-11T14:45:27.838195+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-11T15:00:58.753243+00:00"
+    },
+    {
         "symbol": "EDGE-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.3709,
@@ -32980,16 +32991,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SNXX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 4.179,
-        "sl": 4.241685,
-        "tp1": 4.05363,
-        "tp2": 3.990945,
-        "time": "2026-11-11T14:45:27.838195+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "ETH-USDT-SWAP",
         "direction": "SHORT",
         "entry": 2055.41,
@@ -33007,6 +33008,16 @@
         "tp1": 168.84789999999998,
         "tp2": 171.30684999999997,
         "time": "2026-11-11T14:55:32.783282+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "UNI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 6.436,
+        "sl": 6.53254,
+        "tp1": 6.24292,
+        "tp2": 6.14638,
+        "time": "2026-11-11T15:01:00.194698+00:00",
         "status": "OPEN"
     }
 ]
