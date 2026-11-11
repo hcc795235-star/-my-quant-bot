@@ -32245,6 +32245,17 @@
         "close_time": "2026-11-11T07:40:35.328567+00:00"
     },
     {
+        "symbol": "EDGE-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.3543,
+        "sl": 0.3489855,
+        "tp1": 0.364929,
+        "tp2": 0.3702435,
+        "time": "2026-11-11T07:40:37.902491+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-11T07:45:36.124543+00:00"
+    },
+    {
         "symbol": "PI-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.07233,
@@ -32385,13 +32396,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "EDGE-USDT-SWAP",
-        "direction": "LONG",
-        "entry": 0.3543,
-        "sl": 0.3489855,
-        "tp1": 0.364929,
-        "tp2": 0.3702435,
-        "time": "2026-11-11T07:40:37.902491+00:00",
+        "symbol": "UNI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 6.423,
+        "sl": 6.519345,
+        "tp1": 6.230309999999999,
+        "tp2": 6.133964999999999,
+        "time": "2026-11-11T07:45:37.292971+00:00",
         "status": "OPEN"
     }
 ]
