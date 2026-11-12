@@ -33718,5 +33718,45 @@
         "tp2": 0.7842459999999999,
         "time": "2026-11-12T00:00:58.995790+00:00",
         "status": "OPEN"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 636.11,
+        "sl": 645.65165,
+        "tp1": 617.0267,
+        "tp2": 607.48505,
+        "time": "2026-11-12T00:05:34.135441+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 164.95,
+        "sl": 167.42425,
+        "tp1": 160.00149999999996,
+        "tp2": 157.52724999999995,
+        "time": "2026-11-12T00:05:34.845141+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ZHONGJI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 86.72,
+        "sl": 88.0208,
+        "tp1": 84.11840000000001,
+        "tp2": 82.81760000000001,
+        "time": "2026-11-12T00:05:35.772083+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 961.5,
+        "sl": 975.9225,
+        "tp1": 932.655,
+        "tp2": 918.2325,
+        "time": "2026-11-12T00:05:36.462853+00:00",
+        "status": "OPEN"
     }
 ]
