@@ -35229,6 +35229,28 @@
         "close_time": "2026-11-12T23:45:40.385736+00:00"
     },
     {
+        "symbol": "PUMP-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.003412,
+        "sl": 0.00346318,
+        "tp1": 0.00330964,
+        "tp2": 0.00325846,
+        "time": "2026-11-12T21:25:34.518701+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-12T23:55:30.619036+00:00"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 951.5,
+        "sl": 965.7725,
+        "tp1": 922.9549999999999,
+        "tp2": 908.6824999999999,
+        "time": "2026-11-12T23:25:29.028973+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-12T23:55:32.122872+00:00"
+    },
+    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "LONG",
         "entry": 0.14875,
@@ -35319,16 +35341,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "PUMP-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.003412,
-        "sl": 0.00346318,
-        "tp1": 0.00330964,
-        "tp2": 0.00325846,
-        "time": "2026-11-12T21:25:34.518701+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "SUI-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.8038,
@@ -35349,16 +35361,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "SKHYNIX-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 951.5,
-        "sl": 965.7725,
-        "tp1": 922.9549999999999,
-        "tp2": 908.6824999999999,
-        "time": "2026-11-12T23:25:29.028973+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "KGEN-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.07644,
@@ -35376,6 +35378,16 @@
         "tp1": 1.08058,
         "tp2": 1.06387,
         "time": "2026-11-12T23:45:43.259845+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 640.04,
+        "sl": 649.6406,
+        "tp1": 620.8388,
+        "tp2": 611.2382,
+        "time": "2026-11-12T23:55:33.665783+00:00",
         "status": "OPEN"
     }
 ]
