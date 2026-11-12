@@ -33706,6 +33706,28 @@
         "close_time": "2026-11-12T02:20:34.809066+00:00"
     },
     {
+        "symbol": "UNI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 6.217,
+        "sl": 6.217,
+        "tp1": 6.0304899999999995,
+        "tp2": 5.937234999999999,
+        "time": "2026-11-12T00:20:41.173401+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-12T02:50:35.436877+00:00"
+    },
+    {
+        "symbol": "ZHONGJI-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 90.02,
+        "sl": 90.02,
+        "tp1": 87.31939999999999,
+        "tp2": 85.96909999999998,
+        "time": "2026-11-12T02:15:39.023832+00:00",
+        "status": "WIN_TP1",
+        "close_time": "2026-11-12T02:50:36.581035+00:00"
+    },
+    {
         "symbol": "XLM-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.1469,
@@ -33816,16 +33838,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "UNI-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 6.217,
-        "sl": 6.217,
-        "tp1": 6.0304899999999995,
-        "tp2": 5.937234999999999,
-        "time": "2026-11-12T00:20:41.173401+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "QQQ-USDT-SWAP",
         "direction": "SHORT",
         "entry": 686.76,
@@ -33836,16 +33848,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "ZHONGJI-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 90.02,
-        "sl": 90.02,
-        "tp1": 87.31939999999999,
-        "tp2": 85.96909999999998,
-        "time": "2026-11-12T02:15:39.023832+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "W-USDT-SWAP",
         "direction": "SHORT",
         "entry": 0.010307,
@@ -33853,6 +33855,16 @@
         "tp1": 0.00999779,
         "tp2": 0.009843184999999999,
         "time": "2026-11-12T02:20:36.631753+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 973.0,
+        "sl": 987.595,
+        "tp1": 943.81,
+        "tp2": 929.2149999999999,
+        "time": "2026-11-12T02:50:37.907957+00:00",
         "status": "OPEN"
     }
 ]
