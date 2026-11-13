@@ -35751,6 +35751,17 @@
         "close_time": "2026-11-13T05:05:39.981683+00:00"
     },
     {
+        "symbol": "GRAM-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 1.133,
+        "sl": 1.151298,
+        "tp1": 1.0964040000000002,
+        "tp2": 1.0781060000000002,
+        "time": "2026-11-13T03:55:35.726376+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-13T05:15:34.523567+00:00"
+    },
+    {
         "symbol": "CBRS-USDT-SWAP",
         "direction": "SHORT",
         "entry": 115.73,
@@ -35841,16 +35852,6 @@
         "status": "OPEN"
     },
     {
-        "symbol": "GRAM-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 1.133,
-        "sl": 1.151298,
-        "tp1": 1.0964040000000002,
-        "tp2": 1.0781060000000002,
-        "time": "2026-11-13T03:55:35.726376+00:00",
-        "status": "OPEN"
-    },
-    {
         "symbol": "LIT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3.1219,
@@ -35898,6 +35899,16 @@
         "tp1": 0.5111899999999999,
         "tp2": 0.5032849999999999,
         "time": "2026-11-13T05:05:41.801275+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "MRVL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 164.14,
+        "sl": 166.60209999999998,
+        "tp1": 159.2158,
+        "tp2": 156.7537,
+        "time": "2026-11-13T05:15:36.810366+00:00",
         "status": "OPEN"
     }
 ]
