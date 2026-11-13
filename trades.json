@@ -36476,6 +36476,17 @@
         "close_time": "2026-11-13T12:45:36.067626+00:00"
     },
     {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.8882,
+        "sl": 0.8882,
+        "tp1": 0.861554,
+        "tp2": 0.8482310000000001,
+        "time": "2026-11-13T12:50:36.420062+00:00",
+        "status": "LOSS",
+        "close_time": "2026-11-13T13:15:38.348898+00:00"
+    },
+    {
         "symbol": "LIT-USDT-SWAP",
         "direction": "SHORT",
         "entry": 3.2592,
@@ -36616,13 +36627,13 @@
         "status": "OPEN"
     },
     {
-        "symbol": "BTW-USDT-SWAP",
-        "direction": "SHORT",
-        "entry": 0.8882,
-        "sl": 0.8882,
-        "tp1": 0.861554,
-        "tp2": 0.8482310000000001,
-        "time": "2026-11-13T12:50:36.420062+00:00",
+        "symbol": "AVGO-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 357.16,
+        "sl": 351.80260000000004,
+        "tp1": 367.8748,
+        "tp2": 373.2322,
+        "time": "2026-11-13T13:15:41.815824+00:00",
         "status": "OPEN"
     }
 ]
