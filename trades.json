@@ -35551,7 +35551,7 @@
         "tp1": 0.14420989999999997,
         "tp2": 0.14197984999999996,
         "time": "2026-11-13T00:20:34.999062+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "MSTR-USDT-SWAP",
@@ -35561,7 +35561,7 @@
         "tp1": 111.0941,
         "tp2": 109.37615,
         "time": "2026-11-13T00:20:36.698155+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "DOGE-USDT-SWAP",
@@ -35571,7 +35571,7 @@
         "tp1": 0.06448559999999999,
         "tp2": 0.06348839999999999,
         "time": "2026-11-13T00:20:38.814959+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "SUI-USDT-SWAP",
@@ -35581,7 +35581,7 @@
         "tp1": 0.781626,
         "tp2": 0.7695390000000001,
         "time": "2026-11-13T00:20:41.707384+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "WLD-USDT-SWAP",
@@ -35591,7 +35591,7 @@
         "tp1": 0.291097,
         "tp2": 0.2865955,
         "time": "2026-11-13T00:25:38.124893+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "AKE-USDT-SWAP",
@@ -35601,7 +35601,7 @@
         "tp1": 0.002551968,
         "tp2": 0.002481452,
         "time": "2026-11-13T00:25:38.884718+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "SQQQ-USDT-SWAP",
@@ -35611,7 +35611,7 @@
         "tp1": 39.23650000000001,
         "tp2": 38.62975000000001,
         "time": "2026-11-13T00:30:47.736508+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "LITE-USDT-SWAP",
@@ -35621,7 +35621,7 @@
         "tp1": 619.9852,
         "tp2": 610.3978,
         "time": "2026-11-13T00:35:30.803413+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "GRAM-USDT-SWAP",
@@ -35631,7 +35631,7 @@
         "tp1": 1.1116199999999998,
         "tp2": 1.0944299999999998,
         "time": "2026-11-13T02:22:06.078619+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "MRVL-USDT-SWAP",
@@ -35641,7 +35641,7 @@
         "tp1": 163.3383,
         "tp2": 160.81245,
         "time": "2026-11-13T02:35:32.380633+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "SKHYNIX-USDT-SWAP",
@@ -35651,7 +35651,7 @@
         "tp1": 924.5304,
         "tp2": 909.5956,
         "time": "2026-11-13T02:40:38.489373+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "CBRS-USDT-SWAP",
@@ -35661,7 +35661,7 @@
         "tp1": 112.2775,
         "tp2": 110.54125,
         "time": "2026-11-13T03:15:42.491702+00:00",
-        "status": "OPEN"
+        "status": "CYCLE_TIMEOUT"
     },
     {
         "symbol": "NG-USDT-SWAP",
@@ -35671,6 +35671,86 @@
         "tp1": 3.6278000000000006,
         "tp2": 3.5717000000000008,
         "time": "2026-11-13T03:15:45.786274+00:00",
+        "status": "CYCLE_TIMEOUT"
+    },
+    {
+        "symbol": "CBRS-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 115.73,
+        "sl": 117.46595,
+        "tp1": 112.2581,
+        "tp2": 110.52215,
+        "time": "2026-11-13T03:20:42.705332+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "AAPL-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 356.47,
+        "sl": 361.81705000000005,
+        "tp1": 345.7759,
+        "tp2": 340.42884999999995,
+        "time": "2026-11-13T03:20:44.841285+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "NIGHT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.044147,
+        "sl": 0.044809205,
+        "tp1": 0.04282259,
+        "tp2": 0.042160385,
+        "time": "2026-11-13T03:20:48.444984+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "APR-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.03701,
+        "sl": 0.03756515,
+        "tp1": 0.03589970000000001,
+        "tp2": 0.03534455000000001,
+        "time": "2026-11-13T03:20:50.501807+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BZ-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 93.1,
+        "sl": 94.4965,
+        "tp1": 90.30699999999999,
+        "tp2": 88.91049999999998,
+        "time": "2026-11-13T03:20:51.781153+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "INJ-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 7.372,
+        "sl": 7.48258,
+        "tp1": 7.1508400000000005,
+        "tp2": 7.040260000000001,
+        "time": "2026-11-13T03:20:54.035847+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "XAG-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 50.58,
+        "sl": 51.338699999999996,
+        "tp1": 49.0626,
+        "tp2": 48.303900000000006,
+        "time": "2026-11-13T03:20:57.937965+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ZEC-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 943.6,
+        "sl": 957.754,
+        "tp1": 915.292,
+        "tp2": 901.138,
+        "time": "2026-11-13T03:20:59.411325+00:00",
         "status": "OPEN"
     }
 ]
