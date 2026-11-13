@@ -35747,10 +35747,50 @@
         "symbol": "ZEC-USDT-SWAP",
         "direction": "SHORT",
         "entry": 943.6,
-        "sl": 957.754,
+        "sl": 943.6,
         "tp1": 915.292,
         "tp2": 901.138,
         "time": "2026-11-13T03:20:59.411325+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.9116,
+        "sl": 0.897926,
+        "tp1": 0.9389479999999999,
+        "tp2": 0.9526219999999999,
+        "time": "2026-11-13T03:25:33.753417+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "INIT-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.1176,
+        "sl": 0.12102156,
+        "tp1": 0.11075687999999999,
+        "tp2": 0.10733531999999998,
+        "time": "2026-11-13T03:25:48.962161+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "TIA-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.4274,
+        "sl": 0.4374732,
+        "tp1": 0.4072536,
+        "tp2": 0.3971804,
+        "time": "2026-11-13T03:25:54.353178+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "XAU-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 3921.8,
+        "sl": 3898.2692,
+        "tp1": 3957.0962,
+        "tp2": 3968.8616,
+        "time": "2026-11-13T03:25:56.843509+00:00",
         "status": "OPEN"
     }
 ]
