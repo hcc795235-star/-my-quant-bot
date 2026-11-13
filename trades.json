@@ -36523,5 +36523,55 @@
         "tp2": 0.16426,
         "time": "2026-11-13T12:30:53.992571+00:00",
         "status": "OPEN"
+    },
+    {
+        "symbol": "LITE-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 621.02,
+        "sl": 630.3353,
+        "tp1": 602.3894,
+        "tp2": 593.0741,
+        "time": "2026-11-13T12:35:31.299350+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "SKHYNIX-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 919.6,
+        "sl": 933.394,
+        "tp1": 892.0120000000001,
+        "tp2": 878.2180000000001,
+        "time": "2026-11-13T12:35:33.080648+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "BTW-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 0.8565,
+        "sl": 0.8693475,
+        "tp1": 0.830805,
+        "tp2": 0.8179575,
+        "time": "2026-11-13T12:35:33.944901+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "ALLO-USDT-SWAP",
+        "direction": "LONG",
+        "entry": 0.154,
+        "sl": 0.15169,
+        "tp1": 0.15862,
+        "tp2": 0.16093000000000002,
+        "time": "2026-11-13T12:35:35.111723+00:00",
+        "status": "OPEN"
+    },
+    {
+        "symbol": "QQQ-USDT-SWAP",
+        "direction": "SHORT",
+        "entry": 689.88,
+        "sl": 700.2282,
+        "tp1": 669.1836,
+        "tp2": 658.8353999999999,
+        "time": "2026-11-13T12:35:36.000221+00:00",
+        "status": "OPEN"
     }
 ]
